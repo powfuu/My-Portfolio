@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components"
 
 export const light = { 
-body: "rgb(230,230,230)",
+body: "rgb(220,220,220)",
 fontColor: "#000",
 primaryButtonBg: "rgb(205,205,205)",
 secondaryButtonBg: "#2E3138",

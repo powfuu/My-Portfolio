@@ -13,9 +13,9 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +149 src/components/home/homeComponents.js
-badd +111 src/components/home/home.js
-badd +28 src/themes.js
+badd +249 src/components/home/homeComponents.js
+badd +122 src/components/home/home.js
+badd +21 src/themes.js
 argglobal
 %argdel
 edit src/components/home/home.js
@@ -49,12 +49,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 113 - ((22 * winheight(0) + 25) / 51)
+let s:l = 122 - ((23 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 113
-normal! 0149|
+keepjumps 122
+normal! 050|
 wincmd w
 argglobal
 if bufexists(fnamemodify("src/components/home/homeComponents.js", ":p")) | buffer src/components/home/homeComponents.js | else | edit src/components/home/homeComponents.js | endif
@@ -72,12 +72,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 137 - ((26 * winheight(0) + 25) / 51)
+let s:l = 243 - ((20 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 137
-normal! 05|
+keepjumps 243
+normal! 012|
 wincmd w
 2wincmd w
 exe 'vert 1resize ' . ((&columns * 96 + 96) / 192)

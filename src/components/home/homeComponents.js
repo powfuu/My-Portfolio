@@ -1,6 +1,27 @@
 import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 
+const mw = (prop)=>{
+    return `@media(max-width: ${prop}px)`
+}
+const mh = (prop)=>{
+    return `@media(max-height: ${prop}px)`
+}
+
+export const VidDivMiddle = styled.div`
+    max-height:100%;
+    background: rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+    width: 942px;
+height:71.6%;
+margin-left: ${prop=>prop.mgleft || 0}px;
+position:absolute;
+opacity: 0;
+z-index:1;
+    &:hover {
+        opacity: 1 !important;
+    }
+`
 export const LeftView = styled.div`
     width:93%;
 `
@@ -15,7 +36,8 @@ export const FrequentlyAskedAnswer = styled.p`
 export const FrequentlyAskedDiv = styled.div`
     margin-top:30px;
     background:${prop=>prop.theme.inverseSoftColorIllusion};
-    border-radius:7px;
+    border-top-left-radius:7px;
+    border-bottom-left-radius:7px;
     height:278px;
     width:100%;
     display:flex;
@@ -73,7 +95,10 @@ export const HomeView = styled.div`
     width: 95%;
     border-radius: 8px;
     display: flex;
-    flex-direction: row;
+    flex-direction:row;
+    ${mw(800)}{
+        display:none !important;
+    }
 `
 export const Point = styled.div`
     position: absolute;
@@ -88,8 +113,10 @@ export const Point = styled.div`
     margin-left: ${(prop) => prop.mgleft};
 `
 export const LeftViewTitleDiv = styled.div`
-    border-radius: 8px;
-    margin-top: -20px;
+
+    border-top-left-radius:7px;
+    border-bottom-left-radius:7px;
+    margin-top: -18px;
     background: ${(prop) => prop.theme.inverseSoftColor};
     padding-bottom: 22px;
 `
@@ -116,24 +143,26 @@ export const LeftViewTitle = styled.p`
 export const VidView = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    margin-right: 40px;
-    width: 97%;
+    justify-content:flex-start;
+    width:100%;
+height:100%;
+align-self:center;
     transition: 0.6s all ease-in;
 `
 export const VidDiv = styled.div`
-    max-height: 82%;
-margin-top: 67px;
+    max-height:100%;
     background: rgba(0, 0, 0, 0.18);
-    margin-left: 22.5px;
     cursor: pointer;
-    width: 15.6%;
-    width: 277px;
-    border-radius: 8px;
-    margin-left: -276.5px;
+    width: 430px;
+height:71.6%;
+margin-left: ${prop=>prop.mgleft || 0}px;
+position:absolute;
     opacity: 0;
+clip-path: ${prop=>prop.cp || "polygon(100% 0%, 0 0, 0% 100%)"}; 
+  filter: drop-shadow(-1px 6px 10px rgba(0, 0, 0, 1));
+z-index:3;
     &:hover {
-        opacity: 1;
+        opacity: 1 !important;
     }
 `
 const opacityAnimation = keyframes`
@@ -142,23 +171,20 @@ const opacityAnimation = keyframes`
  100% { opacity:1; }
 `
 export const Vid = styled.video`
-    margin-left: 22.5px;
     cursor: pointer;
-    width: 15.5%;
-    width: 277px;
-    max-height: 82%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 7px;
+    width: 430px;
+    height: 100.8%;
+    object-fit:cover;
+    object-position:center;
+    border-top-right-radius:8px;
+    border-bottom-right-radius:8px;
     transition:0s;
-    margin-top: 66px;
-    box-shadow: 0px 2px 2px 2px ${(prop) => prop.theme.body};
+clip-path: ${prop=>prop.clipPath};
 `
 export const VidGlassView = styled.div`
     min-width: 26%;
     position: absolute;
     min-height: 70%;
-    border-radius: 5px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     background: ${(prop) => prop.theme.navBg};
@@ -220,17 +246,16 @@ export const MergeV = styled.div`
     }
 `
 export const InfoVidView = styled.div`
-    width: 1200px;
-    margin-top: 482px;
+    width:1274px !important;
+position:absolute;
     background: rgba(0, 0, 0, 0.35);
-    margin-left: 22.5px;
+    padding-bottom:0px !important;
     border-top-right-radius: 7px;
     border-top-left-radius: 7px;
-    border-radius: 8px;
-    margin-left: -1142px;
+    border-radius: 0px;
     backdrop-filter: blur(5px);
     animation-name: ${opacityAnimation};
-    animation-duration: 3s;
+    animation-duration: 1s;
     animation-iteration-count: 1;
 `
 export const InfoVidTitle = styled.p`
@@ -292,7 +317,7 @@ export const AboutMeDivBox = styled.div`
     margin-top:62px;
 background: ${prop=>prop.bg};
     margin-right:13px;
-    box-shadow: 0px 0px 1px 1px ${(prop) => prop.theme.inverseSoftFontColor};
+    box-shadow: 0px 0px 0px 0px ${(prop) => prop.theme.inverseSoftFontColor};
 `
 export const AboutMeBoxTitle = styled.p`
     margin-top:12.6px;

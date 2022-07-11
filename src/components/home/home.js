@@ -11,12 +11,14 @@ const Home = ( props ) =>{
     const [years,setYears]=useState(0)
     const [courses,setCourses]=useState(0)
     const [hours,setHours]=useState(0)
+    const [clipPathState, setClipPathState]=useState(false)
     const [vids] = useState([
-        {vid: focuswav, id: 1, title: 'Focus Official Website', description:'Focus es una plataforma que te permite aprender & explorar y tener sesiones privadas con las personas que tu sigues en cualquier momento o lugar del mundo.', tec1:'HTML', tec2:'CSS', tec3:'JavaScript', tec4:'React.Js', tec5:'Styled-Components', tec6:'AOS',tec7:'Animate.CSS', tec8:'unDraw', tec9:'boxicons & css.gg', tecx:'Responsive'}, {vid: inworkwav, id: 0, title: 'inWork Platform', description:'inWork es una plataforma en la cual te permite como cuenta personal buscar trabajo y comunicarte con diversas empresas, y como cuenta de empresa permite encontrar tu vacante mediante tus necesidades.',tec1:'Node.Js', tec2:'express', tec3:'bcrypt', tec4:'MySQL', tec5:'JWT', tec6:'HTML',tec7:'CSS', tec8:'jQuery', tec9:'React.Js', tec10:'React Native', tec11: 'Sweet Alert 2',  tec12: 'SCSS',tec13:'AOS',tec14:'Axios HTTP Requests',tec18:'Styled-Components',tec19:'Expo',tec15:'unDraw',tec16:'boxicons',tec17:'css.gg',tecx:'Responsive' }, {vid: appswav, id: 2, title:'Template Bootstrap', description:'Template para principiantes.', tec1:'HTML', tec2:'CSS',tec3:'AOS',tec4:'JavaScript',tec5:'Bootstrap',tecx:'Responsive'}
+        {vid: appswav, id: 0, title:'Template Bootstrap', description:'Template para principiantes.', tec1:'HTML', tec2:'CSS',tec3:'AOS',tec4:'JavaScript',tec5:'Bootstrap',tecx:'Responsive'},{vid: inworkwav, id: 2, title: 'inWork Platform', description:'inWork es una plataforma en la cual te permite como cuenta personal buscar trabajo y comunicarte con diversas empresas, y como cuenta de empresa permite encontrar tu vacante mediante tus necesidades.',tec1:'Node.Js', tec2:'express', tec3:'bcrypt', tec4:'MySQL', tec5:'JWT', tec6:'HTML',tec7:'CSS', tec8:'jQuery', tec9:'React.Js', tec10:'React Native', tec11: 'Sweet Alert 2',  tec12: 'SCSS',tec13:'AOS',tec14:'Axios HTTP Requests',tec18:'Styled-Components',tec19:'Expo',tec15:'unDraw',tec16:'boxicons',tec17:'css.gg',tecx:'Responsive' },{vid: focuswav, id: 1, title: 'Focus Official Website', description:'Focus es una plataforma que te permite aprender & explorar y tener sesiones privadas con las personas que tu sigues en cualquier momento o lugar del mundo.', tec1:'HTML', tec2:'CSS', tec3:'JavaScript', tec4:'React.Js', tec5:'Styled-Components', tec6:'AOS',tec7:'Animate.CSS', tec8:'unDraw', tec9:'boxicons & css.gg', tecx:'Responsive'}, 
     ]);
     const [selectedVidId, selectVidId] = useState(null);
 const handleSelectVid = prop =>{ 
     selectVidId(prop)
+    // setClipPathState(clipPathState => !clipPathState)
 }
 useEffect(()=>{ 
     AOS.init();
@@ -109,21 +111,19 @@ return(
                 </e.LeftView>
             }
         <e.VidView>
+            {/*
             {selectedVidId === null ? null : <e.Linkv2 to="/proyectos" onClick={()=>{ props.setNavItemIdChecked(3) }}><e.MergeV2 style={{marginLeft:'203px',marginBottom:'-3.1px'}}><Text style={{fontSize:'14px', color: props.theme === "light" ? "#fff" : "#000"}}>Ver Proyectos</Text></e.MergeV2></e.Linkv2>}
-            {selectedVidId === null ? null : <e.MergeV onClick={()=> {selectVidId(null)}}> <i style={{ transform:'scale(1.3)', color: props.theme === "light" ? "rgb(105,105,105)" : "rgb(220,220,220)"}} class="gg-merge-vertical" ></i></e.MergeV>}
-            <e.VidTitleTop>
-                Proyectos recientes
-                
-            </e.VidTitleTop>
-            <e.VidTitleTopLine>
-            </e.VidTitleTopLine>
+            {selectedVidId === null ? null : <e.MergeV onClick={()=> {selectVidId(null); setClipPathState(false)}}> <i style={{ transform:'scale(1.3)', color: props.theme === "light" ? "rgb(105,105,105)" : "rgb(220,220,220)"}} class="gg-merge-vertical" ></i></e.MergeV>}
+
+*/}
             {vids.map((vi)=>{ 
                 return( 
-                <>
-                    <e.Vid onClick={()=>handleSelectVid(vi.id)} style={vi.id === selectedVidId ? { width:'1200px',cursor:'default', transition:'.5s all ease-in-out' } : null}  loop autoPlay muted>
+                <> 
+                    <e.Vid  alt="video" data-aos={vi.id ===1 ? "fade-in": vi.id === 0 ? "fade-in" : null} data-aos-duration="1000" clipPath={clipPathState ? "none" : vi.id===1 ? "polygon(100% 100%,0 0, 100% 0)" : vi.id === 0 ? "polygon(100% 0%, 0 0, 0% 100%)" : null} onClick={()=>handleSelectVid(vi.id)} style={vi.id === selectedVidId ? { clipPath:'none',width:'70%',border:'1px solid rgb(225,225,225)',transition:'0 all ease-in-out',cursor:'default',borderRadius:'0px', margin:'0 auto' } : clipPathState || vi.id != selectedVidId && selectedVidId !=null ? {clipPath:'none',width:'15%',borderRadius:'0',marginLeft:'-2px'} :  vi.id === 2 ? {marginLeft:'-429px',marginRight:'-621px',width:'942px'} : vi.id === 1 ? {marginLeft:'190px'} : null}  loop autoPlay muted>
                         <source src={vi.vid} type="video/mp4"/>
                     </e.Vid>
-                    {selectedVidId === vi.id ? <e.InfoVidView style={{maxHeight:vi.id === 0 ? '31.32%' : '24%',marginTop:vi.id === 0 ? '430px' : '482px'}}>
+                    {
+                        selectedVidId === vi.id ? <e.InfoVidView style={{height:vi.id === 2 ? '242px' : '182px',marginTop:vi.id === 2 ? '480.5px' : '541px',marginLeft: vi.id === 1 ? "542px" : vi.id === 2 ? "270px" : null}}>
                         <e.TitleInfoDiv>
                             <i class="gg-smartphone" style={{color:"white",marginTop:'20.2px'}}></i>
                             <box-icon name='desktop' color="white" style={{marginTop:'18px',marginLeft:'6.5px',marginRight:'9px'}}></box-icon>
@@ -164,7 +164,7 @@ return(
                         </e.InfoVidTagDiv>
                         
                        </e.InfoVidView> : null}
-                       { selectedVidId != null ? null : <e.VidDiv onClick={()=>handleSelectVid(vi.id)}>
+                    { selectedVidId != null ? null : <e.VidDiv cp={vi.id === 1 ? "polygon(100% 100%, 0 0, 100% 0)" : vi.id === 0 ? 'none' : null} mgleft={vi.id === 1 ? 513 : vi.id === 0 ? -0 : null} style={vi.id === 1 ? { borderRadius:'8px'} : vi.id === 0 ? {width:'49.3%'} : null} onClick={()=>handleSelectVid(vi.id)}>
                         </e.VidDiv>
                         }
             </>
