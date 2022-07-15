@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { Text, ButtonPrimary, ButtonSecondary, View } from "../../defaultStyles"
 import * as e from "./footerComponents"
 import test from '../../resources/test.png'
 
@@ -12,7 +11,7 @@ const [ navItems ] = useState([
 ])
 return( 
     <e.Footer>
-        <e.Logo src={test}/>
+        <e.Logo alt="logo" src={test}/>
         <e.FlexViewRow>
             { navItems.map((item)=>{ 
                 return( 
@@ -24,7 +23,7 @@ return(
             <a href="http://www.google.com" target="_blank"><box-icon style={e.BoxIconStyle} size={"35px"} name="linkedin-square" color="#168aff" type="logo"/></a>
             <a href="http://www.google.com" target="_blank"><box-icon style={e.BoxIconStyle} size={"39px"} name="youtube" color="#ff3737" type="logo"/></a>
     </e.FlexViewRow>
-    <e.Derechos>Everit Molero | 2022 © Todos los derechos reservados</e.Derechos>
+    <e.Derechos>Everit John | 2022 © Todos los derechos reservados</e.Derechos>
     <e.Privacidad>
         Políticas de Privacidad
     </e.Privacidad>
