@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components"
 
 export const light = { 
 body: "rgb(230,230,230)",
-fontColor: "#000",
+fontColor: "#211211",
 primaryButtonBg: "rgb(205,205,205)",
 secondaryButtonBg: "#2E3138",
 navBg: "rgb(250,250,250)",
@@ -21,7 +21,14 @@ opaqueText2: 'rgb(170,170,170)',
 opaqueBar: 'rgb(225,225,225)',
 glassstyle: 'rgba(0,0,0,.5)',
 colorTheme: 'white',
-footerBg: '#333'
+footerBg: '#333',
+highContrastScheme:'#fff',
+softColor:'rgb(110,110,110)',
+bgtool:'#d9d9d9',
+bgtoolIc:'#fff',
+skillbehindbg:'rgb(70,70,70)',
+opacityScheme:.6,
+boldInLight:'bold',
 }
 export const dark = {
 body: "#222",
@@ -44,16 +51,31 @@ opaqueBar: '#333',
 glassstyle: 'rgba(255,255,255,.2)',
 colorTheme: 'black',
 lightDark:'#d8d8d8',
-footerBg: '#222'
+footerBg: '#222',
+highContrastScheme:'#333',
+softColor:'rgb(225,225,225)',
+bgtool:'#6B6B6B',
+bgtoolIc:'#434343',
+skillbehindbg:'rgb(70,70,70)',
+opacityScheme:.8,
+boldInLight:'lighter',
 }
 export const GlobalStyles = createGlobalStyle` 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
     *{ 
         transition: .4s all ease-in-out;
 -webkit-tap-highlight-color: transparent;
+-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
     }
-    html{
+    html,body{
         overflow-x:hidden;
+        background:#333;
     }
     #box-icon-first, #box-icon-second, #box-icon-third{
         @media(max-width: 480px){

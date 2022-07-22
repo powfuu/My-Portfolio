@@ -13,21 +13,17 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +252 ~/Desktop/dev/webapps/evcv/src/components/home/home.js
-badd +78 src/components/home/homeComponents.js
-badd +0 src/themes.js
+badd +20 src/components/skills/skills.js
+badd +63 src/components/skills/skillsComponents.js
 argglobal
 %argdel
-edit ~/Desktop/dev/webapps/evcv/src/components/home/home.js
+edit src/components/skills/skills.js
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
-wincmd _ | wincmd |
-vsplit
-2wincmd h
-wincmd w
+1wincmd h
 wincmd w
 let &splitbelow = s:save_splitbelow
 let &splitright = s:save_splitright
@@ -38,11 +34,10 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 63 + 96) / 192)
-exe 'vert 2resize ' . ((&columns * 63 + 96) / 192)
-exe 'vert 3resize ' . ((&columns * 64 + 96) / 192)
+exe 'vert 1resize ' . ((&columns * 96 + 96) / 192)
+exe 'vert 2resize ' . ((&columns * 95 + 96) / 192)
 argglobal
-balt src/components/home/homeComponents.js
+balt src/components/skills/skillsComponents.js
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -53,19 +48,18 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 252 - ((24 * winheight(0) + 25) / 51)
+let s:l = 20 - ((17 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 252
-normal! 037|
+keepjumps 20
+normal! 044|
 wincmd w
 argglobal
-if bufexists(fnamemodify("src/themes.js", ":p")) | buffer src/themes.js | else | edit src/themes.js | endif
+if bufexists(fnamemodify("src/components/skills/skillsComponents.js", ":p")) | buffer src/components/skills/skillsComponents.js | else | edit src/components/skills/skillsComponents.js | endif
 if &buftype ==# 'terminal'
-  silent file src/themes.js
+  silent file src/components/skills/skillsComponents.js
 endif
-balt src/components/home/homeComponents.js
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -76,40 +70,15 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 37 - ((29 * winheight(0) + 25) / 51)
+let s:l = 120 - ((44 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 37
-normal! 027|
+keepjumps 120
+normal! 013|
 wincmd w
-argglobal
-if bufexists(fnamemodify("src/components/home/homeComponents.js", ":p")) | buffer src/components/home/homeComponents.js | else | edit src/components/home/homeComponents.js | endif
-if &buftype ==# 'terminal'
-  silent file src/components/home/homeComponents.js
-endif
-balt ~/Desktop/dev/webapps/evcv/src/components/home/home.js
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 78 - ((45 * winheight(0) + 25) / 51)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 78
-normal! 017|
-wincmd w
-2wincmd w
-exe 'vert 1resize ' . ((&columns * 63 + 96) / 192)
-exe 'vert 2resize ' . ((&columns * 63 + 96) / 192)
-exe 'vert 3resize ' . ((&columns * 64 + 96) / 192)
+exe 'vert 1resize ' . ((&columns * 96 + 96) / 192)
+exe 'vert 2resize ' . ((&columns * 95 + 96) / 192)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

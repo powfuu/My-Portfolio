@@ -1,18 +1,24 @@
 import test from '../../resources/test.png'
-import { useState } from "react" 
+import { useState,useEffect } from "react" 
 import { View } from "../../defaultStyles"
 import * as e from './navigationComponents'
 import { Link } from "react-router-dom"
-
+import AOS from 'aos'
+import 'aos/dist/aos.css'; 
 const Navigation = (prop) =>{
 const [isOpen, setOpen] = useState(false)
 const [ navItems ] = useState([ 
-{ title: "Inicio", path:"/", id:0 }, { title: "Tecnologías", path:"/tecnologias", id: 1 }, 
-{ title: "Habilidades", path:"/habilidades", id: 2 }, { title: "Proyectos", path:"/proyectos", id: 3 },
-{ title: "Cursos", path:"/cursos", id: 4 }, { title: "Acerca de", path:"/acerca-de", id: 5 },
-{ title: "Contacto", path:"/contacto", id: 6 },
+    { title: "Inicio", path:"/", id:0 },  
+    { title: "Habilidades", path:"/habilidades", id: 2 },
+    { title: "Tecnologías", path:"/tecnologias", id: 1 },
+    { title: "Proyectos", path:"/proyectos", id: 3 },
+    { title: "Cursos", path:"/cursos", id: 4 }, 
+    { title: "Acerca de", path:"/acerca-de", id: 5 },
+    { title: "Contacto", path:"/contacto", id: 6 },
 ])
-
+useEffect(()=>{
+    AOS.init();
+},[prop.theme])
 const themeToggler = () => {
 if(prop.theme === "light"){
     prop.setTheme("dark");
@@ -24,7 +30,7 @@ if(prop.theme === "light"){
 }
     return ( 
         <e.Nav height={isOpen ? 515 : null}>
-            <Link to="/" onClick={()=>{ prop.setNavItemIdChecked(0); localStorage.setItem("@app:nav:itemId",0) }}><e.Logo alt="logo" src={test}/></Link>
+            <Link to="/inicio" onClick={()=>{ prop.setNavItemIdChecked(0); localStorage.setItem("@app:nav:itemId",0) }}><e.Logo alt="logo" src={test}/></Link>
             <e.NavItems> 
                 {navItems.map((item,KEY)=>{ 
                     return( 

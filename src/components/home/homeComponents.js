@@ -16,11 +16,18 @@ export const ContactView = styled.div`
     position:relative;
     margin:20px auto;
     background:${prop=>prop.theme.navBg};
+    ${mw(1024)}{
+        width:600px;
+    }
+    ${mw(750)}{
+        width:90%;
+    }
 `
 export const Banner = styled.img`
     width:100%;
     border-radius:8px;
-    height:125px;
+    height:135px;
+    object-fit:cover;
 `
 export const Pic = styled.img`
     width:67px;
@@ -36,6 +43,12 @@ export const Description = styled.p`
     margin-top:-8px;
     font-size:14px;
     color:${prop=>prop.theme.opaqueText2};
+    width:60%;
+    text-align:center;
+    ${mw(560)}{
+        font-size:12px;
+        width:80%;
+    }
 `
 export const ContactLinkedin = styled.button`
     padding-left:22px;
@@ -70,15 +83,20 @@ export const LinkedinSvg = styled.img`
     height:47px;
     width:47px;
     position:absolute; 
-    margin-top:135px;
+    margin-top:148px;
     right:0;
     margin-right:50px;
+    ${mw(560)}{
+        margin-right:20px !important;
+        height:44px;
+        width:44px;
+    }
 `
 export const GmailSvg = styled.img`
     height:43px;
     width:43px;
     margin-top:-5px;
-    margin-bottom:20px;
+    margin-bottom:25px;
     cursor:pointer;
 `
 export const TecnologiesDiv = styled.div`
@@ -440,7 +458,7 @@ margin-top:0px;
 `
 export const HomeView = styled.div`
     position:relative;
-    background: ${(prop) => prop.theme.navBg};
+    background-color:black;
     margin: 0 auto;
     min-height:600px;
     width: 95%;
@@ -489,6 +507,9 @@ export const VidPreview = styled.video`
     ${mw(1850)}{
         width:100%;
     }
+    ${mw(499)}{
+        object-position:bottom;
+    }
 `
 export const VidDiv = styled.div`
     position:absolute;
@@ -504,7 +525,12 @@ export const VidDiv = styled.div`
     border-radius:8px;
     border-bottom-right-radius:0px;
     border-top-right-radius:0px;
+    backdrop-filter: blur(0px);
+    &:hover{
+        backdrop-filter: blur(10px);
+    }
     ${mw(1850)}{
+        border-radius:0px;
         width:100%;
         height:600px;
     }
@@ -531,8 +557,6 @@ export const Vid = styled.video`
     position:absolute;
     width:100%;
     height:100%;
-    object-fit:cover;
-    object-position:bottom;
     border-radius:8px;
     border-bottom-right-radius:0px;
     border-top-right-radius:0px;
@@ -664,7 +688,7 @@ export const LeftViewTitleDiv = styled.div`
     position: relative;
     margin-top: -3px;
     background: ${(prop) => prop.theme.inverseSoftColorIllusion};
-    padding-bottom: 45px;
+    padding-bottom: 55px;
 
 `
 export const LeftViewDescription = styled.p`
@@ -715,6 +739,10 @@ padding-bottom:20px;
 backdrop-filter: blur(3px);
 padding-left:25px;
   flex-wrap: wrap;
+backdrop-filter: blur(0px);
+&:hover{
+    backdrop-filter: blur(10px);
+}
     ${mw(954)}{
         padding-bottom:75px !important;
     }

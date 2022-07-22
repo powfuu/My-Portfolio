@@ -4,16 +4,21 @@ const mw = (prop) => {
     return `@media (max-width: ${prop}px)`
 }
 export const Footer = styled.footer` 
-    width:100%;
     background: ${props=>props.theme.footerBg};
     position:relative;
-    margin-top:50px;
     bottom:0;
     display:flex;
     flex-direction: column;
     padding-top:18px;
     padding-bottom:20px;
     align-items:center;
+    width:100%;
+    // width: 98.4%;
+    // border-radius:20px;
+    // margin-bottom:14px;
+    // border-radius:8px;
+    margin:50px auto;
+    margin-bottom:0;
 `
 export const Logo = styled.img` 
     height:45px;
