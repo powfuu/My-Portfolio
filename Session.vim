@@ -13,11 +13,11 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +20 src/components/skills/skills.js
-badd +63 src/components/skills/skillsComponents.js
+badd +1 src/components/home/home.js
+badd +320 ~/Desktop/dev/webapps/evcv/src/components/home/homeComponents.js
 argglobal
 %argdel
-edit src/components/skills/skills.js
+edit ~/Desktop/dev/webapps/evcv/src/components/home/homeComponents.js
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -34,10 +34,9 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 96 + 96) / 192)
-exe 'vert 2resize ' . ((&columns * 95 + 96) / 192)
+exe 'vert 1resize ' . ((&columns * 95 + 96) / 192)
+exe 'vert 2resize ' . ((&columns * 96 + 96) / 192)
 argglobal
-balt src/components/skills/skillsComponents.js
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -48,18 +47,19 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 20 - ((17 * winheight(0) + 25) / 51)
+let s:l = 794 - ((50 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 20
-normal! 044|
+keepjumps 794
+normal! 0
 wincmd w
 argglobal
-if bufexists(fnamemodify("src/components/skills/skillsComponents.js", ":p")) | buffer src/components/skills/skillsComponents.js | else | edit src/components/skills/skillsComponents.js | endif
+if bufexists(fnamemodify("src/components/home/home.js", ":p")) | buffer src/components/home/home.js | else | edit src/components/home/home.js | endif
 if &buftype ==# 'terminal'
-  silent file src/components/skills/skillsComponents.js
+  silent file src/components/home/home.js
 endif
+balt ~/Desktop/dev/webapps/evcv/src/components/home/homeComponents.js
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -70,15 +70,16 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 120 - ((44 * winheight(0) + 25) / 51)
+let s:l = 251 - ((25 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 120
-normal! 013|
+keepjumps 251
+normal! 039|
 wincmd w
-exe 'vert 1resize ' . ((&columns * 96 + 96) / 192)
-exe 'vert 2resize ' . ((&columns * 95 + 96) / 192)
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 95 + 96) / 192)
+exe 'vert 2resize ' . ((&columns * 96 + 96) / 192)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

@@ -242,7 +242,7 @@ export const TecRight = styled.div`
     }
 `
 export const TecnologiesView = styled.div`
-    margin-top:60px;
+    margin-top:50px;
 `
 export const TecTitleSection = styled.div`
     display:flex;
@@ -458,7 +458,7 @@ margin-top:0px;
 `
 export const HomeView = styled.div`
     position:relative;
-    background-color:black;
+    background-color:${p=>p.theme.body};
     margin: 0 auto;
     min-height:600px;
     width: 95%;
@@ -468,10 +468,12 @@ export const HomeView = styled.div`
   flex-wrap: wrap;
     ${mw(1150)}{
         width: 100%;
+        margin-top:-90px;
+        border-radius:0px;
     }
 `
 export const LeftView = styled.div`
-    width:55%;
+    width:55.20%;
     background:rgb(55,55,55);
     padding-top:3px;
 display: flex;
@@ -487,7 +489,9 @@ export const RightView = styled.div`
     border-bottom-right-radius:0px;
     border-top-right-radius:0px;
     ${mh(1151)}{
-    border-right:2px solid ${prop=>prop.theme.opaqueBar};
+    }
+    ${mw(1150)}{
+        border-radius:0px;
     }
     ${mw(1850)}{
         height:600px;
@@ -514,8 +518,8 @@ export const VidPreview = styled.video`
 export const VidDiv = styled.div`
     position:absolute;
     z-index:1;
-    width:45%;
-    height:99%;
+    width:44.8%;
+    height:99.6%;
     display:flex;
     flex-direction:column;
     padding-top:3px;
@@ -534,6 +538,9 @@ export const VidDiv = styled.div`
         width:100%;
         height:600px;
     }
+${mw(1200)}{
+        backdrop-filter: blur(10px);
+}
 `
 export const VidTitle = styled.p`
     color:white;
@@ -555,8 +562,9 @@ export const VidButton = styled.button`
 `
 export const Vid = styled.video`
     position:absolute;
-    width:100%;
+width:100%;
     height:100%;
+object-fit:cover;
     border-radius:8px;
     border-bottom-right-radius:0px;
     border-top-right-radius:0px;
@@ -682,14 +690,12 @@ z-index:1;
     margin-left: ${(prop) => prop.mgleft};
 `
 export const LeftViewTitleDiv = styled.div`
-    border-radius:7px;
     border-bottom-left-radius:0px;
     border-top-left-radius:0px;
     position: relative;
     margin-top: -3px;
     background: ${(prop) => prop.theme.inverseSoftColorIllusion};
     padding-bottom: 55px;
-
 `
 export const LeftViewDescription = styled.p`
     color: ${(prop) => prop.theme.inverseSoftFontColor};
@@ -739,7 +745,6 @@ padding-bottom:20px;
 backdrop-filter: blur(3px);
 padding-left:25px;
   flex-wrap: wrap;
-backdrop-filter: blur(0px);
 &:hover{
     backdrop-filter: blur(10px);
 }

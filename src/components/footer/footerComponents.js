@@ -17,7 +17,7 @@ export const Footer = styled.footer`
     // border-radius:20px;
     // margin-bottom:14px;
     // border-radius:8px;
-    margin:50px auto;
+    margin:40px auto;
     margin-bottom:0;
 `
 export const Logo = styled.img` 
@@ -31,6 +31,7 @@ export const FlexViewRow = styled.div`
     display:flex;
     flex-direction: row;
   flex-wrap: wrap;
+    position:relative;
 `
 export const ShortcutLink = styled(Link)` 
     text-decoration: none;
@@ -70,6 +71,6 @@ export const Privacidad = styled.p`
 `
 export const BoxIconStyle = { 
 paddingLeft:8,
-marginTop:14,
+marginTop:-35,
 cursor:'pointer'
 }

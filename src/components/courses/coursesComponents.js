@@ -8,20 +8,27 @@ export const View = styled.div`
     text-align:center;
     padding-right:30px;
     padding-left:30px;
+    margin-top:100px;
 `
 export const Img_404 = styled.img`
-    height:100%;
+    height:40%;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    left:50%;
+    top:40%;
     opacity:.6 !important;
     @media(max-width:975px){
-        height:70%;
+        height:32%;
     }
     @media(max-width:400px){
-        height:60%;
+        height:22%;
     }
 `
 export const Img = styled.img`
     height:45%;
-    opacity:${p=>p.theme.opacityScheme} !important;
+    margin-top:50px;
+    opacity:.5 !important;
     @media(max-width: 800px){
         height:40%;
     }

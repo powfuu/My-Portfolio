@@ -7,6 +7,7 @@ const mh = (prop)=>{
     return `@media(min-width: ${prop}px)`
 }
 export const ContactView = styled.div`
+    margin-top:90px;
 `
 export const ProfileView = styled.div`
 box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
@@ -108,6 +109,14 @@ export const ContactGmail = styled.img`
 `
 export const Card = styled.div`
     margin-top:25px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-right:30px;
+    margin-left:30px;
+    padding-top:10px;
 `
 export const CardQuestion = styled.div`
     width:500px;
@@ -115,11 +124,16 @@ export const CardQuestion = styled.div`
     text-align:center;
     background-color:${p => p.theme.navBg};
     border-radius: 20px;
-    margin:15px auto;
+    margin-right:30px;
+    margin-bottom:20px;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     overflow-y:hidden;
     cursor:pointer;
+    &:hover{
+        opacity:.6;
+    }
     ${mw(570)}{
+        margin-right:0px;
         width:92%;
     }
 `

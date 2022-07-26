@@ -1,14 +1,15 @@
 import styled from 'styled-components'
 import { Canvas } from "react-three-fiber"
 
-
 const mw = (prop)=>{
     return `@media(max-width: ${prop}px)`
 }
 const mh = (prop)=>{
     return `@media(min-width: ${prop}px)`
 }
+
 export const TecView = styled.div`
+    margin-top:90px;
 `
 export const TecBox = styled.div`
     display:flex;

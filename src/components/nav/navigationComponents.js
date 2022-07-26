@@ -7,6 +7,68 @@ const mh = (prop) => {
 const mw = (prop) => {
     return `@media (max-width: ${prop}px)`
 }
+export const ScrollUpView = styled.div`
+    height:60px;
+    width:60px;
+    position:fixed;
+    transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    z-index:2;
+    top:120%;
+    right:0;
+    margin-right:55px;
+    background:black;
+    border-radius:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px;
+    ${mw(1560)}{
+        margin-right:50px;
+    }
+    ${mw(1024)}{
+        margin-right:35px;
+    }
+    ${mw(500)}{
+        margin-right:5px;
+        height:55px;
+        width:55px;
+    }
+`
+export const ScrollUpIc={
+    transform:'scale(1.3)'
+}
+export const LanguageView = styled.div`
+    height:55px;
+    width:55px;
+    position:fixed;
+    transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    z-index:2;
+    top:92%;
+    right:left;
+    margin-left:75px;
+    background:${p=>p.theme.navBg};
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px;
+    border-radius:100%;
+    border-bottom-left-radius:5px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    ${mw(500)}{
+        margin-left:45px;
+        height:55px;
+        width:55px;
+    }
+`
+export const CurrentLanguageSvg = styled.img`
+    height:25px;
+    width:33px;
+    border-radius:6px;
+    transition:0s !important;
+`
 export const HamMenu = styled(Burger)`
     display:none;
     position:absolute;
@@ -36,25 +98,32 @@ export const Logo = styled.img`
     }
 `
 export const Nav = styled.nav` 
-    box-shadow: 3px 4px 4px ${prop => prop.theme.body};
     width: 95%;
     border-radius:20px;
     background-color: ${prop => prop.theme.navBg};
     height: ${prop=>prop.height || 52}px;
     display:flex;
     justify-content:space-between;
+    z-index:5;
     margin:20px auto;
     ${mh(1151)}{
         height:52px !important;
+    top:0;
+    position:fixed;
+    transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    left:50%;
+    top:20px;
     }
     ${mw(1150)}{
-        overflow-y:hidden;
-        justify-content: none;
-        flex-direction:column;
-        width:100%;
-        border-radius:0px;
-        margin:0px auto;
-        margin-bottom:12px;
+        display:block !important;
+        overflow-y:hidden !important;
+        justify-content: none !important;
+        flex-direction:column !important;
+        width:100% !important;
+        border-radius:0px !important;
+        margin:0px auto !important;
+        margin-bottom:-70px !important;
     }
 `
 export const ToggleTheme = styled.div` 
@@ -93,10 +162,14 @@ export const ThemeModeView = styled.div`
 export const NavItems = styled.div` 
     display:flex;
     align-self:center;
-    margin-top:0px;
+    ${mh(1151)}{
+    margin-top:-88.25px;
+    }
     ${mw(1150)}{
-        margin-top:-13px;
+        padding:0;
         display:block;
+        margin:-72px auto;
+        width:max-content;
     }
 `
 export const Item = styled.p` 
@@ -111,6 +184,7 @@ export const Item = styled.p`
     width:max-content;
     ${mw(1150)}{
         padding-top:4px;
+        margin-bottom:-70px;
         display:block;
     }
     //padding-bottom:12.5px;
@@ -141,6 +215,7 @@ export const ItemWithoutEffect = styled.p`
     ${mw(1150)}{
         padding-top:4px;
         display:block;
+        margin-bottom:-70px;
     }
 `
 export const moon = { 
@@ -161,7 +236,8 @@ fontSize:'14px'
 }
 export const ViewR = styled.div`
     ${mw(1150)}{
-        margin:0 auto;
+        width:max-content;
+        margin:110px auto;
         padding-bottom:50px;
     }
 `

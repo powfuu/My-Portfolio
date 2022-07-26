@@ -23,12 +23,13 @@ glassstyle: 'rgba(0,0,0,.5)',
 colorTheme: 'white',
 footerBg: '#333',
 highContrastScheme:'#fff',
-softColor:'rgb(110,110,110)',
+softColor:'rgb(130,130,130)',
 bgtool:'#d9d9d9',
 bgtoolIc:'#fff',
 skillbehindbg:'rgb(70,70,70)',
 opacityScheme:.6,
 boldInLight:'bold',
+important:'#00cba9'
 }
 export const dark = {
 body: "#222",
@@ -53,12 +54,13 @@ colorTheme: 'black',
 lightDark:'#d8d8d8',
 footerBg: '#222',
 highContrastScheme:'#333',
-softColor:'rgb(225,225,225)',
+softColor:'rgb(215,215,215)',
 bgtool:'#6B6B6B',
 bgtoolIc:'#434343',
 skillbehindbg:'rgb(70,70,70)',
 opacityScheme:.8,
 boldInLight:'lighter',
+important:'#00a48d'
 }
 export const GlobalStyles = createGlobalStyle` 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
@@ -75,7 +77,7 @@ export const GlobalStyles = createGlobalStyle`
     }
     html,body{
         overflow-x:hidden;
-        background:#333;
+        background:${p=>p.theme.body};
     }
     #box-icon-first, #box-icon-second, #box-icon-third{
         @media(max-width: 480px){
@@ -116,6 +118,7 @@ export const GlobalStyles = createGlobalStyle`
         color:${prop=>prop.theme.fontColor};
         user-select: none;
 font-family: 'Open Sans', sans-serif;
+      white-space: pre-wrap;
     }
     button{ 
         border:none;

@@ -1,8 +1,7 @@
-import { useEffect } from 'react'
+import React,{ useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import * as e from './technologiesComponents'
 import { Text, View, ButtonSecondary, ButtonPrimary} from "../../defaultStyles"
-import Laptop from '../../3d_modules/Laptop.js'
 import { OrbitControls, Sky } from '@react-three/drei'
 //logos
 import javascriptsvg from '../../resources/tecsvg/javascript.svg'
@@ -30,6 +29,8 @@ import phpsvg from '../../resources/tecsvg/php.svg'
 import threejssvg from '../../resources/tecsvg/threejs.svg'
 import bootstrapsvg from '../../resources/tecsvg/bootstrap.svg'
 import pythonsvg from '../../resources/tecsvg/python.svg'
+
+const Laptop = React.lazy(()=>import('../../3d_modules/Laptop.js'))
 
 const Technologies = (props) =>{ 
     let tecList = [

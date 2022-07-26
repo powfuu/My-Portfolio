@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import * as e from './skillsComponents'
 import { View } from "../../defaultStyles"
@@ -26,7 +26,7 @@ const Skills = () =>{
         { id:5, title:'Aprendizaje Rápido', svg: stopwatchtimersvg}
     ]
 return( 
-    <View mgtop={30} mgleft={25} mgright={25} style={{marginBottom:'60px'}}> 
+    <View mgtop={100} mgleft={25} mgright={25} style={{marginBottom:'60px'}}> 
     <e.TitleView>   
         <e.TitleLine data-aos-offset='-300' data-aos='zoom-in-right'/>
         <e.Title data-aos-offset='-300' data-aos='zoom-in-left'>Herramientas</e.Title>
@@ -59,7 +59,7 @@ return(
         {skills.map((s, KEY)=>{
             return(
                 <e.SkillBoxPolygon>
-                <e.SkillBoxBehind data-aos-delay='350' data-aos-duration='300' data-aos='zoom-in-up'/> 
+                <e.SkillBoxBehind data-aos-delay='350' data-aos-duration='300' data-aos='zoom-in-up' data-aos-offset='0'/> 
                 <e.SkillBox key={KEY}>
                     <e.SkillSvg  ml={s.svg === ussvg ? 60 : s.svg === autodidactsvg ? 65 : s.svg === responsivesvg ? 55 : s.svg === lightbulbsvg ? 46 : 65} mt={s.svg === ussvg ? 65 : s.svg === autodidactsvg ? 55 : s.svg === responsivesvg ? 50 : s.svg === lightbulbsvg ? 44 : 60} height={s.svg === ussvg ? 30 : s.svg === autodidactsvg ? 42 : s.svg === responsivesvg ? 51 : s.svg === lightbulbsvg ? 55 : 40} style={s.svg === ussvg ? {background:'white'} : null} src={s.svg}/>
                     <e.SkillTitle style={s.svg===lightbulbsvg ? {fontSize:'12px',marginBottom:'28px'} : null}>{s.title}</e.SkillTitle>

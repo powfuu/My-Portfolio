@@ -20,8 +20,9 @@ import * as e from './components/courses/coursesComponents.js'
 
 function App() {
 const [loaded,setLoaded]=useState(false)
+const [lan, setLan]=useState(localStorage.getItem('@app:lang') == null ? "es" : localStorage.getItem("@app:lang"))
 const [theme,setTheme] = useState( localStorage.getItem('@app:theme') == null ? "light" : localStorage.getItem("@app:theme") )
-const [ navItemIdChecked, setNavItemIdChecked ] = useState(localStorage.getItem('@app/nav:itemId') == null ? 0 :localStorage.getItem('@app/nav:itemId'))
+const [ navItemIdChecked, setNavItemIdChecked ] = useState(localStorage.getItem('@app/nav:itemId') == null ? 0 : localStorage.getItem('@app/nav:itemId'))
     useEffect(()=>{
         if(window.location.pathname === '/inicio'){
             setNavItemIdChecked(0)
@@ -47,7 +48,7 @@ const [ navItemIdChecked, setNavItemIdChecked ] = useState(localStorage.getItem(
         if(window.location.pathname != '/inicio' && window.location.pathname != '/' && window.location.pathname != '/contacto' && window.location.pathname != '/acerca-de' && window.location.pathname != '/cursos' && window.location.pathname != '/proyectos' && window.location.pathname != '/habilidades' && window.location.pathname != '/tecnologias'){
             setNavItemIdChecked(7)
         }
-        setLoaded(true)
+        // setLoaded(true)
         setTimeout(()=>{
             setLoaded(true)
         },3350)
@@ -56,14 +57,16 @@ const [ navItemIdChecked, setNavItemIdChecked ] = useState(localStorage.getItem(
     <ThemeProvider theme={ theme === "light" ? light : dark }>
         <ScrollTop/>
         <GlobalStyles/>
+
         {!loaded ? <div style={{
             display:'flex',
             alignItems: 'center',
             }}><HashLoader size={75} color={"#888"} style={{
             }}/></div> : <> 
                 {navItemIdChecked != 7 ?
-                <Nav theme={theme} navItemIdChecked={navItemIdChecked} setNavItemIdChecked={setNavItemIdChecked} setTheme={setTheme}/>
+                <Nav lan={lan} setLan={setLan} theme={theme} navItemIdChecked={navItemIdChecked} setNavItemIdChecked={setNavItemIdChecked} setTheme={setTheme}/>
             : null}
+                <div style={{minHeight:'100vh',overflow: 'hidden'}}>
         <Routes>
             <Route path='/' element={<Navigate to={navItemIdChecked == 0 ? "/inicio" : navItemIdChecked == 1 ? "/tecnologias" : navItemIdChecked == 2 ? "/habilidades" : navItemIdChecked == 3 ? "/proyectos" : navItemIdChecked == 4 ? "/cursos" : navItemIdChecked == 5 ? "/acerca-de" : navItemIdChecked == 6 ? "/contacto" : null}/>}/>
             <Route path='/inicio' element={<Home theme={theme} setNavItemIdChecked={setNavItemIdChecked}/>}/>
@@ -83,10 +86,11 @@ const [ navItemIdChecked, setNavItemIdChecked ] = useState(localStorage.getItem(
             }
           />
         </Routes>
-        {
+
+                </div> 
         <Footer navItemIdChecked={navItemIdChecked} setNavItemIdChecked={setNavItemIdChecked}/>
-        } </> }      
-        
+                : </>
+ }      
     </ThemeProvider>
   );
 }

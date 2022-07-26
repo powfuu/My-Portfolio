@@ -1,11 +1,10 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import * as e from './contactComponents'
 import linkedinsvg from '../../resources/linkedin.svg'
 import gmailsvg from '../../resources/gmail.svg'
 import banner from '../../resources/banner.png'
 import pic from '../../resources/pic.png'
-
 const Contact = () =>{ 
     const [q1State, setq1State] = useState(false)
     const [q2State, setq2State] = useState(false)
@@ -40,7 +39,7 @@ return(
             </e.OrView> 
             <e.ContactGmail data-aos-offset='-400' data-aos='zoom-in-right' data-aos-duration='700' data-aos-delay='500' src={gmailsvg}/>
         </e.ProfileView> 
-        <e.Card data-aos='zoom-in-up' data-aos-duration='450' data-aos-offset='0'>
+        <e.Card data-aos='zoom-in-up' data-aos-duration='450' data-aos-offset='-180'>
         {questions.map((q)=>{
                 return(
                     <e.CardQuestion onClick={()=>handleqState(q.id)} height={q.id === 0 ? q1State === true ? 128 : 60 : q.id ===1 ? q2State === true ? 128 : 60 : q.id === 2 ? q3State === true ? 128 : 60 : null}>
