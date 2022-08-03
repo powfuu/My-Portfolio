@@ -48,7 +48,7 @@ const [ navItemIdChecked, setNavItemIdChecked ] = useState(localStorage.getItem(
         if(window.location.pathname != '/inicio' && window.location.pathname != '/' && window.location.pathname != '/contacto' && window.location.pathname != '/acerca-de' && window.location.pathname != '/cursos' && window.location.pathname != '/proyectos' && window.location.pathname != '/habilidades' && window.location.pathname != '/tecnologias'){
             setNavItemIdChecked(7)
         }
-        // setLoaded(true)
+        setLoaded(true)
         setTimeout(()=>{
             setLoaded(true)
         },3350)
@@ -58,11 +58,15 @@ const [ navItemIdChecked, setNavItemIdChecked ] = useState(localStorage.getItem(
         <ScrollTop/>
         <GlobalStyles/>
 
-        {!loaded ? <div style={{
+        {!loaded ?
+                <div style={{
             display:'flex',
             alignItems: 'center',
-            }}><HashLoader size={75} color={"#888"} style={{
-            }}/></div> : <> 
+                }}>
+                <HashLoader size={75} color={"#888"} style={{
+                }}/>
+                </div>
+                    : <> 
                 {navItemIdChecked != 7 ?
                 <Nav lan={lan} setLan={setLan} theme={theme} navItemIdChecked={navItemIdChecked} setNavItemIdChecked={setNavItemIdChecked} setTheme={setTheme}/>
             : null}
@@ -72,7 +76,7 @@ const [ navItemIdChecked, setNavItemIdChecked ] = useState(localStorage.getItem(
             <Route path='/inicio' element={<Home theme={theme} setNavItemIdChecked={setNavItemIdChecked}/>}/>
             <Route path='/tecnologias' element={<Technologies theme={theme}/>}/>
             <Route path='/habilidades' element={<Skills/>}/>
-            <Route path='/proyectos' element={<Projects/>}/>
+            <Route path='/proyectos' element={<Projects theme={theme}/>}/>
             <Route path='/cursos' element={<Courses/>}/>
             <Route path='/contacto' element={<Contact/>}/>
             <Route path='/acerca-de' element={<AboutMe/>}/>

@@ -18,7 +18,7 @@ export const Footer = styled.footer`
     // margin-bottom:14px;
     // border-radius:8px;
     margin:40px auto;
-    margin-bottom:0;
+    margin-bottom:-18px !important;
 `
 export const Logo = styled.img` 
     height:45px;

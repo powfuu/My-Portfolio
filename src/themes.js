@@ -5,6 +5,8 @@ body: "rgb(230,230,230)",
 fontColor: "#211211",
 primaryButtonBg: "rgb(205,205,205)",
 secondaryButtonBg: "#2E3138",
+thirdButtonBg: "#212111",
+thirdButtonFg: '#e8e8e8',
 navBg: "rgb(250,250,250)",
 bpc: '#333',
 bsc: '#e4e4e4',
@@ -36,6 +38,8 @@ body: "#222",
 fontColor: "#fff",
 primaryButtonBg: "#494949",
 secondaryButtonBg: "rgb(225,225,225)",
+thirdButtonBg: "#494949",
+thirdButtonFg: '#e8e8e8',
 navBg: "#333",
 bpc: '#e8e8e8',
 bsc: '#333',
@@ -108,11 +112,12 @@ export const GlobalStyles = createGlobalStyle`
             margin-left:20px !important;
         }
 }
-    body{ 
+    body,html{ 
         background-color: ${prop=>prop.theme.body};
         padding:0;
         margin:0;
         overflow-x:hidden;
+min-height: -webkit-fill-available;
     }
     p,h1,h2,h3,h4,h5,h6,ul,li,button,a{
         color:${prop=>prop.theme.fontColor};

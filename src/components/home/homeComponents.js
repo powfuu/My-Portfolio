@@ -7,6 +7,19 @@ const mw = (prop)=>{
 const mh = (prop)=>{
     return `@media(min-width: ${prop}px)`
 }
+export const Etiqueta = styled.div`
+    background:${p=>p.bg};
+    position:absolute;
+    height:60px;
+    width:84px;
+    right:0;
+    border-bottom-right-radius:18px;
+    margin-top:12px;
+    margin-right:-12px;
+  -webkit-clip-path: polygon(100% 0, 100% 0%, 100% 100%, 24% 100%);
+  clip-path: polygon(100% 0, 100% 0%, 100% 100%, 24% 100%);
+    transform:rotate(-90deg);
+`
 export const ContactView = styled.div`
     width:800px;
     border-radius:8px;
@@ -113,7 +126,6 @@ export const TecnologiesDiv = styled.div`
     }
 `
 export const ViewTecnologiesButLeft = styled.button`
-    display:none;
     position:absolute;
     transform:translate(-50%,-50%);
     left:22%;
@@ -270,19 +282,19 @@ export const TecBoxes = styled.div`
     display:flex;
     flex-direction:row;
     margin-top:20px;
-  flex-wrap: wrap;
+    flex-wrap: wrap;
     align-items:center;
     margin-left:30px;
     justify-content:center;
 `
 export const TecBox = styled.div`
     margin-right:30px;
+    position:relative;
     background:rgb(250,250,250);
     border-radius:25px;
     width:410px;
     height:300px;
     margin-top:13px;
-    box-shadow: 1px 1px 1px 1px ${(prop) => prop.theme.inverseSoftFontColor};
     ${mw(411)}{
         width:100%;
         margin-right:20px;
@@ -293,9 +305,9 @@ export const TecBoxInverse = styled.div`
     margin-top:13px;
     background:rgb(55,55,55);
     border-radius:25px;
+box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     width:410px;
     height:300px;
-    box-shadow: 1px 1px 1px 1px ${(prop) => prop.theme.inverseSoftFontColor};
     ${mw(411)}{
         width:100%;
         margin-right:20px;
@@ -459,16 +471,24 @@ margin-top:0px;
 export const HomeView = styled.div`
     position:relative;
     background-color:${p=>p.theme.body};
+    background:black;
     margin: 0 auto;
     min-height:600px;
+    border-radius:8px;
     width: 95%;
-    border-radius: 8px;
     display: flex;
     flex-direction:row;
   flex-wrap: wrap;
+box-shadow: rgba(0, 0, 0, .6) 0px 3px 5px;
+    ${mh(1370)}{
+        // height:82.5vh;
+    }
+    ${mw(1369)}{
+        width: 95%;
+    }
     ${mw(1150)}{
         width: 100%;
-        margin-top:-90px;
+        margin-top:-20px;
         border-radius:0px;
     }
 `
@@ -478,12 +498,14 @@ export const LeftView = styled.div`
     padding-top:3px;
 display: flex;
   flex-flow: column;
-    ${mw(1850)}{
-        width:100% !important;
+    border-radius:140px;
+    ${mw(1369)}{
+        width:100%;
     }
 `
 export const RightView = styled.div`
     width:44.8%;
+    height:100%;
     background:rgb(55,55,55);
     border-radius:8px;
     border-bottom-right-radius:0px;
@@ -493,9 +515,9 @@ export const RightView = styled.div`
     ${mw(1150)}{
         border-radius:0px;
     }
-    ${mw(1850)}{
+    ${mw(1369)}{
+        width:100%;
         height:600px;
-        width:100% !important;
     }
 `
 export const VidPreview = styled.video`
@@ -506,9 +528,7 @@ export const VidPreview = styled.video`
     object-fit:cover;
     object-position:center;
     border-radius:8px;
-    border-bottom-right-radius:0px;
-    border-top-right-radius:0px;
-    ${mw(1850)}{
+    ${mw(1369)}{
         width:100%;
     }
     ${mw(499)}{
@@ -529,14 +549,15 @@ export const VidDiv = styled.div`
     border-radius:8px;
     border-bottom-right-radius:0px;
     border-top-right-radius:0px;
+
     backdrop-filter: blur(0px);
     &:hover{
         backdrop-filter: blur(10px);
     }
-    ${mw(1850)}{
+    ${mw(1369)}{
         border-radius:0px;
-        width:100%;
         height:600px;
+        width:100%;
     }
 ${mw(1200)}{
         backdrop-filter: blur(10px);
@@ -566,15 +587,13 @@ width:100%;
     height:100%;
 object-fit:cover;
     border-radius:8px;
-    border-bottom-right-radius:0px;
-    border-top-right-radius:0px;
-    ${mw(1850)}{
-        display:none;
+    ${mw(1369)}{
+        width:100%;
     }
 `
 export const FrequentlyAskedAnswer = styled.p`
     transition:0s;
-    margin-top:-14.5px;
+    margin-top:-9.5px;
     margin-left:13px;
     padding-right:2px;
     font-size:12.3px;
@@ -583,6 +602,16 @@ export const FrequentlyAskedAnswer = styled.p`
     ${mw(880)}{
         font-size:11px;
     }
+    ${mw(1641)}{
+        font-size:11px;
+    }
+    ${mw(1486)}{
+        margin-top:-17px;
+        font-size:10.5px;
+    }
+    ${mw(1369)}{
+        font-size:12.3px;
+    }
     ${mw(797)}{
         font-size:10px;
     }
@@ -590,8 +619,6 @@ export const FrequentlyAskedAnswer = styled.p`
 export const FrequentlyAskedDiv = styled.div`
     background:${prop=>prop.theme.inverseSoftColorIllusion};
     border-radius:7px;
-    border-bottom-left-radius:0px;
-    border-top-left-radius:0px;
     position: relative;
     height:cover;
     width:100%;
@@ -610,7 +637,7 @@ export const FrequentlyAskedBox = styled.div`
     border-radius:7px;
     margin-right:17px;
     margin-left:${prop=>prop.mgleft || 0}px;
-    height: ${prop=>prop.height || 78}%;
+    height: ${prop=>prop.height || 78}px;
     margin-top:${prop=>prop.mgtop || 30}px;
     width:${prop=>prop.width || 250 }px;
     background:${prop=>prop.theme.opaqueBar};
@@ -629,7 +656,6 @@ export const FrequentlyAskedText = styled.p`
     left:0;
 `
 export const FrequenltyBoxTitleDiv = styled.div`
-
     transition:0s;
     background:${prop=>prop.theme.opaqueBar};
     border-radius:7px;
@@ -657,7 +683,7 @@ export const FrequentlyAskedBoxHidden = styled.div`
     ${mh(2685)}{
         display:block;
     }
-    ${mw(1850)}{
+    ${mw(1369)}{
         display:block;
     }
     ${mw(1320)}{
@@ -690,12 +716,14 @@ z-index:1;
     margin-left: ${(prop) => prop.mgleft};
 `
 export const LeftViewTitleDiv = styled.div`
-    border-bottom-left-radius:0px;
-    border-top-left-radius:0px;
     position: relative;
     margin-top: -3px;
     background: ${(prop) => prop.theme.inverseSoftColorIllusion};
     padding-bottom: 55px;
+    border-radius:8px;
+    border-bottom-left-radius:0px;
+    border-top-left-radius:0px;
+
 `
 export const LeftViewDescription = styled.p`
     color: ${(prop) => prop.theme.inverseSoftFontColor};

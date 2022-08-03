@@ -158,7 +158,7 @@ export const Question = styled.p`
     }
     ${mw(533)}{
         font-size:12px;
-        margin-top:17px;
+        margin-top:18.5px;
     }
 `
 export const Answer = styled.p`
@@ -170,5 +170,11 @@ export const Answer = styled.p`
     font-size:15px;
     ${mw(533)}{
         margin-top:25px;
+    }
+    ${mw(570)}{
+        font-size:13px;
+    }
+    ${mw(533)}{
+        font-size:11px;
     }
 `

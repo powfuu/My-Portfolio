@@ -114,6 +114,7 @@ export const Nav = styled.nav`
     -ms-transform:translate(-50%,-50%);
     left:50%;
     top:20px;
+    box-shadow: rgba(0, 0, 0, .1) 0px 0px 2px;
     }
     ${mw(1150)}{
         display:block !important;

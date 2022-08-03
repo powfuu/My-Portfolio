@@ -27,8 +27,7 @@ export const TechnologiesView = styled.div`
     margin-top:1vh;
 `
 export const TecLevelView = styled.div`
-
-box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     background:${prop=>prop.theme.navBg};
     border-radius:21px;
     width:max-content;

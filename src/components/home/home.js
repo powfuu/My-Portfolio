@@ -13,29 +13,14 @@ import gmailsvg from '../../resources/gmail.svg'
 import banner from '../../resources/banner.png'
 import pic from '../../resources/pic.png'
 const Home = ( props ) =>{ 
-    const [years,setYears]=useState(0)
-    const [courses,setCourses]=useState(0)
-    const [hours,setHours]=useState(0)
+    const [years,setYears]=useState(7)
+    const [courses,setCourses]=useState(3)
+    const [hours,setHours]=useState(9)
     const [loadedVid, setLoadedVid]=useState(false)
     const [selectedVidId, selectVidId] = useState(null);
 const handleSelectVid = prop =>{ 
     selectVidId(prop)
 }
-useEffect(()=>{ 
-    if(hours < 9){
-    setTimeout(()=>{
-        if(years <= 6){
-        setYears(years=>years+1)
-        }
-        if(hours <= 9){
-        setHours(hours=>hours+1)
-        }
-        if(courses <= 2){
-        setCourses(courses=>courses+1)
-        }
-    },100)   
-    }
-},[hours])
 return( 
     <View> 
         <e.HomeView data-aos='zoom-in' data-aos-offset='-600' data-aos-duration='600'>
@@ -87,7 +72,7 @@ return(
                 </e.AboutMeDiv>
                 <e.FrequentlyAskedDiv>
                     <e.FrequentlyAskedText data-aos='zoom-in-up'>{`<${tr[0].frequentlyasked}/>`}</e.FrequentlyAskedText>
-                    <e.FrequentlyAskedBox data-aos="flip-right" data-aos-duration={800} mgleft={42} width={246} height={60} mgtop={80.5}>
+                    <e.FrequentlyAskedBox data-aos="flip-right" data-aos-duration={800} mgleft={42} width={246} height={200} mgtop={80.5}>
                         <e.FrequenltyBoxTitleDiv>
                     <e.SmallPoint bg={"#e14c44"} mgleft="14px" mgtop="14.3px"/> 
                     <e.SmallPoint bg={"#f5d827"} mgleft="35px" mgtop="14.3px"/> 
@@ -99,7 +84,7 @@ return(
                 </e.FrequenltyBoxTitleDiv>
                     </e.FrequentlyAskedBox>
 
-                    <e.FrequentlyAskedBox data-aos="zoom-in" data-aos-duration={800} width={327} height={75} mgtop={29.5}>
+                    <e.FrequentlyAskedBox data-aos="zoom-in" data-aos-duration={800} width={327} height={250} mgtop={29.5}>
                         <e.FrequenltyBoxTitleDiv>
                     <e.SmallPoint bg={"#e14c44"} mgleft="14px" mgtop="14.3px"/> 
                     <e.SmallPoint bg={"#f5d827"} mgleft="35px" mgtop="14.3px"/> 
@@ -111,7 +96,7 @@ return(
                 </e.FrequenltyBoxTitleDiv>
 
                     </e.FrequentlyAskedBox>
-                    <e.FrequentlyAskedBox data-aos="flip-left" data-aos-duration={800} width={244} height={60} mgtop={80}>
+                    <e.FrequentlyAskedBox data-aos="flip-left" data-aos-duration={800} width={244} height={200} mgtop={80}>
                         <e.FrequenltyBoxTitleDiv>
                     <e.SmallPoint bg={"#e14c44"} mgleft="14px" mgtop="14.3px"/> 
                     <e.SmallPoint bg={"#f5d827"} mgleft="35px" mgtop="14.3px"/> 
@@ -124,7 +109,7 @@ return(
                     </e.FrequentlyAskedBox>
 
                     <e.FrequentlyAskedBoxHidden>
-                    <e.FrequentlyAskedBox data-aos="zoom-in" data-aos-duration={800} width={300} height={75} mgtop={29.5}>
+                    <e.FrequentlyAskedBox data-aos="zoom-in" data-aos-duration={800} width={300} height={250} mgtop={29.5}>
                         <e.FrequenltyBoxTitleDiv>
                     <e.SmallPoint bg={"#e14c44"} mgleft="14px" mgtop="14.3px"/> 
                     <e.SmallPoint bg={"#f5d827"} mgleft="35px" mgtop="14.3px"/> 
@@ -153,6 +138,7 @@ return(
             </e.TecTitleSection>
             <e.TecBoxes>
                 <e.TecBox data-aos='flip-right' data-aos-duration={660}>
+                        <e.Etiqueta bg={'#2DA6A8'}/>
                     <e.TecTitleBoxDiv>
                 <e.TecBoxImg alt="logo inwork" src={inworklogo}/>
                 <e.TecBoxTitle>inWork</e.TecBoxTitle>
@@ -167,6 +153,7 @@ return(
 </e.TectecDiv>
             </e.TecBox>
             <e.TecBoxInverse data-aos='flip-up' data-aos-delay='250' data-aos-duration={660}>
+                        <e.Etiqueta bg={'#FF008D'}/>
                     <e.TecTitleBoxDiv>
                         <e.TecBoxImg style={{height:'35px', marginTop:'21px'}} alt="focus logo" src={focuslogo}/>
                         <e.TecBoxTitleInverse style={{color:'#08edd8'}}>Focus</e.TecBoxTitleInverse>
@@ -181,6 +168,7 @@ return(
 </e.TectecDiv>
             </e.TecBoxInverse>
             <e.TecBox data-aos='flip-up' data-aos-delay='500' data-aos-duration={660}>
+                        <e.Etiqueta bg={'#4A5587'}/>
                     <e.TecTitleBoxDiv>
                 <e.TecBoxImg alt="SmallApps Logo" src={smallappslogo}/>
                         <e.TecBoxTitle style={{marginLeft:'12px'}}>Small Apps</e.TecBoxTitle>
@@ -195,6 +183,7 @@ return(
 </e.TectecDiv>
             </e.TecBox>
             <e.TecBoxInverse data-aos='flip-right' data-aos-delay='750' data-aos-duration={660}>
+                        <e.Etiqueta bg={'black'}/>
                     <e.TecTitleBoxDiv>
                 <e.TecBoxImg alt="evercode logo" src={evercodelogo}/>
                         <e.TecBoxTitleInverse style={{color:'#08edd8'}}>EVERCODE</e.TecBoxTitleInverse>
@@ -250,7 +239,7 @@ return(
             <e.LinkedinSvg src={linkedinsvg}/>
             <e.Name>Everit Jhon</e.Name>
             <e.Description>Full-Stack Developer | Description | Edit this, the contact me button and gmail button</e.Description>
-            <e.ContactLinkedin>Contáctame</e.ContactLinkedin>
+            <e.ContactLinkedin>{tr[0].contactmetext}</e.ContactLinkedin>
             <e.OrDiv>
                 <e.OrLine/>
                 <e.Or>o</e.Or>

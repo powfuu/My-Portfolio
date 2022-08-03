@@ -13,11 +13,12 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +1 src/components/home/home.js
-badd +320 ~/Desktop/dev/webapps/evcv/src/components/home/homeComponents.js
+badd +96 src/components/projects/projectsComponents.js
+badd +38 src/components/projects/projects.js
+badd +67 src/App.js
 argglobal
 %argdel
-edit ~/Desktop/dev/webapps/evcv/src/components/home/homeComponents.js
+edit src/components/projects/projects.js
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -37,6 +38,7 @@ set winwidth=1
 exe 'vert 1resize ' . ((&columns * 95 + 96) / 192)
 exe 'vert 2resize ' . ((&columns * 96 + 96) / 192)
 argglobal
+balt src/components/projects/projectsComponents.js
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -47,19 +49,19 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 794 - ((50 * winheight(0) + 25) / 51)
+let s:l = 38 - ((37 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 794
-normal! 0
+keepjumps 38
+normal! 021|
 wincmd w
 argglobal
-if bufexists(fnamemodify("src/components/home/home.js", ":p")) | buffer src/components/home/home.js | else | edit src/components/home/home.js | endif
+if bufexists(fnamemodify("src/components/projects/projectsComponents.js", ":p")) | buffer src/components/projects/projectsComponents.js | else | edit src/components/projects/projectsComponents.js | endif
 if &buftype ==# 'terminal'
-  silent file src/components/home/home.js
+  silent file src/components/projects/projectsComponents.js
 endif
-balt ~/Desktop/dev/webapps/evcv/src/components/home/homeComponents.js
+balt src/App.js
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -70,14 +72,13 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 251 - ((25 * winheight(0) + 25) / 51)
+let s:l = 96 - ((31 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 251
-normal! 039|
+keepjumps 96
+normal! 014|
 wincmd w
-2wincmd w
 exe 'vert 1resize ' . ((&columns * 95 + 96) / 192)
 exe 'vert 2resize ' . ((&columns * 96 + 96) / 192)
 tabnext 1

@@ -25,9 +25,6 @@ return(
             <a href="http://www.google.com" target="_blank"><box-icon style={e.BoxIconStyle} size={"39px"} name="youtube" color="#ff3737" type="logo"/></a>
     </e.FlexViewRow>
     <e.Derechos>Everit Jhon | 2022 © {tr[0].rights}</e.Derechos>
-    <e.Privacidad>
-        {tr[0].policy}
-    </e.Privacidad>
     </e.Footer>
 )
 }

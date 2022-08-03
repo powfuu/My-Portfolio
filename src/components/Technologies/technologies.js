@@ -29,6 +29,9 @@ import phpsvg from '../../resources/tecsvg/php.svg'
 import threejssvg from '../../resources/tecsvg/threejs.svg'
 import bootstrapsvg from '../../resources/tecsvg/bootstrap.svg'
 import pythonsvg from '../../resources/tecsvg/python.svg'
+import angularsvg from '../../resources/tecsvg/angular.svg'
+import nextsvg from '../../resources/tecsvg/next.svg'
+import { technologies as tr } from '../../translations'
 
 const Laptop = React.lazy(()=>import('../../3d_modules/Laptop.js'))
 
@@ -36,6 +39,7 @@ const Technologies = (props) =>{
     let tecList = [
         {id: 0, title:'JavaScript', svg:javascriptsvg, lv: 2},
         {id: 1, title:'React', svg:reactsvg, lv: 2},
+        {id: 26, title:'Angular', svg:angularsvg, lv: 2},
         {id: 3, title:'Node.Js', svg:nodejssvg, lv: 2},
         {id: 20, title:'Styled Components', svg:styledcomponentssvg, lv: 2},
         {id: 25, title:'npm libs', svg:npmsvg, lv: 2},
@@ -59,25 +63,26 @@ const Technologies = (props) =>{
         {id: 13, title:'Three.Js', svg:threejssvg, lv: 0},
         {id: 22, title:'Bootstrap', svg:bootstrapsvg, lv: 0},
         {id: 23, title:'Python', svg:pythonsvg, lv: 0},
+        {id: 24, title:'Next.Js', svg:nextsvg, lv: 0},
     ] 
 return( 
 <e.TecView> 
         <e.TecBox>
             <e.TechnologiesView>
                 <e.TecLevelView data-aos='zoom-in-up' data-aos-offset='-400' data-aos-duration='600'>
-                    <e.TectLevelTitle>Nivel</e.TectLevelTitle>
+                    <e.TectLevelTitle>{tr[0].level}</e.TectLevelTitle>
                     <e.LevelsDiv>
                     <e.TecLevelDiv>
                         <e.TecLevelIndicator bg={props.theme === "dark" ? '#f1f37e' : '#fdd835'}/>
-                        <e.TecLevelVal>Básico</e.TecLevelVal>
+                        <e.TecLevelVal>{tr[0].basic}</e.TecLevelVal>
                     </e.TecLevelDiv>
                     <e.TecLevelDiv>
                         <e.TecLevelIndicator bg={props.theme === "dark" ? '#87ffa9' : '#3fde1b'}/>
-                        <e.TecLevelVal>Intermedio</e.TecLevelVal>
+                        <e.TecLevelVal>{tr[0].intermediate}</e.TecLevelVal>
                     </e.TecLevelDiv>
                     <e.TecLevelDiv>
                         <e.TecLevelIndicator bg={props.theme === "dark"? '#a57aff' : '#b71eff'}/>
-                        <e.TecLevelVal>Avanzado</e.TecLevelVal>
+                        <e.TecLevelVal>{tr[0].advanced}</e.TecLevelVal>
                     </e.TecLevelDiv>
 </e.LevelsDiv>
                 </e.TecLevelView>
@@ -123,7 +128,7 @@ return(
         <Laptop/>
         <OrbitControls enableZoom={false}/>
     </e.D3ModuleCanvas>
-    <e.D3Text>Arrastra el mouse en el modulo 3D para mover</e.D3Text>
+    <e.D3Text>{tr[0].d3movetext}</e.D3Text>
    </e.D3View>
 </e.TecBox>
 </e.TecView>
