@@ -1,12 +1,16 @@
-import React, { useState } from 'react'
+import { useState, useEffect, useRef, lazy } from 'react'
 import { Link } from 'react-router-dom'
 import * as e from './aboutmeComponents'
 import { OrbitControls, Sky } from '@react-three/drei'
 import { Important } from '../../defaultStyles'
 import { aboutme as tr } from '../../translations'
-const Lamp = React.lazy(()=>import('../../3d_modules/Lamp.js'))
+const Lamp = lazy(()=>import('../../3d_modules/Lamp.js'))
 
 const AboutMe = () =>{ 
+  const d3ref = useRef(null)
+  useEffect(()=>{
+      d3ref.current.style.opacity="1"
+  }, [])
 return( 
     <e.AboutMeDiv>
         <e.AboutMeDivWindow data-aos='fade-up' data-aos-offset='-600' data-aos-duration='600'>
@@ -35,7 +39,7 @@ return(
                   {tr[0].am33} 
 
                 </e.Biography>
-                <e.D3View>
+                <e.D3View ref={d3ref}>
     <e.D3ModuleCanvas camera={{zoom:1, position:[75, 30, -55]}}>
         <ambientLight intensity={0.5}/>
         <pointLight position={[35,35,0]} intensity={0.4}/>

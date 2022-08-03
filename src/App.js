@@ -48,7 +48,7 @@ const [ navItemIdChecked, setNavItemIdChecked ] = useState(localStorage.getItem(
         if(window.location.pathname != '/inicio' && window.location.pathname != '/' && window.location.pathname != '/contacto' && window.location.pathname != '/acerca-de' && window.location.pathname != '/cursos' && window.location.pathname != '/proyectos' && window.location.pathname != '/habilidades' && window.location.pathname != '/tecnologias'){
             setNavItemIdChecked(7)
         }
-        setLoaded(true)
+        // setLoaded(true)
         setTimeout(()=>{
             setLoaded(true)
         },3350)
@@ -83,10 +83,9 @@ const [ navItemIdChecked, setNavItemIdChecked ] = useState(localStorage.getItem(
             <Route
             path="*"
             element={
-    <e.View style={{height:'calc(100vh - 298px)'}}>
-        <e.Img_404 src={notfound} data-aos='zoom-in-up'/>
-        <e.Advice data-aos='zoom-in-up' data-aos-delay='200'>Estoy trabajando en el desarrollo de mis cursos, date una vuelta por acá pronto!</e.Advice>
-    </e.View>
+                <div style={{display:'flex', alignItems: 'center', justifyContent: 'center', height:'77vh'}}>
+                    <e.Img_404 src={notfound} data-aos='zoom-in-up'/>
+                </div>
             }
           />
         </Routes>

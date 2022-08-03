@@ -1,8 +1,7 @@
-import { useState, useRef, lazy } from 'react'
+import { useState, useRef, lazy} from 'react'
 import { Link } from 'react-router-dom'
 import * as e from './projectsComponents'
 import { View } from "../../defaultStyles"
-import test from '../../resources/test.jpg'
 import test2 from '../../resources/banner.png'
 import inworkic from '../../resources/inworklogo.png'
 import focusic from '../../resources/focuslogo.png'
@@ -112,7 +111,7 @@ return(
     <e.PreviewView>
         {projects.filter(fabiana=>fabiana.id === selectedId).map((fabiana)=>{
             return(
-        <e.PreviewViewLeft>
+        <e.PreviewViewLeft data-aos-offset='-999' data-aos='fade-up' data-aos-duration='600'  data-aos-delay='250'>
             <e.PreviewLeftBg ref={imgRef} onLoad={()=>{
 imgRef.current.style.opacity="1"
             imgRef.current.style.filter="blur(0px)"
@@ -129,7 +128,7 @@ imgRef.current.style.opacity="1"
         })}
 
 
-      <e.PreviewViewRight>
+      <e.PreviewViewRight  data-aos-offset='-999' data-aos='zoom-in-left' data-aos-duration='600'>
             {projects.filter(p=>p.id === selectedId).map((p)=>{
                 return(
                     <e.PreviewRightView>
@@ -228,16 +227,18 @@ imgRef.current.style.opacity="1"
             })}
         </e.PreviewViewRight>
     </e.PreviewView>
-    <e.PreviewProjectsView>
+    <e.PreviewProjectsView >
             {projects.map((p)=>{
+                    let delayEffect;
                 return(
-                    <e.ProjectBox  bg={p.id === selectedId ? prop.theme === "light" ? "rgb(205,205,205)" : "rgb(112,112,112)" : null}  onClick={()=>handleUpdateId(p.id)}>
+                    <div data-aos='zoom-in-up' data-aos-delay={`${p.id}00`} data-aos-offset='-999' data-aos-once={true} data-aos-duration={600}>
+                        <e.ProjectBox  bg={p.id === selectedId ? prop.theme === "light" ? "rgb(205,205,205)" : "rgb(112,112,112)" : null}  onClick={()=>handleUpdateId(p.id)}>
                             <e.ProjectId bg={p.colorscheme}>{p.id}</e.ProjectId>
-                        <e.ProjectIc draggable={false} transf={p.title === "Focus" ? 'scale(.8)' : p.title==="Vanderbilt" ? "scale(.65)" : p.title==="EVERCODE" || p.title === "EVERCODE Services" ? "scale(.9)" : p.title==="Coming Soon" ? "scale(1.15)" : p.title==="Translators" ? "scale(.9)" : p.title === "Template" ? "scale(.9)" : p.title==="Sharp Development" ? "scale(.9)" : p.title === "Pizza Hut" ? "scale(1.5)" : p.title === "Hacking Services" ? "scale(.7)" : p.title === "FeCManager" ? "scale(.8)" : p.title === "Small Apps" ? "scale(.8)" : null} src={p.ic}/>
-                        <e.ProjectTitle style={p.title === "Hacking Services" ? {marginLeft:'2px'} : null}>{p.title}</e.ProjectTitle>
-                        <e.Etiqueta bg={p.colorscheme}/>
-                    </e.ProjectBox>
-
+                            <e.ProjectIc draggable={false} transf={p.title === "Focus" ? 'scale(.8)' : p.title==="Vanderbilt" ? "scale(.65)" : p.title==="EVERCODE" || p.title === "EVERCODE Services" ? "scale(.9)" : p.title==="Coming Soon" ? "scale(1.15)" : p.title==="Translators" ? "scale(.9)" : p.title === "Template" ? "scale(.9)" : p.title==="Sharp Development" ? "scale(.9)" : p.title === "Pizza Hut" ? "scale(1.5)" : p.title === "Hacking Services" ? "scale(.7)" : p.title === "FeCManager" ? "scale(.8)" : p.title === "Small Apps" ? "scale(.8)" : null} src={p.ic}/>
+                            <e.ProjectTitle style={p.title === "Hacking Services" ? {marginLeft:'2px'} : null}>{p.title}</e.ProjectTitle>
+                            <e.Etiqueta bg={p.colorscheme}/>
+                        </e.ProjectBox>
+                    </div>
                 )
             })} 
     </e.PreviewProjectsView>

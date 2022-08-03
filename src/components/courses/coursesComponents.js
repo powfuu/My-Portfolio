@@ -11,18 +11,13 @@ export const View = styled.div`
     margin-top:100px;
 `
 export const Img_404 = styled.img`
-    height:40%;
-    position:absolute;
-    transform:translate(-50%,-50%);
-    -ms-transform:translate(-50%,-50%);
-    left:50%;
-    top:40%;
+    height:65%;
     opacity:.6 !important;
     @media(max-width:975px){
-        height:32%;
+        height:50%;
     }
     @media(max-width:400px){
-        height:22%;
+        height:55%;
     }
 `
 export const Img = styled.img`

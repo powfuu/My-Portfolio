@@ -194,6 +194,10 @@ export const skills = [
               title3: "100% Responsive",
               title4: "Gran Analísis & lógica y solución de problemas",
               title5: "Aprendizaje Rápido",
+              title6: "Pasión por enseñar",
+              title7: "Desarrollo Web",
+              title8: "Desarrollo Móvil",
+              title9: "Habilidad en Diseño",
           }
         : {
               toolstext: "Tools",
@@ -215,6 +219,10 @@ export const skills = [
               title3: "100% Responsive",
               title4: "High analisis & logic and problem solutions",
               title5: "Fast learning",
+              title6: "Passion for teaching",
+              title7: "Web development",
+              title8: "Mobile development",
+              title9: "Designer skills",
           },
 ];
 export const technologies = [

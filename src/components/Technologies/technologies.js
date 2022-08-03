@@ -1,4 +1,4 @@
-import React,{ useEffect } from 'react'
+import { useEffect, useRef, lazy } from 'react'
 import { Link } from 'react-router-dom'
 import * as e from './technologiesComponents'
 import { Text, View, ButtonSecondary, ButtonPrimary} from "../../defaultStyles"
@@ -33,7 +33,7 @@ import angularsvg from '../../resources/tecsvg/angular.svg'
 import nextsvg from '../../resources/tecsvg/next.svg'
 import { technologies as tr } from '../../translations'
 
-const Laptop = React.lazy(()=>import('../../3d_modules/Laptop.js'))
+const Laptop = lazy(()=>import('../../3d_modules/Laptop.js'))
 
 const Technologies = (props) =>{ 
     let tecList = [
@@ -65,6 +65,10 @@ const Technologies = (props) =>{
         {id: 23, title:'Python', svg:pythonsvg, lv: 0},
         {id: 24, title:'Next.Js', svg:nextsvg, lv: 0},
     ] 
+    const d3ref = useRef(null)
+    useEffect(()=>{
+        d3ref.current.style.opacity="1"
+    },[])
 return( 
 <e.TecView> 
         <e.TecBox>
@@ -120,12 +124,12 @@ return(
                     })} 
                 </e.TechnologiesListView>
             </e.TechnologiesView>
-                <e.D3View>
+            <e.D3View ref={d3ref}>
     <e.D3ModuleCanvas camera={{zoom:2.4, position:[15, 7, -8]}}>
         <ambientLight intensity={0.5}/>
         <pointLight position={[35,35,0]} intensity={0.4}/>
         <pointLight position={[-35,35,0]} intensity={0.4}/>
-        <Laptop/>
+        <Laptop />
         <OrbitControls enableZoom={false}/>
     </e.D3ModuleCanvas>
     <e.D3Text>{tr[0].d3movetext}</e.D3Text>

@@ -11,7 +11,13 @@ import stopwatchtimersvg from '../../resources/tecsvg/stopwatchtimer.svg'
 import lightbulbsvg from '../../resources/tecsvg/lightbulb.svg'
 import autodidactsvg from '../../resources/tecsvg/autodidact.svg'
 import responsivesvg from '../../resources/tecsvg/responsive.svg'
+import mobile from '../../resources/tecsvg/mobile.png'
+import desktop from '../../resources/tecsvg/desktop.png'
+import design from '../../resources/tecsvg/design.png'
+import teach from '../../resources/tecsvg/teach.png'
 import { skills as tr } from '../../translations.js' 
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 const Skills = () =>{ 
     let tools = [
         { id:1, title:'Figma', question:tr[0].question1, desc:tr[0].answer1, ic:figmasvg },
@@ -20,11 +26,15 @@ const Skills = () =>{
         { id:4, title:'Bash', question:tr[0].question4, desc:tr[0].answer4, ic:bashsvg },
     ]
     let skills = [
+        { id:9, title:tr[0].title9, svg: design},
         { id:1, title:tr[0].title1, svg: ussvg},
+        { id:7, title:tr[0].title7, svg: desktop},
+        { id:8, title:tr[0].title8, svg: mobile},
+        { id:4, title:tr[0].title4, svg: lightbulbsvg},
         { id:2, title:tr[0].title2, svg: autodidactsvg},
         { id:3, title:tr[0].title3, svg: responsivesvg},
-        { id:4, title:tr[0].title4, svg: lightbulbsvg},
-        { id:5, title:tr[0].title5, svg: stopwatchtimersvg}
+        { id:5, title:tr[0].title5, svg: stopwatchtimersvg},
+        { id:6, title:tr[0].title6, svg: teach},
     ]
 return( 
     <View mgtop={100} mgleft={25} mgright={25} style={{marginBottom:'60px'}}> 
@@ -62,7 +72,7 @@ return(
                 <e.SkillBoxPolygon>
                 <e.SkillBoxBehind data-aos-delay='350' data-aos-duration='300' data-aos='zoom-in-up' data-aos-offset='0'/> 
                 <e.SkillBox key={KEY}>
-                    <e.SkillSvg  ml={s.svg === ussvg ? 60 : s.svg === autodidactsvg ? 65 : s.svg === responsivesvg ? 55 : s.svg === lightbulbsvg ? 46 : 65} mt={s.svg === ussvg ? 65 : s.svg === autodidactsvg ? 55 : s.svg === responsivesvg ? 50 : s.svg === lightbulbsvg ? 44 : 60} height={s.svg === ussvg ? 30 : s.svg === autodidactsvg ? 42 : s.svg === responsivesvg ? 51 : s.svg === lightbulbsvg ? 55 : 40} style={s.svg === ussvg ? {background:'white'} : null} src={s.svg}/>
+                    <e.SkillSvg  ml={s.svg === ussvg ? 60 : s.svg === autodidactsvg ? 65 : s.svg === responsivesvg ? 55 : s.svg === lightbulbsvg ? 46 : 65} mt={s.svg === ussvg ? 65 : s.svg === autodidactsvg ? 55 : s.svg === responsivesvg ? 50 : s.svg === lightbulbsvg ? 44 : 60} height={s.svg === ussvg ? 30 : s.svg === autodidactsvg ? 42 : s.svg === responsivesvg ? 51 : s.svg === lightbulbsvg ? 55 : s.svg === mobile ? 42 :s.svg === desktop ? 52 : s.svg === teach ? 45 : 40} style={s.svg === ussvg ? {background:'white'} : null} src={s.svg}/>
                     <e.SkillTitle style={s.svg===lightbulbsvg ? {fontSize:'12px',marginBottom:'28px'} : null}>{s.title}</e.SkillTitle>
                 </e.SkillBox>
                 </e.SkillBoxPolygon>

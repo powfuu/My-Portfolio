@@ -80,6 +80,8 @@ export const D3View = styled.div`
     background:transparent;
     align-items:center;
     margin-left:auto;
+    opacity:0;
+    transition:1s all ease-in-out;
     ${mw(1517)}{
         align-items:center;
         width:100%;

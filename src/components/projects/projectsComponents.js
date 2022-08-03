@@ -61,6 +61,7 @@ export const PreviewViewLeft = styled.div`
     position:relative;
     margin-right:20px;
     background:#D6D6D6;
+    opacity:0;
     ${mw(1244)}{
         width:60%;
         height:80%;
@@ -142,7 +143,7 @@ export const PreviewLeftBg = styled.img`
     border-radius:15px;
     object-fit:contain;
     object-position:center;
-    opacity:1;
+    opacity:0;
     z-index:1;
 `
 export const ViewProjectButton = styled.button`

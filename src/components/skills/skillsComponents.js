@@ -155,6 +155,7 @@ box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     position:relative;
     z-index:1;
 padding-left:5px; padding-top:5px;
+    margin-bottom:25px;
 `
 export const SkillBoxBehind = styled.div`
     background:${prop=>prop.theme.softColor};

@@ -140,6 +140,7 @@ export const ViewTecnologiesButLeft = styled.button`
     padding-top:10px;
     padding-bottom:10px;
     z-index:1;
+    display:none;
     &:hover{
      color:#08edd8;
     border-color:#08edd8;

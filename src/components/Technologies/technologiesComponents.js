@@ -36,9 +36,6 @@ export const TecLevelView = styled.div`
     padding-top:4px;
     padding-bottom:8px;
     margin-left:48px;
-    &:hover{
-        opacity:.5 !important;
-    }
     ${mw(1517)}{
         margin: 30px auto;
     }
@@ -81,9 +78,6 @@ export const TechBox = styled.div`
     margin-right:13.5px;
     margin-bottom:13.5px;
 box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-    &:hover{
-        opacity:.5 !important;
-    }
 `
 export const TechTitle = styled.p`
     margin-left:22px;
@@ -128,6 +122,8 @@ export const D3View = styled.div`
     margin-left:auto;
     margin-right:210px;
     margin-top:-100px;
+    opacity:0;
+    transition:1s all ease-in-out;
     ${mw(1517)}{
         align-items:center;
         width:100%;

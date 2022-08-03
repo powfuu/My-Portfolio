@@ -1,4 +1,4 @@
-import { useState,useEffect,lazy } from 'react'
+import { useState,lazy } from 'react'
 import { Link } from 'react-router-dom'
 import * as e from './homeComponents'
 import { home as tr } from '../../translations'
@@ -12,6 +12,8 @@ import linkedinsvg from '../../resources/linkedin.svg'
 import gmailsvg from '../../resources/gmail.svg'
 import banner from '../../resources/banner.png'
 import pic from '../../resources/pic.png'
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 const Home = ( props ) =>{ 
     const [years,setYears]=useState(7)
     const [courses,setCourses]=useState(3)
@@ -137,6 +139,7 @@ return(
                 </e.ViewAllDiv>
             </e.TecTitleSection>
             <e.TecBoxes>
+                <Link to="/proyectos" onClick={() => {props.setNavItemIdChecked(3); localStorage.setItem('@app/nav:itemId', 3) }}>
                 <e.TecBox data-aos='flip-right' data-aos-duration={660}>
                         <e.Etiqueta bg={'#2DA6A8'}/>
                     <e.TecTitleBoxDiv>
@@ -152,6 +155,8 @@ return(
                     <e.Tectec>+12 más</e.Tectec>
 </e.TectecDiv>
             </e.TecBox>
+</Link>
+                <Link to="/proyectos" onClick={() => {props.setNavItemIdChecked(3); localStorage.setItem('@app/nav:itemId', 3) }}>
             <e.TecBoxInverse data-aos='flip-up' data-aos-delay='250' data-aos-duration={660}>
                         <e.Etiqueta bg={'#FF008D'}/>
                     <e.TecTitleBoxDiv>
@@ -167,7 +172,10 @@ return(
                     <e.TectecInverse>+8 más</e.TectecInverse>
 </e.TectecDiv>
             </e.TecBoxInverse>
-            <e.TecBox data-aos='flip-up' data-aos-delay='500' data-aos-duration={660}>
+                </Link>
+
+                <Link to="/proyectos" onClick={() => {props.setNavItemIdChecked(3); localStorage.setItem('@app/nav:itemId', 3) }}>
+            <e.TecBox  data-aos='flip-up' data-aos-delay='500' data-aos-duration={660}>
                         <e.Etiqueta bg={'#4A5587'}/>
                     <e.TecTitleBoxDiv>
                 <e.TecBoxImg alt="SmallApps Logo" src={smallappslogo}/>
@@ -182,6 +190,8 @@ return(
                     <e.Tectec>+3 más</e.Tectec>
 </e.TectecDiv>
             </e.TecBox>
+                </Link>
+                <Link to="/proyectos" onClick={() => {props.setNavItemIdChecked(3); localStorage.setItem('@app/nav:itemId', 3) }}>
             <e.TecBoxInverse data-aos='flip-right' data-aos-delay='750' data-aos-duration={660}>
                         <e.Etiqueta bg={'black'}/>
                     <e.TecTitleBoxDiv>
@@ -197,6 +207,8 @@ return(
                     <e.TectecInverse>+21 más</e.TectecInverse>
 </e.TectecDiv>
             </e.TecBoxInverse>
+
+                </Link>
 </e.TecBoxes>
         </e.TecnologiesView>
         <e.TecSkillsView>
@@ -213,21 +225,21 @@ return(
             <e.TecRight>
                 <e.TecnologiesDiv>
                     <Link data-aos='zoom-in-right' data-aos-duration={660} to="/tecnologias" onClick={() => {props.setNavItemIdChecked(1); localStorage.setItem('@app/nav:itemId', 1) }}><e.ViewTecnologiesBut>{tr[0].exploreprojectstext}<box-icon color={"#fff"} style={{verticalAlign:'middle',marginTop:'-87px',transform:'scale(.95)'}} name='right-arrow-alt' ></box-icon></e.ViewTecnologiesBut></Link>
-                    <div data-aos='zoom-in-up' data-aos-duration={600}>
+                    <div  data-aos='zoom-in-up' data-aos-duration={600}>
                         <box-icon  id='box-icon-first' type='logo' name='javascript' style={{transform:'scale(2.7)',marginRight:'60px',marginBottom:'65px',marginLeft:'166px'}} color={'gold'}></box-icon><br/>
-                    <box-icon id='box-icon-second' name='react' type='logo' style={{transform:'scale(2.7)',marginRight:'60px',marginBottom:'65px',marginLeft:'84px'}} color={'dodgerblue'}></box-icon>
+                        <box-icon id='box-icon-second' name='react' type='logo' style={{transform:'scale(2.7)',marginRight:'60px',marginBottom:'65px',marginLeft:'84px'}} color={'dodgerblue'}></box-icon>
 
-<box-icon id='box-icon-second' name='nodejs' type='logo' style={{transform:'scale(2.7)',marginRight:'60px',marginBottom:'65px'}} color={'green'}></box-icon>
+                        <box-icon id='box-icon-second' name='nodejs' type='logo' style={{transform:'scale(2.7)',marginRight:'60px',marginBottom:'65px'}} color={'green'}></box-icon>
 
-<box-icon name='php' id='box-icon-second' type='logo' style={{transform:'scale(2.7)',marginRight:'60px',marginBottom:'65px'}} color={'dodgerblue'}></box-icon>
-                    <br/>
+                        <box-icon name='php' id='box-icon-second' type='logo' style={{transform:'scale(2.7)',marginRight:'60px',marginBottom:'65px'}} color={'dodgerblue'}></box-icon>
+                        <br/>
 
-<box-icon name='html5' id='box-icon-third' type='logo' style={{transform:'scale(2.7)',marginRight:'60px',marginBottom:'65px'}} color={'#e45c00'} ></box-icon>
-                    <box-icon name='jquery' id='box-icon-third' type='logo' style={{transform:'scale(2.7)',marginRight:'60px',marginBottom:'65px'}} color={'#888'}></box-icon>
+                        <box-icon name='html5' id='box-icon-third' type='logo' style={{transform:'scale(2.7)',marginRight:'60px',marginBottom:'65px'}} color={'#e45c00'} ></box-icon>
+                        <box-icon name='jquery' id='box-icon-third' type='logo' style={{transform:'scale(2.7)',marginRight:'60px',marginBottom:'65px'}} color={'#888'}></box-icon>
 
-<box-icon name='css3' id='box-icon-third' type='logo' style={{transform:'scale(2.7)',marginRight:'60px',marginBottom:'65px'}} color={'dodgerblue'}></box-icon>
-<box-icon name='github' id='box-icon-third' type='logo' style={{transform:'scale(2.7)',marginRight:'60px',marginBottom:'65px'}} color={'#000'}></box-icon>
-                    <box-icon id='box-icon-third' name='data' type='solid' style={{transform:'scale(2.7)',marginRight:'60px',marginBottom:'65px'}} color={'rgb(240,240,240)'}></box-icon>
+                        <box-icon name='css3' id='box-icon-third' type='logo' style={{transform:'scale(2.7)',marginRight:'60px',marginBottom:'65px'}} color={'dodgerblue'}></box-icon>
+                        <box-icon name='github' id='box-icon-third' type='logo' style={{transform:'scale(2.7)',marginRight:'60px',marginBottom:'65px'}} color={'#000'}></box-icon>
+                        <box-icon id='box-icon-third' name='data' type='solid' style={{transform:'scale(2.7)',marginRight:'60px',marginBottom:'65px'}} color={'rgb(240,240,240)'}></box-icon>
 
                     </div>
 </e.TecnologiesDiv>
