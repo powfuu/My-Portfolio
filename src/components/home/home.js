@@ -257,7 +257,7 @@ return(
                 <e.Or>o</e.Or>
                 <e.OrLine/>
             </e.OrDiv>
-            <e.GmailSvg src={gmailsvg}/>
+            <a href="mailto:everit@jhondev.com"><e.GmailSvg src={gmailsvg}/></a>
         </e.ContactView>
 </View>
 )

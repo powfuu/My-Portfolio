@@ -38,7 +38,9 @@ return(
                 <e.Or>o</e.Or>
                 <e.OrLine/>
             </e.OrView> 
-            <e.ContactGmail data-aos-offset='-400' data-aos='zoom-in-right' data-aos-duration='700' data-aos-delay='500' src={gmailsvg}/>
+            <a href="mailto:everit@jhondev.com">
+                <e.ContactGmail data-aos-offset='-400' data-aos='zoom-in-right' data-aos-duration='700' data-aos-delay='500' src={gmailsvg}/>
+            </a>
         </e.ProfileView> 
         <e.Card data-aos='zoom-in-up' data-aos-duration='450' data-aos-offset='-180'>
         {questions.map((q)=>{

@@ -13,12 +13,8 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +96 src/components/projects/projectsComponents.js
-badd +38 src/components/projects/projects.js
-badd +67 src/App.js
 argglobal
 %argdel
-edit src/components/projects/projects.js
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -35,10 +31,22 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 95 + 96) / 192)
-exe 'vert 2resize ' . ((&columns * 96 + 96) / 192)
+exe 'vert 1resize ' . ((&columns * 25 + 88) / 177)
+exe 'vert 2resize ' . ((&columns * 151 + 88) / 177)
 argglobal
-balt src/components/projects/projectsComponents.js
+enew
+file NvimTree_1
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+wincmd w
+argglobal
+enew
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -47,40 +55,9 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 38 - ((37 * winheight(0) + 25) / 51)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 38
-normal! 021|
 wincmd w
-argglobal
-if bufexists(fnamemodify("src/components/projects/projectsComponents.js", ":p")) | buffer src/components/projects/projectsComponents.js | else | edit src/components/projects/projectsComponents.js | endif
-if &buftype ==# 'terminal'
-  silent file src/components/projects/projectsComponents.js
-endif
-balt src/App.js
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 96 - ((31 * winheight(0) + 25) / 51)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 96
-normal! 014|
-wincmd w
-exe 'vert 1resize ' . ((&columns * 95 + 96) / 192)
-exe 'vert 2resize ' . ((&columns * 96 + 96) / 192)
+exe 'vert 1resize ' . ((&columns * 25 + 88) / 177)
+exe 'vert 2resize ' . ((&columns * 151 + 88) / 177)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
