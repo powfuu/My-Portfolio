@@ -297,7 +297,7 @@ export const TecBox = styled.div`
     height:300px;
     margin-top:13px;
     ${mw(411)}{
-        width:100%;
+        width:90%;
         margin-right:20px;
     }
 `
@@ -310,7 +310,7 @@ box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     width:410px;
     height:300px;
     ${mw(411)}{
-        width:100%;
+        width:90%;
         margin-right:20px;
     }
 `
@@ -363,6 +363,10 @@ export const Tectec = styled.p`
         border-color:rgb(85,85,85);
         color:rgb(55,55,55);
     }
+    ${mw(411)}{
+        font-size:9.5px !important;
+        margin-top:56px !important;
+    }
     ${mw(460)}{
         font-size:11px;
         margin-top:50px;
@@ -375,7 +379,6 @@ export const Tectec = styled.p`
     padding-right:6px;
     padding-top:3px;
     padding-bottom:3px;
-        font-size:9.5px;
         text-align:center;
         margin-top:30px;
     }
@@ -400,12 +403,14 @@ export const TectecInverse = styled.p`
         font-size:11px;
         margin-top:30px;
     }
-    ${mw(407)}{
+    ${mw(411)}{
+        font-size:9px !important;
+    }
+${mw(407)}{
     padding-left:6px;
     padding-right:6px;
     padding-top:3px;
     padding-bottom:3px;
-        font-size:9.5px;
         text-align:center;
         margin-top:30px;
     }

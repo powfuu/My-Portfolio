@@ -117,7 +117,7 @@ return(
                                 <e.TechTitle fz={tec.title === "Styled Components" ? 12 : null} style={tec.title==="Styled Components" ? {marginTop:'17px'} : null}>{tec.title}</e.TechTitle>
                                 <e.TechIS>
                                     <e.TechIndicator bg={bg}/>
-                                    <e.TechSvg style={tec.svg === expressjssvg ? { height:'62px', width:'62px', marginLeft:'22px' } : tec.svg === npmsvg ? { marginTop:'22px' } : null} alt={tec.title} src={tec.svg}/>
+                                    <e.TechSvg style={tec.svg === expressjssvg ? { height:'23px', width:'66px', marginLeft:'16px' } : tec.svg === npmsvg ? { marginTop:'22px' } : null} alt={tec.title} src={tec.svg}/>
                                 </e.TechIS>
                             </e.TechBox>
                         )

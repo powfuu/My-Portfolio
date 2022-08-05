@@ -357,7 +357,7 @@ export const Projects = [lang === "es" ? {
     desc5:"EVERCODE es un proyecto personal en el cuál realizaba proyectos gratuitos y pagos para personas que necesitaban programadores o empresas muy pequeñas, está página junto a EVERCODE Services son para representar mi proyecto personal.", 
     desc6:"Focus es una red social dedicada a los creadores de contenido, o personas que quieran ofrecer sesiones privadas o pagar por sesiones privadas y conocer a sus personas soñadas. En focus puedes ganar dinero o canjear dinero como creador de contenido.", 
     desc7:"Translators es una aplicación web realizada para una empresa muy pequeña dedicada a realizar traducciones a proyectos, videos, textos o de cualquier necesidad.", 
-    desc8:"Pizza Hut es un proyecto que realize para una prueba en la Universidad, este proyecto gano el primer lugar del semestre en una prueba general de conocimientos básicos.", 
+    desc8:"Pizza Hut es un proyecto que realice para una prueba en la Universidad, este proyecto gano el primer lugar del semestre en una prueba general de conocimientos básicos.", 
     desc9:"Flare es una Template con una interfaz de usuario diferente y muy agradable, está basada en una página web landing.", 
     desc10:"Vanderbilt fue mi primera aplicación creada para una empresa pequeña localizada en Quito, Ecuador, está se basa en ofrecer información y métodos de contacto y servicios.", 
     desc11:"Sharp Development es una página web de una empresa pequeña de desarrollo, ofrecen información y sus respectivos servicios.", 
