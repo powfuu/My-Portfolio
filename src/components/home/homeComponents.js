@@ -141,6 +141,17 @@ export const ViewTecnologiesButLeft = styled.button`
     padding-bottom:10px;
     z-index:1;
     display:none;
+    text-decoration:underline;
+    background-position-x: 0px;
+    background-size: 200%;
+    color:transparent;
+    font-weight:500;
+    background-clip: text;
+  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: ${p=>p.theme.importantX2};
+    background-image: linear-gradient(90deg, ${p=>p.theme.importantX} 0%, ${p=>p.theme.important} 50%, ${p=>p.theme.importantX} 100%);
+    animation: 3s ease-in-out 0s infinite normal none running bHafHd;
     &:hover{
      color:#08edd8;
     border-color:#08edd8;
@@ -164,8 +175,19 @@ export const ViewTecnologiesBut = styled.button`
     padding-right:25px;
     padding-top:10px;
     padding-bottom:10px;
+    text-decoration:underline;
+    background-position-x: 0px;
+    background-size: 200%;
+    color:transparent;
+    font-weight:500;
+    background-clip: text;
+  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: white;
+    animation: 3s ease-in-out 0s infinite normal none running bHafHd;
     &:hover{
-     color:#08edd8;
+    background-color: ${p=>p.theme.importantX2};
+    background-image: linear-gradient(90deg, ${p=>p.theme.importantX} 0%, ${p=>p.theme.important} 50%, ${p=>p.theme.importantX} 100%);
     border-color:#08edd8;
     }
     ${mw(950)}{
@@ -222,7 +244,17 @@ export const TecLeftDesc = styled.p`
     }
 `
 export const TecLeftTitle = styled.p`
-    color:#08edd8;
+    text-decoration:underline;
+    background-position-x: 0px;
+    background-size: 200%;
+    color:transparent;
+    font-weight:500;
+    background-clip: text;
+  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: ${p=>p.theme.importantX2};
+    background-image: linear-gradient(90deg, ${p=>p.theme.importantX} 0%, ${p=>p.theme.important} 50%, ${p=>p.theme.importantX} 100%);
+    animation: 3s ease-in-out 0s infinite normal none running bHafHd;
     font-size:34px;
     white-space:break-word;
     ${mw(1448)}{
@@ -427,6 +459,16 @@ export const TecBoxDesc = styled.p`
 `
 export const TecBoxTitleInverse = styled.p`
     color: #e8e8e8;
+    text-decoration:underline;
+    background-position-x: 0px;
+    background-size: 200%;
+    color:transparent;
+    background-clip: text;
+  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: ${p=>p.theme.importantX2};
+    background-image: linear-gradient(90deg, ${p=>p.theme.importantX} 0%, ${p=>p.theme.important} 50%, ${p=>p.theme.importantX} 100%);
+    animation: 3s ease-in-out 0s infinite normal none running bHafHd;
     font-size:20px;
     margin-left:12px;
     margin-top:28px;
@@ -726,7 +768,7 @@ export const LeftViewTitleDiv = styled.div`
     margin-top: -3px;
     background: ${(prop) => prop.theme.inverseSoftColorIllusion};
     padding-bottom: 55px;
-    border-radius:8px;
+    border-radius:14px;
     border-bottom-left-radius:0px;
     border-top-left-radius:0px;
 
@@ -749,6 +791,17 @@ export const LeftViewTitle = styled.p`
     margin-top: -14.5px;
     font-size: 35.4px;
     padding-left: 65px;
+    text-decoration:underline;
+    background-position-x: 0px;
+    background-size: 200%;
+    color:transparent;
+    font-weight:500;
+    background-clip: text;
+  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: ${p=>p.theme.importantX2};
+    background-image: linear-gradient(90deg, ${p=>p.theme.importantX} 0%, ${p=>p.theme.important} 50%, ${p=>p.theme.importantX} 100%);
+    animation: 3s ease-in-out 0s infinite normal none running bHafHd;
     ${mw(637)}{
         padding-right:40px !important;
     }

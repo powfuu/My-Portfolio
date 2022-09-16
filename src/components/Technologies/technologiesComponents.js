@@ -96,6 +96,17 @@ export const TechIndicator = styled.div`
     margin-top:-2px;
     background:${prop=>prop.bg};
     margin-left:32px;
+    text-decoration:underline;
+    background-position-x: 0px;
+    background-size: 200%;
+    color:transparent;
+    -webkit-text-fill-color: transparent;
+    background-color: ${p=>p.bg};
+    background-image: ${p=>p.bgi};
+    animation: 3s ease-in-out 0s infinite normal none running bHafHd;
+    background-position-x: 0px;
+    background-size: 200%;
+    background-clip: text;
 `
 export const TechSvg = styled.img`
     width:48px;
@@ -108,6 +119,13 @@ export const TecLevelIndicator = styled.div`
     border-radius:100%;
     height:13.5px;
     width:13.5px;
+    text-decoration:underline;
+    background-position-x: 0px;
+    background-size: 200%;
+    color:transparent;
+    -webkit-text-fill-color: transparent;
+    background-color: ${p=>p.bg};
+    background-image: ${p=>p.bgi};
 `
 export const TecLevelVal = styled.p`
     margin-left:8px;

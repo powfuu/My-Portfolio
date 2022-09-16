@@ -219,7 +219,7 @@ return(
                 </e.TecLeftDesc>
                 <Link to="/tecnologias" data-aos='zoom-in-up' data-aos-duration={660} onClick={() => {props.setNavItemIdChecked(1); localStorage.setItem('@app/nav:itemId', 1) }}><e.ViewTecnologiesButLeft style={{marginTop:'-110px'}}>{tr[0].exploreprojectstext}</e.ViewTecnologiesButLeft></Link>
                 <svg xmlns="http://www.w3.org/2000/svg" style={{position:'absolute',bottom:'0',width:'100vw',marginLeft:'-175px', transform:'rotateY(0deg)'}} viewBox="0 0 1440 320">
-  <path fill="#00cba9" fill-opacity="10" d="M0,256L120,261.3C240,267,480,277,720,261.3C960,245,1200,203,1320,181.3L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+                    <path fill="#00cba9" fill-opacity="10" d="M0,256L120,261.3C240,267,480,277,720,261.3C960,245,1200,203,1320,181.3L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
 </svg>
             </e.TecLeft>
             <e.TecRight>
@@ -245,6 +245,7 @@ return(
 </e.TecnologiesDiv>
             </e.TecRight>
         </e.TecSkillsView>
+        <br/>
         <e.ContactView data-aos-offset='100' data-aos-duration='500' data-aos='zoom-in'>
             <e.Banner src={banner}/> 
             <e.Pic src={pic}/>

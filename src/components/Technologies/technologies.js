@@ -28,6 +28,7 @@ import scsssvg from '../../resources/tecsvg/sass.svg'
 import phpsvg from '../../resources/tecsvg/php.svg'
 import threejssvg from '../../resources/tecsvg/threejs.svg'
 import bootstrapsvg from '../../resources/tecsvg/bootstrap.svg'
+import mongosvg from '../../resources/tecsvg/mongodb.svg'
 import pythonsvg from '../../resources/tecsvg/python.svg'
 import angularsvg from '../../resources/tecsvg/angular.svg'
 import nextsvg from '../../resources/tecsvg/next.svg'
@@ -38,6 +39,7 @@ const Laptop = lazy(()=>import('../../3d_modules/Laptop.js'))
 const Technologies = (props) =>{ 
     let tecList = [
         {id: 0, title:'JavaScript', svg:javascriptsvg, lv: 2},
+        {id: 15, title:'TypeScript', svg:typescriptsvg, lv: 2},
         {id: 1, title:'React', svg:reactsvg, lv: 2},
         {id: 26, title:'Angular', svg:angularsvg, lv: 2},
         {id: 3, title:'Node.Js', svg:nodejssvg, lv: 2},
@@ -56,8 +58,8 @@ const Technologies = (props) =>{
         {id: 12, title:'Git', svg:gitsvg, lv: 1},
         {id: 11, title:'JWT', svg:jwtsvg, lv: 1},
         {id: 17, title:'bcrypt.Js', svg:bcryptsvg, lv: 1},
-        {id: 15, title:'TypeScript', svg:typescriptsvg, lv: 1},
         {id: 14, title:'Docker', svg:dockersvg, lv: 0},
+        {id: 27, title:'MongoDB', svg:mongosvg, lv: 0},
         {id: 6, title:'SCSS', svg:scsssvg, lv: 0},
         {id: 9, title:'PHP', svg:phpsvg, lv: 0},
         {id: 13, title:'Three.Js', svg:threejssvg, lv: 0},
@@ -77,46 +79,37 @@ return(
                     <e.TectLevelTitle>{tr[0].level}</e.TectLevelTitle>
                     <e.LevelsDiv>
                     <e.TecLevelDiv>
-                        <e.TecLevelIndicator bg={props.theme === "dark" ? '#f1f37e' : '#fdd835'}/>
+                        <e.TecLevelIndicator bg={'#F6AF04'} bgi={'linear-gradient(90deg, #EFEB77 0%, #DE791E 50%, #EFEB77 100%)'}/>
                         <e.TecLevelVal>{tr[0].basic}</e.TecLevelVal>
                     </e.TecLevelDiv>
                     <e.TecLevelDiv>
-                        <e.TecLevelIndicator bg={props.theme === "dark" ? '#87ffa9' : '#3fde1b'}/>
+                        <e.TecLevelIndicator bg={'#41e975'} bgi={'linear-gradient(90deg, #4091B2 0%, #00cba9 50%, #41e975 100%)'}/>
                         <e.TecLevelVal>{tr[0].intermediate}</e.TecLevelVal>
                     </e.TecLevelDiv>
                     <e.TecLevelDiv>
-                        <e.TecLevelIndicator bg={props.theme === "dark"? '#a57aff' : '#b71eff'}/>
+                        <e.TecLevelIndicator bg={'rgb(56,123,255)'} bgi={'linear-gradient(90deg, rgb(162,68,255) 0%, rgb(52,182,255) 50%, rgb(162,68,255) 100%)'}/>
                         <e.TecLevelVal>{tr[0].advanced}</e.TecLevelVal>
                     </e.TecLevelDiv>
 </e.LevelsDiv>
                 </e.TecLevelView>
                 <e.TechnologiesListView>
                     {tecList.map((tec, KEY)=>{
-                        let bg;
+                        let bg,bgi;
                         if(tec.lv === 0){
-                            if(props.theme === "light"){
-                            bg="#fdd835"
-                            }else{
-                            bg="#f1f37e"
-                            }
+                            bg="#F6AF04" 
+                            bgi='linear-gradient(90deg, #EFEB77 0%, #DE791E 50%, #EFEB77 100%)'
                         }else if(tec.lv === 1){
-                            if(props.theme === "light"){
-                            bg="#3fde1b"
-                            }else{
-                            bg="#87ffa9"
-                            }
+                            bg="#41e975"
+                            bgi='linear-gradient(90deg, #4091B2 0%, #00cba9 50%, #41e975 100%)'
                         }else if(tec.lv === 2){
-                            if(props.theme === "light"){
-                            bg="#b71eff"
-                            }else{
-                            bg="#a57aff"
-                            }
+                            bg="rgb(56,123,255)"
+                            bgi="linear-gradient(90deg, rgb(162, 68, 255) 0%, rgb(52, 182, 255) 50%, rgb(162, 68, 255) 100%)"
                         }
                         return(
                             <e.TechBox data-aos-delay='300' key={KEY} data-aos-offset='-400' data-aos='zoom-in-left' data-aos-duration='600'>
                                 <e.TechTitle fz={tec.title === "Styled Components" ? 12 : null} style={tec.title==="Styled Components" ? {marginTop:'17px'} : null}>{tec.title}</e.TechTitle>
                                 <e.TechIS>
-                                    <e.TechIndicator bg={bg}/>
+                                    <e.TechIndicator bg={bg} bgi={bgi}/>
                                     <e.TechSvg style={tec.svg === expressjssvg ? { height:'23px', width:'66px', marginLeft:'16px' } : tec.svg === npmsvg ? { marginTop:'22px' } : null} alt={tec.title} src={tec.svg}/>
                                 </e.TechIS>
                             </e.TechBox>

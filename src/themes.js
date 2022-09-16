@@ -31,7 +31,9 @@ bgtoolIc:'#fff',
 skillbehindbg:'rgb(70,70,70)',
 opacityScheme:.6,
 boldInLight:'bold',
-important:'#00cba9'
+important:'#00cba9',
+importantX2:'#41e975',
+importantX: '#4091B2'
 }
 export const dark = {
 body: "#222",
@@ -64,10 +66,21 @@ bgtoolIc:'#434343',
 skillbehindbg:'rgb(70,70,70)',
 opacityScheme:.8,
 boldInLight:'lighter',
-important:'#00a48d'
+important:'#00cba9',
+importantX2:'#41e975',
+importantX: '#4091B2'
 }
 export const GlobalStyles = createGlobalStyle` 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@keyframes bHafHd{
+  0%{
+    background-position-x:0%;
+  }
+  100%{
+    background-position-x:-200%;
+  }
+}
     *{ 
         transition: .4s all ease-in-out;
 -webkit-tap-highlight-color: transparent;

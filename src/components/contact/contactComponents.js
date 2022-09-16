@@ -141,6 +141,16 @@ export const Plus = styled.p`
     float:left;
     display:inline-block;
     color:#00CBA9;
+    text-decoration:underline;
+    background-position-x: 0px;
+    background-size: 200%;
+    color:transparent;
+    background-clip: text;
+  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: ${p=>p.theme.importantX2};
+    background-image: linear-gradient(90deg, ${p=>p.theme.importantX} 0%, ${p=>p.theme.important} 50%, ${p=>p.theme.importantX} 100%);
+    animation: 3s ease-in-out 0s infinite normal none running bHafHd;
     font-weight:bold;
     margin-left:40px;
     font-size:20px;

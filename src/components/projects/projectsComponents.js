@@ -96,6 +96,7 @@ export const ProjectsBox = styled.p`
     margin-right:7px;
     margin-top:-5px;
     font-size:13px;
+
     ${mw(1428)}{
         font-size:12px;
     }
@@ -296,6 +297,12 @@ export const PreviewRightLine =styled.div`
     width:120px;
     height:1px;
     background:${p=>p.bg};
+
+    background-position-x: 0px;
+    background-size: 200%;
+    background-color: ${p=>p.theme.importantX2};
+    background-image: linear-gradient(90deg, ${p=>p.theme.importantX} 0%, ${p=>p.theme.important} 50%, ${p=>p.theme.importantX} 100%);
+    animation: 3s ease-in-out 0s infinite normal none running bHafHd;
     ${mw(1712)}{
         width:50px;
     }
