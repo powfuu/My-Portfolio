@@ -76,10 +76,10 @@ const Projects = (prop) =>{
     let projects = [
         { id:1, title:'inWork', colorscheme:'#2DA6A8', ic: inworkic, bg: inworkbg, desc:desc1 }, 
         
-        { id:2, colorscheme:'#4A5587', title:'Small Apps', ic:smallappslogo, bg: smallapps, desc:desc2 },
-{ id:3, colorscheme:'#26273B', title:'Bash Site', ic:bash, bg:bashbg, desc:desc3 },
-        { id:4, colorscheme:'#00CBA9', title:'Coming Soon', ic:comingsoon, bg: comingsoonbg, desc:desc4 },
-        { id:5, colorscheme:'black', title:'EVERCODE', ic:evercode, bg:evercodebg, desc:desc5 },
+{ id:2, colorscheme:'#26273B', title:'Bash Site', ic:bash, bg:bashbg, desc:desc3 },
+        { id:3, colorscheme:'#00CBA9', title:'Coming Soon', ic:comingsoon, bg: comingsoonbg, desc:desc4 },
+        { id:4, colorscheme:'black', title:'EVERCODE', ic:evercode, bg:evercodebg, desc:desc5 },
+        { id:5, colorscheme:'#4A5587', title:'Small Apps', ic:smallappslogo, bg: smallapps, desc:desc2 },
         { id:6, colorscheme:'#FF008D', title:'Focus', ic:focusic, bg:focusbg, desc:desc6 },
         { id:7, colorscheme:'#5EABD5', title:'Translators', ic:translators, bg: translatorsbg, desc:desc7 },
         { id:8, colorscheme:'#EE3A43', title:'Pizza Hut', ic:pizzahut, bg: pizzahutbg, desc:desc8 },
