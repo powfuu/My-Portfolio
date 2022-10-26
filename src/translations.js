@@ -95,6 +95,8 @@ export const home = [
               seeptext: "Ver Proyectos",
               inworkdesc:
                   "La plataforma inWork es una red social dirigída al campo profesional en el cual consiste en unir una cuenta de empresa con una cuenta personal contando con sus respectivas preferencias. Como empresa podrás encontrar a tu candidato perfecto, y como personal podrás aumentar tus posibilidades de trabajo y encontrar la empresa indicada.",
+              fasfudesc:
+                  "Fasfu Burgers es una aplicación pick-up delivery en tiempo real realizada para el restaurante Fasfu Burgers. Este prototipo te permite ordenar tu comida favorita en linea. esta aplicación fue creada para Luisito Comunica y la comunidad Hispano Hablante alrededor del mundo.",
               focusdesc:
                   "La plataforma Focus se basa en una aplicación donde puedas tener sesiones privadas con diversas personas que sigues. Focus puede tener como próposito dictar/recibir clases, conocer a tus ídolos en sesiones privadas, realizar cursos de todo tipo, y entre muchos otros própositos. En focus podrás ingresar o recibir dinero como creador de contenido.",
               smallappsdesc:
@@ -152,6 +154,7 @@ export const home = [
               seeptext: "Explore Projects",
               inworkdesc:
                   "inWork platform is a social network which it consist in join a business account with a personal account based in their preferences. As a business Account you will find your perfect vacant and as a personal account you will improve your opportunities and find the perfect work",
+            fasfudesc:"Fasfu Burgers is a real time pick-up delivery application of Fasfu Burgers Restaurant. This prototype allows you to order your favorite food online. this application was maded for Luisito Comunica and the spanish speakers around the world.",
               focusdesc:
                   "Focus platform is an web application where you will have the opportunitie to know people you follow. Focus can be used for teaching or receiving classes, know your most loved artists in private sessions, teach about some courses of all types, and including a lot more things you can do. In Focus you insert money to pay the sessions and recceive money as a content creator.",
               smallappsdesc:
@@ -366,6 +369,9 @@ export const Projects = [lang === "es" ? {
     desc14:"React Template es un landing page template de React para facilitar el trabajo de desarrolladores en diversas aplicaciones.", 
     desc15:"Besign Invest es una aplicación web que representa un grupo de diseñadores gráficos profesionales que ofrecen sus diversos servicios y demuestran sus proyectos y testimmonios.", 
     desc16:"Animated Portfolio es un portafolio de PRUEBA, donde la información es falsa y fue creado solo para demostrar diversos conocimientos en Next.Js.", 
+    desc17:"Fasfu Burgers es una aplicación pick-up delivery en tiempo real realizada para el restaurante Fasfu Burgers. Este prototipo te permite ordenar tu comida favorita en linea. esta aplicación fue creada para Luisito Comunica y la comunidad Hispano Hablante alrededor del mundo.",
+    desc18:"Luck es una plataforma que se basa en crear sorteos de creadores de contenido para su comunidad, el proposito de esta aplicación es mejorar la comunidad y entregar premios a tu comunidad.",
+    desc19:"Mochi Template es un template de real estate realizado con la tecnología de Angular.", 
 } : {
     text:"See Project",
     desc1:"inWork is a social network for searching job and recruiting professionals, in this platform the algorithm will help you to connect and reach an agreement, this application is made for browsers and android applications.", 
@@ -384,4 +390,7 @@ export const Projects = [lang === "es" ? {
     desc14:"React Template is a landing page from React, is used to make more flexible the developing of a landing website.", 
     desc15:"Besign Invest is a web application, was made for a graphic designer group that offers their services & projects and testimonials.", 
     desc16:"Animated Portfolio is a test portfolio, all the information it contains it is false and this was created for showing various skills in Next.Js.", 
+    desc17:"Fasfu Burgers is a real time pick-up delivery application of Fasfu Burgers Restaurant. This prototype allows you to order your favorite food online. this application was maded for Luisito Comunica and the spanish speakers around the world.", 
+    desc18:"Luck is a platform that improve the relationship of the community of content creators, the propourse of this application is creating raffles and give rewards & improve your community.", 
+    desc19:"Mochi Template is a real estate template maded with Angular.", 
 }];

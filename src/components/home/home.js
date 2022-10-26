@@ -5,9 +5,9 @@ import { home as tr } from '../../translations'
 import { View, Important } from "../../defaultStyles"
 import testwav from '../../resources/testwav.mp4'
 import inworklogo from '../../resources/inworklogo.png'
+import fasfulogo from '../../resources/fasfuic.webp'
 import focuslogo from '../../resources/focuslogo.png'
 import evercodelogo from '../../resources/evercodelogo.png'
-import smallappslogo from '../../resources/smallappslogo.png'
 import linkedinsvg from '../../resources/linkedin.svg'
 import gmailsvg from '../../resources/gmail.svg'
 import banner from '../../resources/banner.png'
@@ -141,18 +141,18 @@ return(
             <e.TecBoxes>
                 <Link to="/proyectos" onClick={() => {props.setNavItemIdChecked(3); localStorage.setItem('@app/nav:itemId', 3) }}>
                 <e.TecBox data-aos='flip-right' data-aos-duration={660}>
-                        <e.Etiqueta bg={'#2DA6A8'}/>
+                        <e.Etiqueta bg={'#0306a6'}/>
                     <e.TecTitleBoxDiv>
-                <e.TecBoxImg alt="logo inwork" src={inworklogo}/>
-                <e.TecBoxTitle>inWork</e.TecBoxTitle>
+                        <e.TecBoxImg alt="logo inwork" style={{height:'44px',width:'45px'}} src={fasfulogo}/>
+                        <e.TecBoxTitle style={{marginLeft:'10px'}}>Fasfu Burgers</e.TecBoxTitle>
 </e.TecTitleBoxDiv>
-                <e.TecBoxDesc>{tr[0].inworkdesc}</e.TecBoxDesc>
-                    <e.TectecDiv>
+                    <e.TecBoxDesc style={{marginBottom:'30px'}}>{tr[0].fasfudesc}</e.TecBoxDesc>
+                    <e.TectecDiv style={{marginLeft:'35px'}}>
                     <e.Tectec>React</e.Tectec>
-                    <e.Tectec>Node.js</e.Tectec>
-                    <e.Tectec>React Native</e.Tectec>
-                    <e.Tectec>MySQL</e.Tectec>
-                    <e.Tectec>+12 más</e.Tectec>
+                    <e.Tectec>HTML</e.Tectec>
+                    <e.Tectec>CSS</e.Tectec>
+                    <e.Tectec>JavaScript</e.Tectec>
+                    <e.Tectec>+4 más</e.Tectec>
 </e.TectecDiv>
             </e.TecBox>
 </Link>
@@ -173,24 +173,23 @@ return(
 </e.TectecDiv>
             </e.TecBoxInverse>
                 </Link>
-
                 <Link to="/proyectos" onClick={() => {props.setNavItemIdChecked(3); localStorage.setItem('@app/nav:itemId', 3) }}>
-            <e.TecBox  data-aos='flip-up' data-aos-delay='500' data-aos-duration={660}>
-                        <e.Etiqueta bg={'#4A5587'}/>
+                <e.TecBox data-aos='flip-right' data-aos-duration={660}>
+                        <e.Etiqueta bg={'#2DA6A8'}/>
                     <e.TecTitleBoxDiv>
-                <e.TecBoxImg alt="SmallApps Logo" src={smallappslogo}/>
-                        <e.TecBoxTitle style={{marginLeft:'12px'}}>Small Apps</e.TecBoxTitle>
+                <e.TecBoxImg alt="logo inwork" src={inworklogo}/>
+                <e.TecBoxTitle>inWork</e.TecBoxTitle>
 </e.TecTitleBoxDiv>
-                <e.TecBoxDesc style={{marginTop:'3px'}}>{tr[0].smallappsdesc}</e.TecBoxDesc>
-                <e.TectecDiv style={{marginTop:'78px',marginLeft:'25px'}}>
-                    <e.Tectec>HTML</e.Tectec>
-                    <e.Tectec>CSS</e.Tectec>
-                    <e.Tectec>JavaScript</e.Tectec>
-                    <e.Tectec>Bootstrap</e.Tectec>
-                    <e.Tectec>+3 más</e.Tectec>
+                <e.TecBoxDesc>{tr[0].inworkdesc}</e.TecBoxDesc>
+                    <e.TectecDiv>
+                    <e.Tectec>React</e.Tectec>
+                    <e.Tectec>Node.js</e.Tectec>
+                    <e.Tectec>React Native</e.Tectec>
+                    <e.Tectec>MySQL</e.Tectec>
+                    <e.Tectec>+12 más</e.Tectec>
 </e.TectecDiv>
             </e.TecBox>
-                </Link>
+</Link>
                 <Link to="/proyectos" onClick={() => {props.setNavItemIdChecked(3); localStorage.setItem('@app/nav:itemId', 3) }}>
             <e.TecBoxInverse data-aos='flip-right' data-aos-delay='750' data-aos-duration={660}>
                         <e.Etiqueta bg={'black'}/>

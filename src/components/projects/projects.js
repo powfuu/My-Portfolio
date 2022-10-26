@@ -4,6 +4,9 @@ import * as e from './projectsComponents'
 import { View } from "../../defaultStyles"
 import test2 from '../../resources/banner.png'
 import inworkic from '../../resources/inworklogo.png'
+import mochiic from '../../resources/tecsvg/angular.svg'
+import fasfuic from '../../resources/fasfuic.webp'
+import luckic from '../../resources/luckic.png'
 import focusic from '../../resources/focuslogo.png'
 import animatedportfolio from '../../resources/animatedportfolio.png'
 import bash from '../../resources/bash.png'
@@ -19,7 +22,9 @@ import template1 from '../../resources/template1.svg'
 import translators from '../../resources/translators.png'
 import vanderbilt from '../../resources/vanderbilt.png'
 import inworkbg from '../../resources/projectsbg/inwork.png'
+import luckbg from '../../resources/projectsbg/luck.png'
 import focusbg from '../../resources/projectsbg/focus.png'
+import mochibg from '../../resources/projectsbg/mochi_template.png'
 import bashbg from '../../resources/projectsbg/bash.jpg'
 import smallapps from '../../resources/projectsbg/smallapps.png'
 import evercodebg from '../../resources/projectsbg/evercode.png'
@@ -34,6 +39,7 @@ import hackingservicesbg from '../../resources/projectsbg/hackingservices.png'
 import fecmanagerbg from '../../resources/projectsbg/fecmanager.png'
 import besigninvestbg from '../../resources/projectsbg/besigninvest.png'
 import animatedportfoliobg from '../../resources/projectsbg/animatedportfolio.png'
+import fasfubg from '../../resources/projectsbg/fasfu.png'
 import { FadeLoader } from 'react-spinners'
 import { Projects as tr } from "../../translations"
 
@@ -54,12 +60,18 @@ const Projects = (prop) =>{
     let desc14 = tr[0].desc14;
     let desc15 = tr[0].desc15;
     let desc16 = tr[0].desc16;
+    let desc17 = tr[0].desc17;
+    let desc18 = tr[0].desc18;
+    let desc19 = tr[0].desc19;
     const [selectedId, setSelectedId]=useState(1)
     let technologies = [
         { title:"inWork", t1:'JavaScript', t2:'React', t3:'React Native', t4:'HTML',t5:'CSS',t6:'AOS',t7:'MySQL',t8:'Node.js',t10:'Express',t11:'JWT Auth',t12:'bcrypt',t13:'NodeMailer',t14:'MulterJs',t15:'Axios',t16:'HTTP Requests',t17:'jQuery',t18:'Responsive'},
         { title:"Small Apps", t1:'HTML', t2:'CSS', t3:'JavaScript', t4:'Bootstrap', t5:'AOS', t6:'Animate.css', t7:'Responsive'},
         { title:"Bash Site", t1:'Angular', t2:'TypeScript', t3:'HTML', t4:'CSS', t5:'Responsive'},
         { title:"Coming Soon", t1:'HTML', t2:'CSS', t3:'JavaScript', t4:'Responsive'},
+        { title:"Fasfu Burgers", t1:'HTML', t2:'CSS', t3:'JavaScript', t4:'Responsive', t5:'React', t6:'SCSS', t7:'Styled-Icons', t8:'Design Tools (Figma, GNU)'},
+        { title:"Mochi Template", t1:'HTML', t2:'CSS', t3:'JavaScript', t4:'Responsive', t5: 'Angular', t6: 'Styled-Icons'},
+        { title:"Luck", t1:'HTML', t2:'CSS', t3:'JavaScript', t4:'Responsive', t5:'Angular', t6:'Styled-icons', t7:'MySQL'},
         { title:"EVERCODE", t1:'JavaScript', t2:'React', t3:'React Native', t4:'HTML',t5:'CSS',t6:'AOS',t7:'MySQL',t8:'Node.js',t9:'',t10:'Express',t11:'JWT Auth',t12:'bcrypt',t13:'NodeMailer',t14:'MulterJs',t15:'Axios',t16:'HTTP Requests',t17:'jQuery',t18:'Responsive'},
         { title:"Focus", t1:'JavaScript', t2:'HTML', t3:'CSS', t4:'React', t5:'AOS', t6:'Node.Js', t7:'Express', t8:'JWT Auth', t9:'Axios', t10:'HTTP Requests', t11:'Responsive', t12:'bcrypt', t13:'MulterJs'},
         { title:"Translators", t1:'JavaScript' , t2:'HTML', t3:'CSS', t4:'AOS', t5:'Responsive'},
@@ -74,23 +86,26 @@ const Projects = (prop) =>{
         { title:"Animated Portfolio", t1:'JavaScript', t2:'React', t3:'Next.Js', t4:'HTML', t5:'CSS', t6:'Responsive', t7:'AOS'},
     ]
     let projects = [
-        { id:1, title:'inWork', colorscheme:'#2DA6A8', ic: inworkic, bg: inworkbg, desc:desc1 }, 
+        { id:1, title:'Fasfu Burgers', colorscheme:'#0306a6', ic: fasfuic, bg: fasfubg, desc:desc17 }, 
+        { id:2, title:'inWork', colorscheme:'#2DA6A8', ic: inworkic, bg: inworkbg, desc:desc1 }, 
         
-{ id:2, colorscheme:'#26273B', title:'Bash Site', ic:bash, bg:bashbg, desc:desc3 },
-        { id:3, colorscheme:'#00CBA9', title:'Coming Soon', ic:comingsoon, bg: comingsoonbg, desc:desc4 },
-        { id:4, colorscheme:'black', title:'EVERCODE', ic:evercode, bg:evercodebg, desc:desc5 },
-        { id:5, colorscheme:'#4A5587', title:'Small Apps', ic:smallappslogo, bg: smallapps, desc:desc2 },
-        { id:6, colorscheme:'#FF008D', title:'Focus', ic:focusic, bg:focusbg, desc:desc6 },
-        { id:7, colorscheme:'#5EABD5', title:'Translators', ic:translators, bg: translatorsbg, desc:desc7 },
-        { id:8, colorscheme:'#EE3A43', title:'Pizza Hut', ic:pizzahut, bg: pizzahutbg, desc:desc8 },
-        { id:9, colorscheme:'#F5C92C', title:'Template', ic:template1, bg: templatebg, desc:desc9 },
-        { id:10, colorscheme:'#E30613', title:'Vanderbilt', ic:vanderbilt, bg: vanderbiltbg, desc:desc10 },
-        { id:11, colorscheme:'#5658DD', title:'Sharp Development', ic:sharpdevelopment, bg: sharpdevelopmentbg, desc:desc11 },
-        { id:12, colorscheme:'black', title:'EVERCODE Services', ic:evercode, bg: evercodeservicesbg, desc:desc12 },
-        { id:13, colorscheme:'#5971F1', title:'Hacking Services', ic:hackingservice, bg: hackingservicesbg, desc:desc13 },
-        { id:14, colorscheme:'#209CEE', title:'Template 2', ic:fecmanager, bg: fecmanagerbg, desc:desc14 },
-        { id:15, colorscheme:'#00689F', title:'Besign Invest', ic:besigninvest, bg: besigninvestbg, desc:desc15 },
-        { id:16, colorscheme:'#44A0FB', title:'Animated Portfolio', ic:animatedportfolio, bg: animatedportfoliobg, desc:desc16 },
+{ id:3, colorscheme:'#26273B', title:'Bash Site', ic:bash, bg:bashbg, desc:desc3 },
+        { id:4, title:'Luck', colorscheme:'#9057FE', ic: luckic, bg: luckbg, desc:desc18 }, 
+        { id:5, colorscheme:'#00CBA9', title:'Coming Soon', ic:comingsoon, bg: comingsoonbg, desc:desc4 },
+        { id:6, colorscheme:'#ee3a43', title:'Mochi Template', ic:mochiic, bg: mochibg, desc:desc19 },
+        { id:7, colorscheme:'black', title:'EVERCODE', ic:evercode, bg:evercodebg, desc:desc5 },
+        { id:8, colorscheme:'#4A5587', title:'Small Apps', ic:smallappslogo, bg: smallapps, desc:desc2 },
+        { id:9, colorscheme:'#FF008D', title:'Focus', ic:focusic, bg:focusbg, desc:desc6 },
+        { id:10, colorscheme:'#5EABD5', title:'Translators', ic:translators, bg: translatorsbg, desc:desc7 },
+        { id:11, colorscheme:'#EE3A43', title:'Pizza Hut', ic:pizzahut, bg: pizzahutbg, desc:desc8 },
+        { id:12, colorscheme:'#F5C92C', title:'Template', ic:template1, bg: templatebg, desc:desc9 },
+        { id:13, colorscheme:'#E30613', title:'Vanderbilt', ic:vanderbilt, bg: vanderbiltbg, desc:desc10 },
+        { id:14, colorscheme:'#5658DD', title:'Sharp Development', ic:sharpdevelopment, bg: sharpdevelopmentbg, desc:desc11 },
+        { id:15, colorscheme:'black', title:'EVERCODE Services', ic:evercode, bg: evercodeservicesbg, desc:desc12 },
+        { id:16, colorscheme:'#5971F1', title:'Hacking Services', ic:hackingservice, bg: hackingservicesbg, desc:desc13 },
+        { id:17, colorscheme:'#209CEE', title:'Template 2', ic:fecmanager, bg: fecmanagerbg, desc:desc14 },
+        { id:18, colorscheme:'#00689F', title:'Besign Invest', ic:besigninvest, bg: besigninvestbg, desc:desc15 },
+        { id:19, colorscheme:'#44A0FB', title:'Animated Portfolio', ic:animatedportfolio, bg: animatedportfoliobg, desc:desc16 },
     ]
     const imgRef=useRef(null)
     const handleUpdateId = id => {
@@ -126,7 +141,6 @@ imgRef.current.style.opacity="1"
         </e.PreviewViewLeft>
             )
         })}
-
 
       <e.PreviewViewRight  data-aos-offset='-999' data-aos='zoom-in-left' data-aos-duration='600'>
             {projects.filter(p=>p.id === selectedId).map((p)=>{

@@ -43,7 +43,8 @@ const handleLanguage = () =>{
 useEffect(()=>{
     AOS.init({
   mirror: false, // whether elements should animate out while scrolling past them
-  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+        once:true
     });
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
