@@ -159,6 +159,15 @@ export const ViewTecnologiesButLeft = styled.button`
     ${mw(950)}{
         display:block;
     }
+    ${mw(500)}{
+        margin-left:22px;
+    }
+    ${mw(450)}{
+        margin-left:26px;
+    }
+    ${mw(390)}{
+        margin-left:36px;
+    }
 `
 export const ViewTecnologiesBut = styled.button`
     position:absolute;

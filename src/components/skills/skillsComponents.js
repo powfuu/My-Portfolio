@@ -179,6 +179,7 @@ export const SkillSvg = styled.img`
     height:${p=>p.height}px; 
     transform:rotate(-48deg);
     position:absolute; 
+    border-radius:4px;
     top:0;
     left:0;
 margin-left:${p=>p.ml}px;

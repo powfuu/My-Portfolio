@@ -32,6 +32,8 @@ import mongosvg from '../../resources/tecsvg/mongodb.svg'
 import pythonsvg from '../../resources/tecsvg/python.svg'
 import angularsvg from '../../resources/tecsvg/angular.svg'
 import nextsvg from '../../resources/tecsvg/next.svg'
+import tailwindsvg from '../../resources/tecsvg/tailwind.svg'
+import vitesvg from '../../resources/tecsvg/vite.svg'
 import { technologies as tr } from '../../translations'
 
 const Laptop = lazy(()=>import('../../3d_modules/Laptop.js'))
@@ -54,6 +56,8 @@ const Technologies = (props) =>{
         {id: 24, title:'Multer.Js', svg:multersvg, lv: 2},
         {id: 18, title:'Frontend Tools', svg:frontendsvg, lv: 2},
         {id: 16, title:'HTTP & REST', svg:httprestsvg, lv: 2},
+        {id: 25, title:'Tailwind CSS', svg:tailwindsvg, lv: 1},
+        {id: 26, title:'Vite', svg:vitesvg, lv: 1},
         {id: 2, title:'React Native', svg:reactnativesvg, lv: 1},
         {id: 12, title:'Git', svg:gitsvg, lv: 1},
         {id: 11, title:'JWT', svg:jwtsvg, lv: 1},

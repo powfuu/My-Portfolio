@@ -12,8 +12,6 @@ import linkedinsvg from '../../resources/linkedin.svg'
 import gmailsvg from '../../resources/gmail.svg'
 import banner from '../../resources/banner.png'
 import pic from '../../resources/pic.png'
-import AOS from 'aos'
-import 'aos/dist/aos.css';
 const Home = ( props ) =>{ 
     const [years,setYears]=useState(7)
     const [courses,setCourses]=useState(3)
@@ -38,7 +36,7 @@ return(
                 <Link to="/proyectos" data-aos-offset='-400' data-aos='zoom-in-up' data-aos-delay='600' onClick={() => {props.setNavItemIdChecked(3); localStorage.setItem('@app/nav:itemId', 3) }}><e.VidButton>{tr[0].exploreText}</e.VidButton></Link> 
             </e.VidDiv>
             <e.VidPreview alt="video" loop autoPlay={true} muted>
-                <source alt="video" src={testwav}/>
+                <source  alt="video" src={testwav}/>
             </e.VidPreview>
                 </e.RightView>
            { selectedVidId != null ? null
@@ -167,7 +165,7 @@ return(
                     <e.TectecDiv>
                     <e.TectecInverse>React</e.TectecInverse>
                     <e.TectecInverse>Node.js</e.TectecInverse>
-                        <e.TectecInverse>Styled Comp...</e.TectecInverse>
+                        <e.TectecInverse>Styled Com..</e.TectecInverse>
                     <e.TectecInverse>MySQL</e.TectecInverse>
                     <e.TectecInverse>+8 más</e.TectecInverse>
 </e.TectecDiv>
@@ -181,7 +179,7 @@ return(
                 <e.TecBoxTitle>inWork</e.TecBoxTitle>
 </e.TecTitleBoxDiv>
                 <e.TecBoxDesc>{tr[0].inworkdesc}</e.TecBoxDesc>
-                    <e.TectecDiv>
+                    <e.TectecDiv style={{marginTop:'10px',marginLeft:'25px'}}>
                     <e.Tectec>React</e.Tectec>
                     <e.Tectec>Node.js</e.Tectec>
                     <e.Tectec>React Native</e.Tectec>

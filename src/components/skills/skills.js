@@ -17,8 +17,6 @@ import design from '../../resources/tecsvg/design.png'
 import scrum from '../../resources/tecsvg/scrum.png'
 import tdd from '../../resources/tecsvg/tdd.jpg'
 import { skills as tr } from '../../translations.js' 
-import AOS from 'aos'
-import 'aos/dist/aos.css';
 const Skills = () =>{ 
     let tools = [
         { id:1, title:'Figma', question:tr[0].question1, desc:tr[0].answer1, ic:figmasvg },
@@ -72,9 +70,9 @@ return(
         {skills.map((s, KEY)=>{
             return(
                 <e.SkillBoxPolygon>
-                <e.SkillBoxBehind data-aos-delay='350' data-aos-duration='300' data-aos='zoom-in-up' data-aos-offset='0'/> 
+                <e.SkillBoxBehind data-aos-delay='350' data-aos-duration='400' data-aos='zoom-in-up' data-aos-offset='0'/> 
                 <e.SkillBox key={KEY}>
-                    <e.SkillSvg  ml={s.svg === ussvg ? 60 : s.svg === autodidactsvg ? 65 : s.svg === responsivesvg ? 55 : s.svg === lightbulbsvg ? 46 : 65} mt={s.svg === ussvg ? 65 : s.svg === autodidactsvg ? 55 : s.svg === responsivesvg ? 50 : s.svg === lightbulbsvg ? 44 : 60} height={s.svg === ussvg ? 30 : s.svg === autodidactsvg ? 42 : s.svg === responsivesvg ? 51 : s.svg === lightbulbsvg ? 55 : s.svg === mobile ? 42 :s.svg === desktop ? 52 : s.svg === tdd ? 42 : 40} style={s.svg === ussvg ? {background:'white'} : null} src={s.svg}/>
+                    <e.SkillSvg  ml={s.svg === ussvg ? 65 : s.svg === autodidactsvg ? 65 : s.svg === responsivesvg ? 55 : s.svg === lightbulbsvg ? 46 : s.svg === desktop ? 64 : 65} mt={s.svg === ussvg ? 65 : s.svg === autodidactsvg ? 55 : s.svg === responsivesvg ? 50 : s.svg === lightbulbsvg ? 44 : s.svg === desktop ? 55 : 60} height={s.svg === ussvg ? 28 : s.svg === autodidactsvg ? 42 : s.svg === responsivesvg ? 51 : s.svg === lightbulbsvg ? 55 : s.svg === mobile ? 42 :s.svg === desktop ? 45 : s.svg === tdd ? 42 : 40} style={s.svg === ussvg ? {background:'white'} : null} src={s.svg}/>
                     <e.SkillTitle style={s.svg===lightbulbsvg ? {fontSize:'12px',marginBottom:'28px'} : null}>{s.title}</e.SkillTitle>
                 </e.SkillBox>
                 </e.SkillBoxPolygon>

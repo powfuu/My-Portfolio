@@ -17,6 +17,8 @@ import Contact from './components/contact/contact'
 import { HashLoader } from 'react-spinners'
 import notfound from './resources/404.svg'
 import * as e from './components/courses/coursesComponents.js'
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 
 function App() {
 const [loaded,setLoaded]=useState(false)
@@ -51,8 +53,21 @@ const [ navItemIdChecked, setNavItemIdChecked ] = useState(localStorage.getItem(
         // setLoaded(true)
         setTimeout(()=>{
             setLoaded(true)
-        },3350)
+        },2350)
     },[])
+    useEffect(()=>{
+        if(window.innerHeight <= 1133 && window.innerWidth <= 1782){
+    AOS.init({
+        once:true,
+        offset:-999
+    });
+        }else{
+    AOS.init({
+        once:true,
+        offset:0
+    });
+        }
+    },[window.location.pathname])
   return (
     <ThemeProvider theme={ theme === "light" ? light : dark }>
         <ScrollTop/>
