@@ -88,7 +88,7 @@ export const home = [
               answer2:
                   "A lo largo de mi vida esta pregunta fue muy común, sin embargo con los años de experiencia & estudios me di cuenta que no es necesario un titulo universitario para tener éxito como programador, hoy en día es posible aprender software mediante internet de forma gratuita o incluso con un costo muy bajo, y poder tener mucho más conocimiento que un recién graduado dependiendo de tú dedicación.",
               answer3:
-                  "Ser buen desarrollador consta de tener diversos hábitos, entre ellos nunca dejar de aprender, comentar & refactorizar tu código, masterizar herramientas de desarrollo como por ejemplo Vim, mantener un código limpio y legíble, entre otros.",
+                  "Ser buen desarrollador consta de tener diversos hábitos, entre ellos nunca dejar de aprender, comentar & refactorizar tu código, masterizar herramientas de desarrollo, mantener un código limpio y legíble, entre otros.",
               answer4:
                   "Nosotros los programadores requerimos una ruta de aprendizaje muy amplia en el mundo de la tecnología, ser constante y más que tener teoría, mucha práctica, ya que eso os ayudará mucho a crecer como programador, investigar mucho, dormir bien, proponerse a realizar proyectos para armar tu propio CV, conocer diversas tecnologías, recurrir a cursos o personas con conocimientos superiores y sin duda alguna, tomarse un buen café!",
               rptext: "Proyectos Recientes",
@@ -145,9 +145,9 @@ export const home = [
               answer2:
                   "throughout my life this question has been very common, however with the years of experience & studies i realized that is not neccesary a degree. today it is possible to learn software free or with a very low cost, and have more knoweldge than a person with degree.",
               answer3:
-                  "Being a good developer const of having differents habits, one of them it is never stop learning, comment code, refactor code, master developing tools for example Vim, make the code clean and others.",
+                  "Being a good developer const of having differents habits, one of them it is never stop learning, comment code, refactor code, master developing tools, make the code clean and others.",
               answer4:
-                  "Being a good developer const of having differents habits, one of them it is never stop learning, comment code, refactor code, master developing tools for example Vim, make the code clean and others.",
+                  "Our profession require a very broad learning path, we need to be constant and study & practice a lot, this will help you a lot to grow as a programmer, do a lot of research, sleep well, propose to carry out projects for put together your own CV, learn about various technologies, follow courses or people with superior knowledge and without a doubt, drink a good coffee!",
               rptext: "Recent Projects",
               seeptext: "Explore Projects",
               rptext: "Recent Projects",

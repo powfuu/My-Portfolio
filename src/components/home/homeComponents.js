@@ -308,21 +308,30 @@ export const TecTitleLine = styled.div`
     height:25px;
     margin-left:56px;
     margin-top:-5.5px;
+${mw(615)}{
+    margin-left:35px;
+}
+    ${mw(440)}{
+        width:45px;
+        margin-top:-7px;
+    }
+    ${mw(400)}{
+        width:35px;
+    }
+${mw(500)}{
+    margin-left:20px;
+}
 `
 export const TecTitle = styled.p`
     color: ${prop=>prop.theme.lightDark};
     font-size:17px;
     font-weight:300;
-    margin-left:15px;
+    margin-left:10px;
         margin-top:8px;
-${mw(500)}{
-    margin-left:20px;
-}
-    ${mw(390)}{
+    ${mw(440)}{
         font-size:16px;
     }
     ${mw(363)}{
-        margin-left:30px;
         font-size:17px;
         margin-top:0px !important;
     }
@@ -513,13 +522,33 @@ export const ViewAllDiv = styled.div`
     flex-direction:row;
     padding-bottom:0px;
     padding-left:4px;
-    border-bottom:1px solid transparent; 
+transition: .35s all ease-in-out !important;
+border-bottom:1px solid ${prop=>prop.theme.body};
     &:hover{
         border-bottom:1px solid rgb(180,180,180);
     }
-${mw(500)}{
-    margin-right:0px;
+${mw(615)}{
+    margin-right:15px;
 }
+${mw(565)}{
+    &:hover{
+        border-bottom:1px solid transparent;
+    }
+}
+${mw(550)}{
+    margin-right:10px;
+}
+${mw(500)}{
+    margin-right:5px;
+}
+    ${mw(400)}{
+        margin-right:-20px;
+        margin-left:35px;
+    }
+    ${mw(370)}{
+        margin-right:0px;
+        margin-left:35px;
+    }
 `
 export const ViewAllBut = styled.button`
     background:transparent;
@@ -527,9 +556,8 @@ export const ViewAllBut = styled.button`
     margin-left:-10px;
 margin-top:0px;
     color: ${prop=>prop.theme.lightDark};
-    ${mw(390)}{
+    ${mw(440)}{
         font-size:15px;
-        margin-left:-15px;
     }
 `
 export const HomeView = styled.div`
@@ -692,7 +720,7 @@ export const FrequentlyAskedDiv = styled.div`
     flex: 1 1 auto;
     min-height:310px;
     justify-content:center;
-    ${mw(646)}{
+    ${mw(680)}{
         display:none !important;
     }
 `
