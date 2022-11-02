@@ -1,4 +1,12 @@
 import styled from "styled-components"
+export const Loader = styled.div`
+  border: 10px solid transparent;
+    border-top: 3px solid ${prop=>prop.theme.inverseSoftColor};
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 1s linear infinite;
+`
 export const View = styled.div`
     margin-top: ${prop=>prop.mgtop || 90}px;
     margin-left: ${prop=>prop.mgleft || 0}px;

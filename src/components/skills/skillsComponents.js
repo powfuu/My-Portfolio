@@ -2,9 +2,6 @@ import styled from 'styled-components'
 const mw = (prop)=>{
     return `@media(max-width: ${prop}px)`
 }
-const mh = (prop)=>{
-    return `@media(min-width: ${prop}px)`
-}
 
 export const TitleView = styled.div`
     display:flex;  

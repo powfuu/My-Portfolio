@@ -1,5 +1,3 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import * as e from './coursesComponents'
 import maintenance from '../../resources/maintenance.svg'
 import { courses as tr } from '../../translations'

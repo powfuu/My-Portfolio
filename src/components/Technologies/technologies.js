@@ -1,8 +1,6 @@
 import { useEffect, useRef, lazy } from 'react'
-import { Link } from 'react-router-dom'
 import * as e from './technologiesComponents'
-import { Text, View, ButtonSecondary, ButtonPrimary} from "../../defaultStyles"
-import { OrbitControls, Sky } from '@react-three/drei'
+import { OrbitControls } from '@react-three/drei'
 //logos
 import javascriptsvg from '../../resources/tecsvg/javascript.svg'
 import reactsvg from '../../resources/tecsvg/react.svg'
@@ -38,7 +36,7 @@ import { technologies as tr } from '../../translations'
 
 const Laptop = lazy(()=>import('../../3d_modules/Laptop.js'))
 
-const Technologies = (props) =>{ 
+const Technologies = () =>{ 
     let tecList = [
         {id: 0, title:'JavaScript', svg:javascriptsvg, lv: 2},
         {id: 15, title:'TypeScript', svg:typescriptsvg, lv: 2},

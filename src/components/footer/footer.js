@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import * as e from "./footerComponents"
 import test from '../../resources/test.png'
 import { footer as tr } from '../../translations'

@@ -1,7 +1,6 @@
-import { useState, useEffect, useRef, lazy } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect, useRef, lazy } from 'react'
 import * as e from './aboutmeComponents'
-import { OrbitControls, Sky } from '@react-three/drei'
+import { OrbitControls } from '@react-three/drei'
 import { Important } from '../../defaultStyles'
 import { aboutme as tr } from '../../translations'
 const Lamp = lazy(()=>import('../../3d_modules/Lamp.js'))

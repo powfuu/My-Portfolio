@@ -81,6 +81,27 @@ export const GlobalStyles = createGlobalStyle`
     background-position-x:-200%;
   }
 }
+    #clip-body{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        height:100vh;
+        transition:0s;
+        overflow:hidden;
+    }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+    #clip-logo{
+        position:absolute;
+        height:52px;
+        width:52px;
+    }
     *{ 
         transition: .4s all ease-in-out;
 -webkit-tap-highlight-color: transparent;
@@ -95,6 +116,9 @@ export const GlobalStyles = createGlobalStyle`
     html,body{
         overflow-x:hidden;
         background:${p=>p.theme.body};
+    }
+    body{
+        transition:0s;
     }
     #box-icon-first, #box-icon-second, #box-icon-third{
         @media(max-width: 480px){

@@ -4,9 +4,6 @@ import { Canvas } from "react-three-fiber"
 const mw = (prop)=>{
     return `@media(max-width: ${prop}px)`
 }
-const mh = (prop)=>{
-    return `@media(min-width: ${prop}px)`
-}
 
 export const TecView = styled.div`
     margin-top:90px;

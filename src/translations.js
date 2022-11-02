@@ -125,7 +125,7 @@ export const home = [
               lvd1: "high experience in design & web development and mobile applications development,",
               lvdi2: "i'm very autodidact",
               lvd2: ", i love problem solutions and",
-              lvdi3: "learn",
+              lvdi3: "learning",
               lvd3: "more everyday, i also have an",
               lvdi4: "advanced english",
               lvd4: "knoweldge.",

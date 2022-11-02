@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import * as e from './contactComponents'
 import linkedinsvg from '../../resources/linkedin.svg'
 import gmailsvg from '../../resources/gmail.svg'

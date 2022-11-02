@@ -1,5 +1,5 @@
 import test from '../../resources/test.png'
-import React, { useState,useEffect,useRef } from "react"
+import { useState,useEffect,useRef } from "react"
 import { View } from "../../defaultStyles"
 import * as e from './navigationComponents'
 import { Link } from "react-router-dom"

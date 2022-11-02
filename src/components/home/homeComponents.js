@@ -302,11 +302,18 @@ export const TecTitleSection = styled.div`
     display:flex;
     flex-direction:row;
 `
+export const TecTitleLine = styled.div`
+    border-bottom:1px solid ${prop=>prop.theme.lightDark};
+    width:70px;
+    height:25px;
+    margin-left:56px;
+    margin-top:-5.5px;
+`
 export const TecTitle = styled.p`
     color: ${prop=>prop.theme.lightDark};
     font-size:17px;
-    font-weight:bold;
-    margin-left:46px;
+    font-weight:300;
+    margin-left:15px;
         margin-top:8px;
 ${mw(500)}{
     margin-left:20px;

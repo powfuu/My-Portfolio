@@ -1,8 +1,6 @@
-import { useState, useRef, lazy} from 'react'
-import { Link } from 'react-router-dom'
+import { useState, useRef } from 'react'
 import * as e from './projectsComponents'
 import { View } from "../../defaultStyles"
-import test2 from '../../resources/banner.png'
 import inworkic from '../../resources/inworklogo.png'
 import mochiic from '../../resources/tecsvg/angular.svg'
 import fasfuic from '../../resources/fasfuic.webp'

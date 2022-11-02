@@ -1,4 +1,4 @@
-import { useState,lazy } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import * as e from './homeComponents'
 import { home as tr } from '../../translations'
@@ -13,14 +13,10 @@ import gmailsvg from '../../resources/gmail.svg'
 import banner from '../../resources/banner.png'
 import pic from '../../resources/pic.png'
 const Home = ( props ) =>{ 
-    const [years,setYears]=useState(7)
-    const [courses,setCourses]=useState(3)
-    const [hours,setHours]=useState(9)
-    const [loadedVid, setLoadedVid]=useState(false)
-    const [selectedVidId, selectVidId] = useState(null);
-const handleSelectVid = prop =>{ 
-    selectVidId(prop)
-}
+    let years=7
+    let courses=3
+    let hours=9
+    const [selectedVidId] = useState(null);
 return( 
     <View> 
         <e.HomeView data-aos='zoom-in' data-aos-offset='-600' data-aos-duration='600'>
@@ -127,7 +123,7 @@ return(
                 </e.HomeView>
         <e.TecnologiesView>
             <e.TecTitleSection>
-
+                <e.TecTitleLine/>
             <e.TecTitle data-aos='zoom-in-left'>{tr[0].rptext}</e.TecTitle>
                     <e.ViewAllDiv data-aos='zoom-in-right'>
                         <Link to="/proyectos" data-aos='zoom-in-up' onClick={() => {props.setNavItemIdChecked(3); localStorage.setItem('@app/nav:itemId', 3) }}><>

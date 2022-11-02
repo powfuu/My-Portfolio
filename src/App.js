@@ -1,4 +1,5 @@
 import { GlobalStyles, light, dark } from "./themes"
+import { Loader } from "./defaultStyles"
 import { useState, useEffect } from "react"
 import { ThemeProvider } from "styled-components"
 import { Route,Routes,Navigate} from "react-router-dom"
@@ -14,8 +15,8 @@ import Skills from './components/skills/skills'
 import Projects from './components/projects/projects'
 import Courses from './components/courses/courses'
 import Contact from './components/contact/contact'
-import { HashLoader } from 'react-spinners'
 import notfound from './resources/404.svg'
+import test from './resources/test.png'
 import * as e from './components/courses/coursesComponents.js'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
@@ -25,6 +26,11 @@ const [loaded,setLoaded]=useState(false)
 const [lan, setLan]=useState(localStorage.getItem('@app:lang') == null ? "es" : localStorage.getItem("@app:lang"))
 const [theme,setTheme] = useState( localStorage.getItem('@app:theme') == null ? "light" : localStorage.getItem("@app:theme") )
 const [ navItemIdChecked, setNavItemIdChecked ] = useState(localStorage.getItem('@app/nav:itemId') == null ? 0 : localStorage.getItem('@app/nav:itemId'))
+    useEffect(()=>{
+        setTimeout(() => {
+            document.body.style.transition='.4s all ease-in-out' 
+        }, 1000);
+    },[])
     useEffect(()=>{
         if(window.location.pathname === '/inicio'){
             setNavItemIdChecked(0)
@@ -50,7 +56,6 @@ const [ navItemIdChecked, setNavItemIdChecked ] = useState(localStorage.getItem(
         if(window.location.pathname != '/inicio' && window.location.pathname != '/' && window.location.pathname != '/contacto' && window.location.pathname != '/acerca-de' && window.location.pathname != '/cursos' && window.location.pathname != '/proyectos' && window.location.pathname != '/habilidades' && window.location.pathname != '/tecnologias'){
             setNavItemIdChecked(7)
         }
-        // setLoaded(true)
         setTimeout(()=>{
             setLoaded(true)
         },2350)
@@ -74,12 +79,9 @@ const [ navItemIdChecked, setNavItemIdChecked ] = useState(localStorage.getItem(
         <GlobalStyles/>
 
         {!loaded ?
-                <div style={{
-            display:'flex',
-            alignItems: 'center',
-                }}>
-                <HashLoader size={75} color={"#888"} style={{
-                }}/>
+                <div id='clip-body'>
+                    <Loader/>
+                    <img id='clip-logo' src={test}/>
                 </div>
                     : <> 
                 {navItemIdChecked != 7 ?

@@ -4,9 +4,6 @@ import { Canvas } from "react-three-fiber"
 const mw = (prop)=>{
     return `@media(max-width: ${prop}px)`
 }
-const mh = (prop)=>{
-    return `@media(min-width: ${prop}px)`
-}
 export const AboutMeDiv = styled.div`
     margin-top:92px;
     display:flex;
@@ -18,7 +15,7 @@ export const AboutMeDivWindow = styled.div`
     width:90%;
     position: relative;
     margin-top: -3px;
-    background: ${(prop) => prop.theme.inverseSoftColorIllusion};
+    background: ${(prop) => prop.theme.navBg};
     padding-bottom: 55px;
     height:max-content;
     padding-bottom:140px;
@@ -58,12 +55,12 @@ export const TitleViewLine = styled.div`
     background:${p=>p.theme.opaqueText2};
 `
 export const Title = styled.div`
-    color:${p=>p.theme.bgtoolIc}; 
+    color:${p=>p.theme.fontColor};
     font-size:21px;
     margin-left:10px;
 `
 export const Biography = styled.p`
-    color:${p=>p.theme.bsc};
+    color:${p=>p.theme.navItems};
     margin-top:25px;
     margin-right:66px;
     margin-left:50px;
@@ -102,7 +99,7 @@ export const D3ModuleCanvas = styled(Canvas)`
     }
 `
 export const D3Text = styled.p`
-    color:${pwop=>pwop.theme.opaqueText};     
+    color:${p=>p.theme.navItems};
     font-size:12.8px;
     margin-top:-322px;
     margin-left:10px;

@@ -1,5 +1,3 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 import * as e from './skillsComponents'
 import { View } from "../../defaultStyles"
 import figmasvg from '../../resources/tecsvg/figma.svg'
@@ -72,7 +70,7 @@ return(
                 <e.SkillBoxPolygon>
                 <e.SkillBoxBehind data-aos-delay='350' data-aos-duration='400' data-aos='zoom-in-up' data-aos-offset='0'/> 
                 <e.SkillBox key={KEY}>
-                    <e.SkillSvg  ml={s.svg === ussvg ? 65 : s.svg === autodidactsvg ? 65 : s.svg === responsivesvg ? 55 : s.svg === lightbulbsvg ? 46 : s.svg === desktop ? 64 : 65} mt={s.svg === ussvg ? 65 : s.svg === autodidactsvg ? 55 : s.svg === responsivesvg ? 50 : s.svg === lightbulbsvg ? 44 : s.svg === desktop ? 55 : 60} height={s.svg === ussvg ? 28 : s.svg === autodidactsvg ? 42 : s.svg === responsivesvg ? 51 : s.svg === lightbulbsvg ? 55 : s.svg === mobile ? 42 :s.svg === desktop ? 45 : s.svg === tdd ? 42 : 40} style={s.svg === ussvg ? {background:'white'} : null} src={s.svg}/>
+                    <e.SkillSvg  ml={s.svg === ussvg ? 67 : s.svg === autodidactsvg ? 65 : s.svg === responsivesvg ? 55 : s.svg === lightbulbsvg ? 46 : s.svg === desktop ? 64 : 65} mt={s.svg === ussvg ? 67 : s.svg === autodidactsvg ? 55 : s.svg === responsivesvg ? 50 : s.svg === lightbulbsvg ? 44 : s.svg === desktop ? 55 : 60} height={s.svg === ussvg ? 25 : s.svg === autodidactsvg ? 42 : s.svg === responsivesvg ? 51 : s.svg === lightbulbsvg ? 55 : s.svg === mobile ? 42 :s.svg === desktop ? 45 : s.svg === tdd ? 42 : 40} style={s.svg === ussvg ? {background:'white'} : null} src={s.svg}/>
                     <e.SkillTitle style={s.svg===lightbulbsvg ? {fontSize:'12px',marginBottom:'28px'} : null}>{s.title}</e.SkillTitle>
                 </e.SkillBox>
                 </e.SkillBoxPolygon>
