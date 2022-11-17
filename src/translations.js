@@ -59,6 +59,7 @@ export const courses = [
 export const home = [
     lang === "es"
         ? {
+              mas:'más',
               vidTitle: "Explora mis Proyectos",
               vidDesc:
                   "En este sitio web podrás conocer acerca de mí, de mis proyectos, cursos, tecnologías e habilidades.\nMi objetivo es brindar información detallada sobre mí para futuras oportunidades.",
@@ -70,7 +71,7 @@ export const home = [
               lvd2: " , me encanta la solución de problemas y",
               lvdi3: "aprender",
               lvd3: "más cada día, también tengo",
-              lvdi4: "conocimiento de inglés",
+              lvdi4: "conocimientos de inglés",
               lvd4: "avanzado.",
               aboutmetext: "Sobre mí",
               devtext: "Desarrollador",
@@ -86,7 +87,7 @@ export const home = [
               answer1:
                   "Dependiendo la rama de desarrollo que tomes será la respuesta, independientemente de eso siempre he recomendando empezar con Python debido a que su curva de aprendizaje es rápida y más sencilla que otras.",
               answer2:
-                  "A lo largo de mi vida esta pregunta fue muy común, sin embargo con los años de experiencia & estudios me di cuenta que no es necesario un titulo universitario para tener éxito como programador, hoy en día es posible aprender software mediante internet de forma gratuita o incluso con un costo muy bajo, y poder tener mucho más conocimiento que un recién graduado dependiendo de tú dedicación.",
+                  "A lo largo de mi vida esta pregunta fue muy común, sin embargo con los años de experiencia & estudios me di cuenta que no es necesario un titulo universitario para tener éxito como programador, hoy en día es posible aprender software mediante internet de forma gratuita o incluso con un costo muy bajo, y poder tener mucho más conocimientos que un recién graduado dependiendo de tú dedicación.",
               answer3:
                   "Ser buen desarrollador consta de tener diversos hábitos, entre ellos nunca dejar de aprender, comentar & refactorizar tu código, masterizar herramientas de desarrollo, mantener un código limpio y legíble, entre otros.",
               answer4:
@@ -94,7 +95,7 @@ export const home = [
               rptext: "Proyectos Recientes",
               seeptext: "Ver Proyectos",
               inworkdesc:
-                  "La plataforma inWork es una red social dirigída al campo profesional en el cual consiste en unir una cuenta de empresa con una cuenta personal contando con sus respectivas preferencias. Como empresa podrás encontrar a tu candidato perfecto, y como personal podrás aumentar tus posibilidades de trabajo y encontrar la empresa indicada.",
+                  "La plataforma inWork es una red social dirigída al campo profesional en el cual consiste en unir una cuenta de empresa con una cuenta personal contando con sus respectivas preferencias. Como empresa podrás encontrar a tu candidato perfecto, y como personal podrás aumentar tus ofertas laborales y encontrar la empresa indicada.",
               fasfudesc:
                   "Fasfu Burgers es una aplicación pick-up delivery en tiempo real realizada para el restaurante Fasfu Burgers. Este prototipo te permite ordenar tu comida favorita en linea. esta aplicación fue creada para Luisito Comunica y la comunidad Hispano Hablante alrededor del mundo.",
               focusdesc:
@@ -102,21 +103,22 @@ export const home = [
               smallappsdesc:
                   "Small Apps es un template landing page basado en HTML/CSS/JavaScript, fue creado para un uso gratuito por un grupo pequeño de programadores.",
               evercodedesc:
-                  "EVERCODE es un proyecto personal en el cuál me dedico a crear proyectos gratuitos/pagos para diversas personas. En el he realizado alrededor de 15+ Android  Apps sencillas con React Native y alrededor de 20+ Web Apps con React, Node.js y MySQL, también forma parte de aplicaciones personales como inWork.",
+                  "EVERCODE es un proyecto personal en el cuál me dedico a crear proyectos gratuitos/pagos para diversas personas. En el he realizado alrededor de 15+ Android  Apps sencillas con React Native y alrededor de 20+ Web Apps con React, Node.js y MySQL.",
               skillstec: "Habilidades & Tecnologías",
               exploreprojectstext: "Ver Tecnologías",
               desc1: "Desarrollador Full-Stack dedicado al área de programación Web & Desarrollo de aplicaciones móviles, soy una persona con diversos conocimientos en tecnologías e habilidades personales.",
               desc2: "las principales",
               desc3: "tecnologías que utilizo frecuentemente son",
-              desc4: "JavaScript y frameworks de JavaScript como React o React Native, Node.Js, MySQL, HTML & CSS, Styled Components, entre muchas otras. También utilizo",
+              desc4: "JavaScript, TypeScript y frameworks de JavaScript como React, Angular, Node.Js, MySQL, HTML & CSS, Styled Components, entre muchas otras. También utilizo",
               desc5: "herramientas",
               desc6: "que facilitan mi trabajo en el desarrollo como por ejemplo Figma para la creación de UI, o Vim para flexibilizar mi código. Uno de mis proyectos personales ha sido dictar cursos de programación, y eso me ha desarrollado una habilidad de liderazgo que crece cada día, también tengo",
-              desc7: "conocimiento de inglés",
+              desc7: "conocimientos de inglés",
               desc8: ", soy completamente autodidacta y considero que tengo una alta capacidad para la solución de problemas.",
               contactmetext: "Contáctame",
               biography: "Full-Stack Developer | Descripcion | Editar aqui",
           }
         : {
+              mas:'more',
               vidTitle: "Explore my Projects",
               vidDesc: `In this website you will know about me, my projects, courses, technologies and skills.\nMy objective is provide detailed information about me for next opportunities.`,
               exploreText: "Explore",
@@ -141,7 +143,7 @@ export const home = [
               question3: "Good Habits?",
               question4: "Developer Tips?",
               answer1:
-                  "Depending of the development branch you take will be the answer, but i always has recommend start with python because it is more easier than others and it has a fast learning curve.",
+                  "Depending of the development branch you take will be the answer, but i always has recommended start with python because it is more easier than others and it has a fast learning curve.",
               answer2:
                   "throughout my life this question has been very common, however with the years of experience & studies i realized that is not neccesary a degree. today it is possible to learn software free or with a very low cost, and have more knoweldge than a person with degree.",
               answer3:
@@ -156,21 +158,21 @@ export const home = [
                   "inWork platform is a social network which it consist in join a business account with a personal account based in their preferences. As a business Account you will find your perfect vacant and as a personal account you will improve your opportunities and find the perfect work",
             fasfudesc:"Fasfu Burgers is a real time pick-up delivery application of Fasfu Burgers Restaurant. This prototype allows you to order your favorite food online. this application was maded for Luisito Comunica and the spanish speakers around the world.",
               focusdesc:
-                  "Focus platform is an web application where you will have the opportunitie to know people you follow. Focus can be used for teaching or receiving classes, know your most loved artists in private sessions, teach about some courses of all types, and including a lot more things you can do. In Focus you insert money to pay the sessions and recceive money as a content creator.",
+                  "Focus platform is a web application where you will have the opportunitie to know the people you follow. Focus can be used for teaching or receiving classes, know your most loved artists in private sessions, teach about some courses of all types, and including a lot more things you can do. In Focus you insert money to pay the sessions and recceive money as a content creator.",
               smallappsdesc:
                   "Small Apps is a web landing page based in HTML/CSS/JavaScript, was created for a small group of developers.",
               evercodedesc:
                   "EVERCODE is a personal project, in this project i decided to create web applications and mobile applications to any person who need it without any cost. i improve my skills a lot with React Native, React, Node.Js, MySQL, inWork platform counts too as a project from EVERCODE.",
               skillstec: "Skills & Technologies",
               exploreprojectstext: "Explore Technologies",
-              desc1: "Full-Stack Developer i have multiples knoweldge in technologies and personal skills.",
-              desc2: "the main",
-              desc3: "technologies that i use frequently are",
-              desc4: "JavaScript and JavaScript Frameworks such as React and React Native, Node.Js, MySQL, HTML & CSS, Styled Components, and others. i also use",
+              desc1: "I'm a Full-Stack Developer, i have multiples knoweldge in various technologies and personal skills.",
+              desc2: "the most",
+              desc3: "technologies that i frequenlty use are",
+              desc4: "JavaScript, TypeScript and JavaScript Frameworks such as React and Angular, Node.Js, MySQL, HTML & CSS, Styled Components, and others. i also use",
               desc5: "tools",
               desc6: "that make my work easier, for example Figma for UI creation, or Vim to make more flexible my coding. one of my personal projects has been teach some courses of web development, and that has increase my leadership skill, i also have",
               desc7: "advanced english knoweldge",
-              desc8: ", i am a very autodidact and i think i have a high capacity of problem solutions.",
+              desc8: ", i am a very autodidact and i have a high capacity of problem solutions.",
               contactmetext: "Contact Me",
               biography: "Full-Stack Developer | Description | Edit Here",
           },
@@ -287,8 +289,8 @@ export const aboutme = [
               am6: "lógica",
               am7: "a una muy corta edad, a lo largo de los años de mucho estudio de forma autodidacta y formaciones online comenzé a crear proyectos como redes sociales, o aplicaciones de diversos usos. esto me ayudo mucho a mejorar mi",
               am8: "habilidad con tecnologías",
-              am9: "como javascript, React, Angular, PHP, jQuery, MySQL, node.js y entre otros.",
-              am10: "Luego de haber desarrollado diversas páginas e aplicaciones, tuve un empleo en una empresa de instrucción pequeña localizada en Ecuador, Quito. Mi trabajo para está empresa fue desarrollar una aplicación web dónde los profesores podían crear class rooms, poner tareas/videos explicativos a sus clases, también podían evaluar a los alumnos mediante la aplicación, está aplicación fue basada en",
+              am9: "como Javascript, TypeScript, React, Angular, PHP, jQuery, MySQL, Node.js y entre otros.",
+              am10: "Luego de haber desarrollado diversas páginas e aplicaciones, tuve un empleo en una empresa de instrucción pequeña localizada en Ecuador, Quito. Mi trabajo para está empresa fue desarrollar una Aplicación Web dónde los profesores podían crear Class Rooms, implementar tareas/videos explicativos a sus clases, también podían evaluar a los alumnos mediante la aplicación, está aplicación fue basada en",
               am11: "Google Class Room",
               am12: ", y contiene sus principales carácteristicas.",
               am13: "Con el tiempo pude",
@@ -305,11 +307,11 @@ export const aboutme = [
               am24: "dictar clases online",
               am25: "gratuitamente, donde podía enseñar mis conocimientos a personas interesadas. Esto me desarrollo habilidad de liderazgo y enseñanza poco a poco, hoy en día luego de haber dictado diversos cursos privados estoy trabajando en desarrollar nuevos cursos en el cuál enseña a",
               am26: "programar con diversas tecnologías",
-              am27: ", siempre he tenido interés en enseñar.",
+              am27: ", siempre he tenido mucho interés en enseñar.",
               am28: "También me interesé en aprender",
               am29: "inglés",
-              am30: "avanzado debido a su alta demanda y participación en el desarrollo y también decidí aprender sobre",
-              am31: "alemán",
+              am30: "avanzado debido a su alta demanda y participación en el desarrollo y también decidí aprender",
+            am31: "Español (Gallego)",
               am32: "básico.",
               am33: "En este momento sigo aprendiendo nuevas tecnologías y maneras de mejorar como desarrollador, también me encuentro en una busqueda de oportunidades para crecer profesionalmente.",
           }
@@ -322,10 +324,10 @@ export const aboutme = [
               am4: "detailed information about me, my skills, tools i use, projects, and technologies learned.",
               am5: "I started interesting in development since i was a kid, i always has been a very curious and autodidact person, i started to study by my own when i was 13 years old, i started with C, C++ and C#, this helped me a lot to improve my",
               am6: "logic",
-              am7: "at a very young age, throughout the years of a lot of autodidact and online formations studies i started to create personal projects such as social networks or applications of various uses. this helped me to improve my",
+              am7: "at a very young age, throughout the years of a lot of autodidact and online formations studies i started to create personal projects such as social networks or applications of various ussages. this helped me to improve my",
               am8: "skills with technologies",
-              am9: "like JavaScript, React, Angular, PHP, jQuery, MySQL, Node.Js, and others.",
-              am10: "After developing various web applications and mobile applications, i had a job in a small business of instruction located in Ecuador, Quito. My work here was developing a web application where the professors can create their class rooms, they was able to create/edit tasks for their students, they was also able to evaluate the students, this application was based in",
+              am9: "like JavaScript, TypeScript, React, Angular, PHP, jQuery, MySQL, Node.Js, and others.",
+              am10: "After developing various web applications and mobile applications, i had a job in a small business of instruction located in Ecuador, Quito. My work here was developing a web application where the professors can create their own class rooms, they was able to create/edit tasks for their students, they was also able to evaluate the students, this application was based in",
               am11: "Google Class Room",
               am12: ", and it contains all the main functions of it.",
               am13: "throughout the time i",
@@ -346,7 +348,7 @@ export const aboutme = [
               am28: "I also learn advanced",
               am29: "English",
               am30: "due to its high demand and participation in the software development, and i decided to learn basic",
-              am31: "German",
+              am31: "Spanish (Galician)",
               am32: "too.",
               am33: "In this right moment i am still learning new technologies and looking for ways to improve as a Developer, i am also looking for oportunities to grow professionally.",
           },
@@ -367,8 +369,9 @@ export const Projects = [lang === "es" ? {
     desc12:"EVERCODE es un proyecto personal en el cuál realizaba proyectos gratuitos y pagos para personas que necesitaban programadores o empresas muy pequeñas, está página junto a EVERCODE son para representar mi proyecto personal.", 
     desc13:"Hacking Services es una aplicación web One Page con una muy simple interfaz.", 
     desc14:"React Template es un landing page template de React para facilitar el trabajo de desarrolladores en diversas aplicaciones.", 
-    desc15:"Besign Invest es una aplicación web que representa un grupo de diseñadores gráficos profesionales que ofrecen sus diversos servicios y demuestran sus proyectos y testimmonios.", 
+    desc15:"Besign Invest es una aplicación web que representa un grupo de diseñadores gráficos profesionales que ofrecen sus diversos servicios y demuestran sus proyectos y testimonios.", 
     desc16:"Animated Portfolio es un portafolio de PRUEBA, donde la información es falsa y fue creado solo para demostrar diversos conocimientos en Next.Js.", 
+    descloc:"League of Champs es una app que maneja la API de Riot Games y permite conocer todos los campeones y skins de League of Legends.", 
     desc17:"Fasfu Burgers es una aplicación pick-up delivery en tiempo real realizada para el restaurante Fasfu Burgers. Este prototipo te permite ordenar tu comida favorita en linea. esta aplicación fue creada para Luisito Comunica y la comunidad Hispano Hablante alrededor del mundo.",
     desc18:"Luck es una plataforma que se basa en crear sorteos de creadores de contenido para su comunidad, el proposito de esta aplicación es mejorar la comunidad y entregar premios a tu comunidad.",
     desc19:"Mochi Template es un template de real estate realizado con la tecnología de Angular.", 
@@ -390,6 +393,7 @@ export const Projects = [lang === "es" ? {
     desc14:"React Template is a landing page from React, is used to make more flexible the developing of a landing website.", 
     desc15:"Besign Invest is a web application, was made for a graphic designer group that offers their services & projects and testimonials.", 
     desc16:"Animated Portfolio is a test portfolio, all the information it contains it is false and this was created for showing various skills in Next.Js.", 
+    descloc:"League of Champs is an app which uses the api from Riot Games, League of Champs let you see all champions and skins of League of Legends.", 
     desc17:"Fasfu Burgers is a real time pick-up delivery application of Fasfu Burgers Restaurant. This prototype allows you to order your favorite food online. this application was maded for Luisito Comunica and the spanish speakers around the world.", 
     desc18:"Luck is a platform that improve the relationship of the community of content creators, the propourse of this application is creating raffles and give rewards & improve your community.", 
     desc19:"Mochi Template is a real estate template maded with Angular.", 

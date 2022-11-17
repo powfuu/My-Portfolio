@@ -135,8 +135,12 @@ export const PreviewViewRight = styled.div`
 `
 export const PreviewLeftBg = styled.img`
     background:#D6D6D6;
-    height:100%;
-    width:100%;
+    height:90%;
+    width:90%;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
     position:absolute;
     border-radius:15px;
     object-fit:contain;
@@ -294,12 +298,6 @@ export const PreviewRightLine =styled.div`
     width:120px;
     height:1px;
     background:${p=>p.bg};
-
-    background-position-x: 0px;
-    background-size: 200%;
-    background-color: ${p=>p.theme.importantX2};
-    background-image: linear-gradient(90deg, ${p=>p.theme.importantX} 0%, ${p=>p.theme.important} 50%, ${p=>p.theme.importantX} 100%);
-    animation: 3s ease-in-out 0s infinite normal none running bHafHd;
     ${mw(1712)}{
         width:50px;
     }

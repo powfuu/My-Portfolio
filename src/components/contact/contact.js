@@ -37,7 +37,7 @@ return(
                 <e.Or>o</e.Or>
                 <e.OrLine/>
             </e.OrView> 
-            <a href="mailto:everit@jhondev.com">
+            <a href="mailto:dev@everit-jhon.com">
                 <e.ContactGmail data-aos-offset='-400' data-aos='zoom-in-right' data-aos-duration='700' data-aos-delay='500' src={gmailsvg}/>
             </a>
         </e.ProfileView> 

@@ -146,7 +146,7 @@ return(
                     <e.Tectec>HTML</e.Tectec>
                     <e.Tectec>CSS</e.Tectec>
                     <e.Tectec>JavaScript</e.Tectec>
-                    <e.Tectec>+4 más</e.Tectec>
+                    <e.Tectec>+4 </e.Tectec>
 </e.TectecDiv>
             </e.TecBox>
 </Link>
@@ -163,7 +163,7 @@ return(
                     <e.TectecInverse>Node.js</e.TectecInverse>
                         <e.TectecInverse>Styled Com..</e.TectecInverse>
                     <e.TectecInverse>MySQL</e.TectecInverse>
-                    <e.TectecInverse>+8 más</e.TectecInverse>
+                    <e.TectecInverse>+8 </e.TectecInverse>
 </e.TectecDiv>
             </e.TecBoxInverse>
                 </Link>
@@ -180,7 +180,7 @@ return(
                     <e.Tectec>Node.js</e.Tectec>
                     <e.Tectec>React Native</e.Tectec>
                     <e.Tectec>MySQL</e.Tectec>
-                    <e.Tectec>+12 más</e.Tectec>
+                    <e.Tectec>+12 </e.Tectec>
 </e.TectecDiv>
             </e.TecBox>
 </Link>
@@ -197,7 +197,7 @@ return(
                     <e.TectecInverse>Node.js</e.TectecInverse>
                     <e.TectecInverse>React Native</e.TectecInverse>
                     <e.TectecInverse>MySQL</e.TectecInverse>
-                    <e.TectecInverse>+21 más</e.TectecInverse>
+                    <e.TectecInverse>+21 </e.TectecInverse>
 </e.TectecDiv>
             </e.TecBoxInverse>
 
@@ -208,7 +208,7 @@ return(
             <e.TecLeft>
                 <e.TecLeftTitle data-aos='zoom-in-up' data-aos-duration={1470}>{tr[0].skillstec}</e.TecLeftTitle>
                 <e.TecLeftDesc data-aos='fade-up' data-aos-delay='300' data-aos-duration={1460} style={{paddingBottom:'150px'}}>
-                    {tr[0].desc1}<br/> {tr[0].desc2} <Important>{tr[0].desc3}</Important> {tr[0].desc4} <Important>{tr[0].desc5}</Important> {tr[0].desc6} <Important>{tr[0].desc7}</Important>{tr[0].desc8}
+                    {tr[0].desc1}<br/>{tr[0].desc2} <Important>{tr[0].desc3}</Important> {tr[0].desc4} <Important>{tr[0].desc5}</Important> {tr[0].desc6} <Important>{tr[0].desc7}</Important>{tr[0].desc8}
                 </e.TecLeftDesc>
                 <Link to="/tecnologias" data-aos='zoom-in-up' data-aos-duration={660} onClick={() => {props.setNavItemIdChecked(1); localStorage.setItem('@app/nav:itemId', 1) }}><e.ViewTecnologiesButLeft style={{marginTop:'-110px'}}>{tr[0].exploreprojectstext}</e.ViewTecnologiesButLeft></Link>
                 <svg xmlns="http://www.w3.org/2000/svg" style={{position:'absolute',bottom:'0',width:'100vw',marginLeft:'-175px', transform:'rotateY(0deg)'}} viewBox="0 0 1440 320">
@@ -251,7 +251,7 @@ return(
                 <e.Or>o</e.Or>
                 <e.OrLine/>
             </e.OrDiv>
-            <a href="mailto:everit@jhondev.com"><e.GmailSvg src={gmailsvg}/></a>
+            <a href="mailto:dev@everit-jhon.com"><e.GmailSvg src={gmailsvg}/></a>
         </e.ContactView>
 </View>
 )

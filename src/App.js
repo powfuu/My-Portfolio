@@ -32,7 +32,7 @@ const [ navItemIdChecked, setNavItemIdChecked ] = useState(localStorage.getItem(
         }, 1000);
     },[])
     useEffect(()=>{
-        if(window.location.pathname === '/inicio'){
+        if(window.location.pathname === '/'){
             setNavItemIdChecked(0)
         }
         else if(window.location.pathname === '/tecnologias'){
@@ -53,7 +53,7 @@ const [ navItemIdChecked, setNavItemIdChecked ] = useState(localStorage.getItem(
         else if(window.location.pathname === '/contacto'){
             setNavItemIdChecked(6)
         }
-        if(window.location.pathname != '/inicio' && window.location.pathname != '/' && window.location.pathname != '/contacto' && window.location.pathname != '/acerca-de' && window.location.pathname != '/cursos' && window.location.pathname != '/proyectos' && window.location.pathname != '/habilidades' && window.location.pathname != '/tecnologias'){
+        if(window.location.pathname != '/' && window.location.pathname != '/' && window.location.pathname != '/contacto' && window.location.pathname != '/acerca-de' && window.location.pathname != '/cursos' && window.location.pathname != '/proyectos' && window.location.pathname != '/habilidades' && window.location.pathname != '/tecnologias'){
             setNavItemIdChecked(7)
         }
         setTimeout(()=>{
@@ -89,8 +89,7 @@ const [ navItemIdChecked, setNavItemIdChecked ] = useState(localStorage.getItem(
             : null}
                 <div style={{minHeight:'100vh',overflow: 'hidden'}}>
         <Routes>
-            <Route path='/' element={<Navigate to={navItemIdChecked == 0 ? "/inicio" : navItemIdChecked == 1 ? "/tecnologias" : navItemIdChecked == 2 ? "/habilidades" : navItemIdChecked == 3 ? "/proyectos" : navItemIdChecked == 4 ? "/cursos" : navItemIdChecked == 5 ? "/acerca-de" : navItemIdChecked == 6 ? "/contacto" : null}/>}/>
-            <Route path='/inicio' element={<Home theme={theme} setNavItemIdChecked={setNavItemIdChecked}/>}/>
+            <Route path='/' element={<Home theme={theme} setNavItemIdChecked={setNavItemIdChecked}/>}/>
             <Route path='/tecnologias' element={<Technologies theme={theme}/>}/>
             <Route path='/habilidades' element={<Skills/>}/>
             <Route path='/proyectos' element={<Projects theme={theme}/>}/>
