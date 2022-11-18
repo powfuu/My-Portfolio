@@ -88,7 +88,7 @@ const Projects = (prop) =>{
         { title:"Animated Portfolio", t1:'JavaScript', t2:'React', t3:'Next.Js', t4:'HTML', t5:'CSS', t6:'Responsive', t7:'AOS'},
     ]
     let projects = [
-        { id:1, title:'Fasfu Burgers', colorscheme:'#0306a6', ic: fasfuic, bg: fasfubg, desc:desc17 }, 
+        { id:1, title:'Fasfu Burgers', colorscheme:'#0306a6', ic: fasfuic, bg: fasfubg, desc:desc17, url:'https://www.fasfu-burgers.everit-jhon.com' }, 
         { id:2, title:'inWork', colorscheme:'#2DA6A8', ic: inworkic, bg: inworkbg, desc:desc1 }, 
         
 { id:3, colorscheme:'#26273B', title:'Bash Site', ic:bash, bg:bashbg, desc:desc3 },
@@ -178,7 +178,9 @@ imgRef.current.style.opacity="1"
                         <e.PreviewRightIc height={p.title==="Coming Soon" ? "60" : p.title==="Pizza Hut" ? "70" : p.title === "Vanderbilt" ? "34" : p.title==="Hacking Services" ? "30" : p.title==="Sharp Development" ? "33" : p.title==="LOC" ? "35" : null} transf={p.title === "Focus" ? "scale(.8)" : null} src={p.ic}/>
                 </e.PreviewRightTitleView>
                         <e.PreviewRightDesc>{p.desc}</e.PreviewRightDesc>
-            <e.ViewProjectButton bg={p.colorscheme}>{tr[0].text}</e.ViewProjectButton>
+                        <e.ViewProjectButton onClick={()=>{
+                            window.location.href=p.url
+                        }} bg={p.colorscheme}>{tr[0].text}</e.ViewProjectButton>
                             {technologies.filter((tec)=>tec.title === p.title).map((t)=>{
                                 return(
                                 <e.ProjectsView>

@@ -87,7 +87,7 @@ if(prop.theme === "light"){
     return (
         <>
             <e.Nav ref={navRef} height={isOpen ? 615 : null}>
-                <Link to="/inicio" onClick={()=>{ prop.setNavItemIdChecked(0); localStorage.setItem("@app:nav:itemId",0) }}><e.Logo alt="logo" src={test}/></Link>
+                <Link to="/" onClick={()=>{ prop.setNavItemIdChecked(0); localStorage.setItem("@app:nav:itemId",0) }}><e.Logo alt="logo" src={test}/></Link>
             <e.NavItems>
                 {navItems.map((item,KEY)=>{
                     return(
