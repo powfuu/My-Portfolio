@@ -1,4 +1,4 @@
-let lang = localStorage.getItem("@app:lang");
+let lang = localStorage.getItem("@app:lang") || 'es';
 export const navigation = [
     lang === "es"
         ? {

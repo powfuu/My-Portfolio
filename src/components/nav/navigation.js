@@ -31,10 +31,10 @@ window.scrollTo({
 }
 const handleLanguage = () =>{
     if(prop.lan === "es"){
-        prop.setLan("en")
+        prop.setLan("es")
         localStorage.setItem('@app:lang','en')
     }else if(prop.lan === "en"){
-        prop.setLan("es")
+        prop.setLan("en")
         localStorage.setItem('@app:lang','es')
     }
     window.location.reload()

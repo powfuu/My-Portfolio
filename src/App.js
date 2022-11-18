@@ -23,7 +23,7 @@ import 'aos/dist/aos.css';
 
 function App() {
 const [loaded,setLoaded]=useState(false)
-const [lan, setLan]=useState(localStorage.getItem('@app:lang') == null ? "es" : localStorage.getItem("@app:lang"))
+const [lan, setLan]=useState(localStorage.getItem('@app:lang') === null ? "es" : localStorage.getItem("@app:lang"))
 const [theme,setTheme] = useState( localStorage.getItem('@app:theme') == null ? "light" : localStorage.getItem("@app:theme") )
 const [ navItemIdChecked, setNavItemIdChecked ] = useState(localStorage.getItem('@app/nav:itemId') == null ? 0 : localStorage.getItem('@app/nav:itemId'))
     useEffect(()=>{
