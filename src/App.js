@@ -2,7 +2,7 @@ import { GlobalStyles, light, dark } from "./themes"
 import { Loader } from "./defaultStyles"
 import { useState, useEffect } from "react"
 import { ThemeProvider } from "styled-components"
-import { Route,Routes,Navigate} from "react-router-dom"
+import { Route,Routes} from "react-router-dom"
 //function & footer & Navigation
 import ScrollTop from './func/scrollTop'
 import Nav from "./components/nav/navigation"
