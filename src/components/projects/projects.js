@@ -88,27 +88,27 @@ const Projects = (prop) =>{
         { title:"Animated Portfolio", t1:'JavaScript', t2:'React', t3:'Next.Js', t4:'HTML', t5:'CSS', t6:'Responsive', t7:'AOS'},
     ]
     let projects = [
-        { id:1, title:'Fasfu Burgers', colorscheme:'#0306a6', ic: fasfuic, bg: fasfubg, desc:desc17, url:'https://www.fasfu-burgers.everit-jhon.com' }, 
-        { id:2, title:'inWork', colorscheme:'#2DA6A8', ic: inworkic, bg: inworkbg, desc:desc1 }, 
+        { id:1, title:'Fasfu Burgers', colorscheme:'#0306a6', ic: fasfuic, bg: fasfubg, desc:desc17, url:'https://fasfu-burgers.everit-jhon.com/' }, 
+        { id:2, title:'inWork', colorscheme:'#2DA6A8', ic: inworkic, bg: inworkbg, desc:desc1, url:'https://inwork.everit-jhon.com/' }, 
         
-{ id:3, colorscheme:'#26273B', title:'Bash Site', ic:bash, bg:bashbg, desc:desc3 },
-        { id:4, title:'Luck', colorscheme:'#9057FE', ic: luckic, bg: luckbg, desc:desc18 }, 
-        { id:5, colorscheme:'#00CBA9', title:'Coming Soon', ic:comingsoon, bg: comingsoonbg, desc:desc4 },
-        { id:6, colorscheme:'#ee3a43', title:'Mochi Template', ic:mochiic, bg: mochibg, desc:desc19 },
-        { id:7, colorscheme:'black', title:'EVERCODE', ic:evercode, bg:evercodebg, desc:desc5 },
-        { id:8, colorscheme:'#4A5587', title:'Small Apps', ic:smallappslogo, bg: smallapps, desc:desc2 },
-        { id:9, colorscheme:'#FF008D', title:'Focus', ic:focusic, bg:focusbg, desc:desc6 },
-        { id:10, colorscheme:'#5EABD5', title:'Translators', ic:translators, bg: translatorsbg, desc:desc7 },
-        { id:11, colorscheme:'#EE3A43', title:'Pizza Hut', ic:pizzahut, bg: pizzahutbg, desc:desc8 },
-        { id:12, colorscheme:'#F5C92C', title:'Template', ic:template1, bg: templatebg, desc:desc9 },
-        { id:13, colorscheme:'#E30613', title:'Vanderbilt', ic:vanderbilt, bg: vanderbiltbg, desc:desc10 },
-        { id:14, colorscheme:'#5658DD', title:'Sharp Development', ic:sharpdevelopment, bg: sharpdevelopmentbg, desc:desc11 },
-        { id:15, colorscheme:'black', title:'EVERCODE Services', ic:evercode, bg: evercodeservicesbg, desc:desc12 },
-        { id:16, colorscheme:'#D5C396', title:'LOC', ic:loc , bg: locbg, desc:descloc },
-        { id:17, colorscheme:'#5971F1', title:'Hacking Services', ic:hackingservice, bg: hackingservicesbg, desc:desc13 },
-        { id:18, colorscheme:'#209CEE', title:'Template 2', ic:fecmanager, bg: fecmanagerbg, desc:desc14 },
-        { id:19, colorscheme:'#00689F', title:'Besign Invest', ic:besigninvest, bg: besigninvestbg, desc:desc15 },
-        { id:20, colorscheme:'#44A0FB', title:'Animated Portfolio', ic:animatedportfolio, bg: animatedportfoliobg, desc:desc16 },
+{ id:3, colorscheme:'#26273B', title:'Bash Site', ic:bash, bg:bashbg, desc:desc3, url:'https://bash.everit-jhon.com/' },
+        { id:4, title:'Luck', colorscheme:'#9057FE', ic: luckic, bg: luckbg, desc:desc18, url:'https://luck.everit-jhon.com/' }, 
+        { id:5, colorscheme:'#00CBA9', title:'Coming Soon', ic:comingsoon, bg: comingsoonbg, desc:desc4, url:'https://coming-soon.everit-jhon.com/' },
+        { id:6, colorscheme:'#ee3a43', title:'Mochi Template', ic:mochiic, bg: mochibg, desc:desc19, url:'https://mochi-template.everit-jhon.com/' },
+        { id:7, colorscheme:'black', title:'EVERCODE', ic:evercode, bg:evercodebg, desc:desc5, url:'https://evercode.everit-jhon.com/' },
+        { id:8, colorscheme:'#4A5587', title:'Small Apps', ic:smallappslogo, bg: smallapps, desc:desc2, url:'https://small-apps.everit-jhon.com/' },
+        { id:9, colorscheme:'#FF008D', title:'Focus', ic:focusic, bg:focusbg, desc:desc6, url:'https://focus.everit-jhon.com/' },
+        { id:10, colorscheme:'#5EABD5', title:'Translators', ic:translators, bg: translatorsbg, desc:desc7, url:'https://translators.everit-jhon.com/' },
+        { id:11, colorscheme:'#EE3A43', title:'Pizza Hut', ic:pizzahut, bg: pizzahutbg, desc:desc8, url:'https://pizza-hut.everit-jhon.com/' },
+        { id:12, colorscheme:'#F5C92C', title:'Template', ic:template1, bg: templatebg, desc:desc9, url:'https://template.everit-jhon.com/' },
+        { id:13, colorscheme:'#E30613', title:'Vanderbilt', ic:vanderbilt, bg: vanderbiltbg, desc:desc10, url:'https://vanderbilt.everit-jhon.com/' },
+        { id:14, colorscheme:'#5658DD', title:'Sharp Development', ic:sharpdevelopment, bg: sharpdevelopmentbg, desc:desc11, url:'https://sharp-development.everit-jhon.com/' },
+        { id:15, colorscheme:'black', title:'EVERCODE Services', ic:evercode, bg: evercodeservicesbg, desc:desc12, url:'https://evercode-services.everit-jhon.com/' },
+        { id:16, colorscheme:'#D5C396', title:'LOC', ic:loc , bg: locbg, desc:descloc, url:'https://leagueofchamps.everit-jhon.com/' },
+        { id:17, colorscheme:'#5971F1', title:'Hacking Services', ic:hackingservice, bg: hackingservicesbg, desc:desc13, url:'https://hacking-services.everit-jhon.com/' },
+        { id:18, colorscheme:'#209CEE', title:'Template 2', ic:fecmanager, bg: fecmanagerbg, desc:desc14, url:'https://template-2.everit-jhon.com/' },
+        { id:19, colorscheme:'#00689F', title:'Besign Invest', ic:besigninvest, bg: besigninvestbg, desc:desc15, url:'https://besign-invest.everit-jhon.com/' },
+        { id:20, colorscheme:'#44A0FB', title:'Animated Portfolio', ic:animatedportfolio, bg: animatedportfoliobg, desc:desc16, url:'https://animated-portfolio.everit-jhon.com/' },
     ]
     const imgRef=useRef(null)
     const handleUpdateId = id => {
@@ -178,9 +178,9 @@ imgRef.current.style.opacity="1"
                         <e.PreviewRightIc height={p.title==="Coming Soon" ? "60" : p.title==="Pizza Hut" ? "70" : p.title === "Vanderbilt" ? "34" : p.title==="Hacking Services" ? "30" : p.title==="Sharp Development" ? "33" : p.title==="LOC" ? "35" : null} transf={p.title === "Focus" ? "scale(.8)" : null} src={p.ic}/>
                 </e.PreviewRightTitleView>
                         <e.PreviewRightDesc>{p.desc}</e.PreviewRightDesc>
-                        <e.ViewProjectButton onClick={()=>{
-                            window.location.href=p.url
-                        }} bg={p.colorscheme}>{tr[0].text}</e.ViewProjectButton>
+                        <a href={p.url} target="_blank">
+                        <e.ViewProjectButton bg={p.colorscheme}>{tr[0].text}</e.ViewProjectButton>
+                        </a>
                             {technologies.filter((tec)=>tec.title === p.title).map((t)=>{
                                 return(
                                 <e.ProjectsView>

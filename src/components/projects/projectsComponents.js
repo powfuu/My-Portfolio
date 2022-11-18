@@ -155,7 +155,7 @@ export const ViewProjectButton = styled.button`
     right:0;
     bottom:0;
     margin-bottom:43px;
-    font-size:18.5px;
+    font-size:15.5px;
     border-radius:100px;
     margin-right:20px;
     margin-bottom:-120px;
@@ -166,7 +166,7 @@ export const ViewProjectButton = styled.button`
         margin-bottom:-50px;
     }
     ${mw(1428)}{
-        font-size:16px;
+        font-size:15px;
     }
 `
 export const PreviewProjectsView = styled.div`
