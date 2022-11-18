@@ -77,24 +77,21 @@ export const HamMenu = styled(Burger)`
     top:0;
     transform:scale(.9);
     margin-top:27px;
-    ${mw(1150)}{
+    ${mw(1290)}{
         display:block;
         margin-top:8px;
     }
 `
 export const Logo = styled.img` 
-    height:40px;
-    width:40px;
-    margin-top:5px;
+    height:52px;
+    width:52px;
+    margin-top:-2.5px;
     margin-left:110px;
     ${mw(1200)}{
         margin-left:70px;
     }
     ${mw(800)}{
         margin-left:25px;
-        height:37px;
-        width:37px;
-        margin-top:7px;
     }
 `
 export const Nav = styled.nav` 
@@ -106,17 +103,7 @@ export const Nav = styled.nav`
     justify-content:space-between;
     z-index:5;
     margin:20px auto;
-    ${mh(1151)}{
-        height:52px !important;
-    top:0;
-    position:fixed;
-    transform:translate(-50%,-50%);
-    -ms-transform:translate(-50%,-50%);
-    left:50%;
-    top:20px;
-    box-shadow: rgba(0, 0, 0, .1) 0px 0px 2px;
-    }
-    ${mw(1150)}{
+    ${mw(1290)}{
         display:block !important;
         overflow-y:hidden !important;
         justify-content: none !important;
@@ -125,6 +112,16 @@ export const Nav = styled.nav`
         border-radius:0px !important;
         margin:0px auto !important;
         margin-bottom:-70px !important;
+    }
+    ${mh(1290)}{
+        height:52px !important;
+    top:0;
+    position:fixed;
+    transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    left:50%;
+    top:20px;
+    box-shadow: rgba(0, 0, 0, .1) 0px 0px 2px;
     }
 `
 export const ToggleTheme = styled.div` 
@@ -142,7 +139,7 @@ export const ToggleTheme = styled.div`
     padding-right:${prop=>prop.pr}px;
     background: ${prop => prop.bg};
     cursor:pointer;
-    ${mw(1150)}{
+    ${mw(1290)}{
     }
 `
 export const ToggleThemeText = styled.p` 
@@ -166,7 +163,7 @@ export const NavItems = styled.div`
     ${mh(1151)}{
     margin-top:-88.25px;
     }
-    ${mw(1150)}{
+    ${mw(1290)}{
         padding:0;
         display:block;
         margin:-72px auto;
@@ -183,7 +180,7 @@ export const Item = styled.p`
     border-bottom:1px solid transparent;
     margin-top:17px;
     width:max-content;
-    ${mw(1150)}{
+    ${mw(1290)}{
         padding-top:4px;
         margin-bottom:-70px;
         display:block;
@@ -213,7 +210,7 @@ export const ItemWithoutEffect = styled.p`
     padding-top:15px;
     padding-bottom:14px;
     border-bottom:1px solid ${prop => prop.theme.fontColor};
-    ${mw(1150)}{
+    ${mw(1290)}{
         padding-top:4px;
         display:block;
         margin-bottom:-70px;
@@ -236,7 +233,7 @@ marginRight:'16px',
 fontSize:'14px'
 }
 export const ViewR = styled.div`
-    ${mw(1150)}{
+    ${mw(1290)}{
         width:max-content;
         margin:110px auto;
         padding-bottom:50px;

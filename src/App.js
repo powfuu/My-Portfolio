@@ -108,7 +108,7 @@ const [ navItemIdChecked, setNavItemIdChecked ] = useState(localStorage.getItem(
 
                 </div> 
         <Footer navItemIdChecked={navItemIdChecked} setNavItemIdChecked={setNavItemIdChecked}/>
-                : </>
+                    </>
  }      
     </ThemeProvider>
   );

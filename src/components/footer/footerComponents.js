@@ -21,8 +21,8 @@ export const Footer = styled.footer`
     margin-bottom:-18px !important;
 `
 export const Logo = styled.img` 
-    height:45px;
-    width:45px;
+    height:65px;
+    width:65px;
 `
 export const LogoText = styled.p` 
     color:#fff;

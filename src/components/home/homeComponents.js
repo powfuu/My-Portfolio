@@ -578,7 +578,7 @@ box-shadow: rgba(0, 0, 0, .6) 0px 3px 5px;
     ${mw(1369)}{
         width: 95%;
     }
-    ${mw(1150)}{
+    ${mw(1290)}{
         width: 100%;
         margin-top:-20px;
         border-radius:0px;
@@ -604,7 +604,7 @@ export const RightView = styled.div`
     border-top-right-radius:0px;
     ${mh(1151)}{
     }
-    ${mw(1150)}{
+    ${mw(1290)}{
         border-radius:0px;
     }
     ${mw(1369)}{

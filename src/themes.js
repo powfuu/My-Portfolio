@@ -99,8 +99,8 @@ export const GlobalStyles = createGlobalStyle`
 }
     #clip-logo{
         position:absolute;
-        height:52px;
-        width:52px;
+        height:73px;
+        width:73px;
     }
     *{ 
         transition: .4s all ease-in-out;
@@ -119,6 +119,7 @@ export const GlobalStyles = createGlobalStyle`
     }
     body{
         transition:0s;
+        overflow:hidden;
     }
     #box-icon-first, #box-icon-second, #box-icon-third{
         @media(max-width: 480px){
@@ -177,7 +178,7 @@ font-family: 'Open Sans', sans-serif;
     }
 /* width */
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 5px;
 }
 
 /* Track */
