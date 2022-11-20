@@ -9,6 +9,7 @@ import styledcomponentssvg from '../../resources/tecsvg/styled-components.svg'
 import htmlsvg from '../../resources/tecsvg/html.svg'
 import csssvg from '../../resources/tecsvg/css.svg'
 import mysqlsvg from '../../resources/tecsvg/mysql.svg'
+import awspng from '../../resources/tecsvg/aws.png'
 import jquerysvg from '../../resources/tecsvg/jquery.svg'
 import expressjssvg from '../../resources/tecsvg/expressjs.svg'
 import backendsvg from '../../resources/tecsvg/backend.svg'
@@ -54,6 +55,7 @@ const Technologies = () =>{
         {id: 24, title:'Multer.Js', svg:multersvg, lv: 2},
         {id: 18, title:'Frontend Tools', svg:frontendsvg, lv: 2},
         {id: 16, title:'HTTP & REST', svg:httprestsvg, lv: 2},
+        {id: 27, title:'AWS', svg:awspng, lv: 2},
         {id: 25, title:'Tailwind CSS', svg:tailwindsvg, lv: 1},
         {id: 26, title:'Vite', svg:vitesvg, lv: 1},
         {id: 2, title:'React Native', svg:reactnativesvg, lv: 1},
