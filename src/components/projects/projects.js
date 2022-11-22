@@ -89,10 +89,10 @@ const Projects = (prop) =>{
     ]
     let projects = [
         { id:1, title:'Fasfu Burgers', colorscheme:'#0306a6', ic: fasfuic, bg: fasfubg, desc:desc17, url:'https://fasfu-burgers.everit-jhon.com/' }, 
-        { id:2, title:'inWork', colorscheme:'#2DA6A8', ic: inworkic, bg: inworkbg, desc:desc1, url:'https://inwork.everit-jhon.com/' }, 
+        { id:2, title:'inWork', colorscheme:'#2DA6A8', ic: inworkic, bg: inworkbg, desc:desc1, url:'http://inwork.everit-jhon.com/' }, 
         
 { id:3, colorscheme:'#26273B', title:'Bash Site', ic:bash, bg:bashbg, desc:desc3, url:'https://bash.everit-jhon.com/' },
-        { id:4, title:'Luck', colorscheme:'#9057FE', ic: luckic, bg: luckbg, desc:desc18, url:'https://luck.everit-jhon.com/' }, 
+        { id:4, title:'Luck', colorscheme:'#9057FE', ic: luckic, bg: luckbg, desc:desc18, url:'http://luck.everit-jhon.com/' }, 
         { id:5, colorscheme:'#00CBA9', title:'Coming Soon', ic:comingsoon, bg: comingsoonbg, desc:desc4, url:'https://coming-soon.everit-jhon.com/' },
         { id:6, colorscheme:'#ee3a43', title:'Mochi Template', ic:mochiic, bg: mochibg, desc:desc19, url:'https://mochi-template.everit-jhon.com/' },
         { id:7, colorscheme:'black', title:'EVERCODE', ic:evercode, bg:evercodebg, desc:desc5, url:'https://evercode.everit-jhon.com/' },
