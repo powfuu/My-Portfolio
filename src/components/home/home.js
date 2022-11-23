@@ -11,7 +11,7 @@ import evercodelogo from '../../resources/evercodelogo.png'
 import linkedinsvg from '../../resources/linkedin.svg'
 import gmailsvg from '../../resources/gmail.svg'
 import banner from '../../resources/banner.png'
-import pic from '../../resources/pic.png'
+import pic from '../../resources/test.png'
 const Home = ( props ) =>{ 
     let years=7
     let courses=3
@@ -51,7 +51,7 @@ return(
                      <e.AboutMeTitle data-aos='zoom-in-up'>{tr[0].aboutmetext}</e.AboutMeTitle>
                     <e.AboutMeDivBox data-aos="fade-right" data-aos-delay='400' data-aos-duration="600" bg="#4a4640">
                         <e.AboutMeBoxTitle>{`<${tr[0].devtext}/>`}</e.AboutMeBoxTitle>
-                        <e.AboutMeBigTitle style={{marginLeft:'14px',fontSize:'21px'}}>Semi-Senior</e.AboutMeBigTitle>
+                        <e.AboutMeBigTitle style={{marginLeft:'14px',fontSize:'21px'}}>Mid-Level</e.AboutMeBigTitle>
                     </e.AboutMeDivBox>
                     <e.AboutMeDivBox data-aos-delay='550' data-aos="zoom-in" data-aos-duration="700" bg="#605a52">
                         <e.AboutMeBoxTitle>{`<${tr[0].codeyears}/>`}</e.AboutMeBoxTitle>
@@ -244,8 +244,8 @@ return(
             <e.Pic src={pic}/>
             <e.LinkedinSvg src={linkedinsvg}/>
             <e.Name>Everit Jhon</e.Name>
-            <e.Description>Full-Stack Developer | Description | Edit this, the contact me button and gmail button</e.Description>
-            <e.ContactLinkedin>{tr[0].contactmetext}</e.ContactLinkedin>
+            <e.Description>Full Stack Developer | React Angular Node.Js MySQL | Web developer Instructor</e.Description>
+            <e.ContactLinkedin onClick={()=>{window.location.href="https://www.linkedin.com/in/everit-jhon"}}>{tr[0].contactmetext}</e.ContactLinkedin>
             <e.OrDiv>
                 <e.OrLine/>
                 <e.Or>o</e.Or>

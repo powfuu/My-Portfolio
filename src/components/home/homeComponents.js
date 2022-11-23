@@ -43,8 +43,8 @@ export const Banner = styled.img`
     object-fit:cover;
 `
 export const Pic = styled.img`
-    width:67px;
-    height:67px;
+    width:70px;
+    height:70px;
     border-radius:100%;
     margin-top:-39px;
 `
