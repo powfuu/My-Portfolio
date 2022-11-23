@@ -6,7 +6,8 @@ import { Link } from "react-router-dom"
 import usflag from '../../resources/usflag.svg'
 import spainflag from '../../resources/esflag.svg'
 import { navigation as tr } from '../../translations'
-import CV from '../../resources/CV.pdf'
+import CV_es from '../../resources/CV_es.pdf'
+import CV_en from '../../resources/CV_en.pdf'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 const Navigation = (prop) =>{
@@ -101,7 +102,7 @@ if(prop.theme === "light"){
             {prop.theme === "light" ?
         <e.ToggleTheme pr={12} pl={3} bbrr={5} bblr={20} bg={'rgb(230,230,230)'} onClick={themeToggler}><e.ThemeModeView bg={'white'}><i className="gg-sun" style={e.moon}></i></e.ThemeModeView> <e.ToggleThemeText>Light</e.ToggleThemeText></e.ToggleTheme>
             : <e.ToggleTheme bblr={5} bbrr={20} bg={'#242424'} pl={12} pr={2} onClick={themeToggler} ><e.ToggleThemeText style={{paddingRight:'6px'}}>Dark</e.ToggleThemeText><e.ThemeModeView bg={'rgb(230,230,230)'}><i className="gg-moon" style={e.sun}></i></e.ThemeModeView></e.ToggleTheme>}
-                <a href={CV} download="everitjho_CV"><e.ButtonSecondary style={e.downloadCvStyle}>{tr[0].cvBut}</e.ButtonSecondary></a>
+                <a href={prop.lan === "es" ? CV_es : CV_en } download={prop.lan === "es" ? "everit-CV_spanish" : "everit-CV_english"}><e.ButtonSecondary style={e.downloadCvStyle}>{tr[0].cvBut}</e.ButtonSecondary></a>
                 <e.HamMenu color={prop.theme === "light" ? "#000" : "#fff"} opened={isOpen} onClick={() => setOpen((o) => !o)}/>
     </e.ViewR>
         </e.Nav>
