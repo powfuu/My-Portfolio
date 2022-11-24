@@ -11,7 +11,7 @@ import evercodelogo from '../../resources/evercodelogo.png'
 import linkedinsvg from '../../resources/linkedin.svg'
 import gmailsvg from '../../resources/gmail.svg'
 import banner from '../../resources/banner.png'
-import pic from '../../resources/test.png'
+import pic from '../../resources/pic.jpg'
 const Home = ( props ) =>{ 
     let years=7
     let courses=3

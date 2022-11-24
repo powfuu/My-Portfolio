@@ -3,7 +3,7 @@ import * as e from './contactComponents'
 import linkedinsvg from '../../resources/linkedin.svg'
 import gmailsvg from '../../resources/gmail.svg'
 import banner from '../../resources/banner.png'
-import pic from '../../resources/test.png'
+import pic from '../../resources/pic.jpg'
 import { contact as tr } from '../../translations'
 const Contact = () =>{ 
     const [q1State, setq1State] = useState(false)
